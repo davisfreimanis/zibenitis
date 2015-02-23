@@ -6,6 +6,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'zibenitis.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^dancers/', include('dejotaju_saraksts.urls')),
+    url(r'^dancers/', include('dancers.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
