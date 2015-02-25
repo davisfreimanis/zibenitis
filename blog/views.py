@@ -1,11 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
-from django.http import HttpResponse
-
+from blog.models import Post
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the blog index.")
+    posts = Post.objects.order_by('-created')
+    return render(request, 'blog/index.html', {'posts': posts})
 
-def detail(request, blog_id):
-    return HttpResponse("You're looking at blog %s." % blog_id)
+def post(request, post_id):
+    post = get_object_or_404(Post, post_id=post_id)
+    return render(request, 'blog/post.html', {'post': post_id})
 
