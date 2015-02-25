@@ -6,6 +6,6 @@ urlpatterns = patterns('',
     # ex: /blog/
     url(r'^$', views.index, name='index'),
     # ex: /blog/5/
-    url(r'^(?P<blog_id>\d+)/$', views.post, name='post')
+    url(r'^(?P<post_id>\d+)/$', views.post, name='post')
 )
 
