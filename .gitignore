@@ -2,3 +2,7 @@
 *.sqlite3
 *.swp
 migrations
+
+#pycharm
+*.iml
+.idea/
