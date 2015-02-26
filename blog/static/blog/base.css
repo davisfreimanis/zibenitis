@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    background-color: burlywood;
+    max-width: 1280px;
+}
+
+header {
+    height: 300px;
+    width: auto;
+    background-color: hotpink;
+}
+
+header > nav {
+    height: 100px;
+    width: auto;
+    background-color: aqua;
+}
+
+header > nav > div.logo {
+    height: 100px;
+    width: 100px;
+    float: left;
+    background-color: chartreuse;
+}
+
+header > nav > ul {
+    margin: 0;
+    float: right;
+    width: auto;
+}
+
+header > nav > ul > li {
+    background-color: antiquewhite;
+    display: block;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    float: left;
+}
