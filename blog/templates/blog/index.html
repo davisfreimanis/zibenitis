@@ -1,8 +1,8 @@
- {% extends 'base.html' %}
-     
-     
+{% extends 'base.html' %}
+{% load staticfiles %}
+
     {% block title %} Zibenitis {% endblock %}
-     
+
     {% block content %}
         <h1> Zibenitis </h1>
         {% for post in posts %}
@@ -12,7 +12,7 @@
                     {{post.title}}
                 </a>
             </h2>
-            <p>{{post.content}}</p>
+            <p class="blogEntryHeader">{{post.content}}</p>
             <p>
                 Posted on
                 <time datetime="{{post.created|date:"c"}}">
@@ -21,5 +21,6 @@
             </p>
         </div>
         {% endfor %}
+        <img src="{% static 'blog/ditto.gif' %}" alt="ditto"/>
     {% endblock %}
 
