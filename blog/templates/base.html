@@ -3,16 +3,38 @@
     <head>
         <meta charset="utf-8">
         {% load staticfiles %}
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}">
         {% block css %}{% endblock %}
         <title>
             {% block title %}{% endblock %}
         </title>
         </head>
     <body>
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-        </div>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Zibenitis</p>
+            </div>
+            <ul>
+                <li>Blog</li>
+                <li>Par Mums</li>
+                <li>Lorem</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="content">
+        {% block content %}
+        {% endblock %}
+    </section>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
     </body>
 </html>
