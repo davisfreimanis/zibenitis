@@ -1,0 +1,18 @@
+ {% extends 'base.html' %}
+     
+     
+    {% block title %} Zibenitis {% endblock %}
+     
+    {% block content %}
+        <h1> Dancer list </h1>
+        {% for person in persons %}
+        <div class="person">
+            <h2>
+                <a href="/dancers/{{person.last_name}}/">
+                    {{person.first_name}} {{person.last_name}}
+                </a>
+            </h2>
+        </div>
+        {% endfor %}
+    {% endblock %}
+
