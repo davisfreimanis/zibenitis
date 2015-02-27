@@ -4,7 +4,7 @@ from blog import views
 
 urlpatterns = patterns('',
     # ex: /blog/
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.index, name='blog'),
     # ex: /blog/5/
     url(r'^(?P<post_id>\d+)/$', views.post, name='post')
 )

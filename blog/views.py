@@ -4,7 +4,7 @@ from blog.models import Post
 
 def index(request):
     posts = Post.objects.order_by('-created')
-    return render(request, 'blog/index.html', {'posts': posts})
+    return render(request, 'blog/blog.html', {'posts': posts})
 
 def post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
