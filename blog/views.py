@@ -7,6 +7,6 @@ def index(request):
     return render(request, 'blog/index.html', {'posts': posts})
 
 def post(request, post_id):
-    post = get_object_or_404(Post, post_id=post_id)
-    return render(request, 'blog/post.html', {'post': post_id})
+    post = get_object_or_404(Post, id=post_id)
+    return render(request, 'blog/post.html', {'post': post})
 
