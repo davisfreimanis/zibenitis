@@ -49,15 +49,28 @@
         </div>
 
         <div class="container">
+            <div class="jumbotron">
+                <h1 class="jumbotron-title">Zibenitis blog</h1>
+                <p class="jumbotron-paragraph">Lorem ipsum dolor sit amet</p>
+            </div>
             <div class="row">
-                {% block content %}
-                {% endblock %}
+                <div class="col-md-8 blog-post-container">
+                    <!-- Blog entries -->
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="col-md-3 col-md-offset-1 side-bar">
+                    <div class="sidebar-post ">
+                        <h3>Sidebar</h3>
+                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque consequuntur corporis debitis enim error exercitationem illo incidunt, minus, necessitatibus nisi nostrum officia praesentium quibusdam quis vel vitae voluptates!</span><span>Autem distinctio doloremque exercitationem explicabo hic iste, officiis reprehenderit vero? Asperiores aspernatur, atque blanditiis commodi dolore ea facere in nihil nobis perspiciatis quos, reiciendis repellat saepe sapiente tempora ut voluptate.</span><span>Asperiores cumque deserunt distinctio ex excepturi ipsum labore, laborum libero magnam maiores minus quam quia quis, rerum suscipit tempore voluptates? Aspernatur esse, est incidunt labore odio temporibus totam! Dolores, in!</span></p>
+                    </div>
+                </div>
             </div>
         </div>
 
 
-        <div class="navbar navbar-default navbar-fixed-bottom">
-            <p class="navbar-text">Hello this is a footer</p>
+        <div class="navbar float-left">
+            <p class="navbar-text text-center">This is a footer</p>
         </div>
 
     </body>

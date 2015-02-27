@@ -5,7 +5,7 @@
 
     {% block content %}
         {% for post in posts %}
-        <div class="post col-md-6">
+        <div class="blog-post">
             <h2>
                 <a href="/blog/{{post.id}}/">
                     {{post.title}}
@@ -20,18 +20,5 @@
             </p>
         </div>
         {% endfor %}
-        <div class="col-md-6">
-            <img src="{% static 'blog/ditto.gif' %}" alt="ditto"/>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'blog/ditto.gif' %}" alt="ditto"/>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'blog/ditto.gif' %}" alt="ditto"/>
-        </div>
-        <div class="col-md-6">
-            <img src="{% static 'blog/ditto.gif' %}" alt="ditto"/>
-        </div>
-
     {% endblock %}
 
