@@ -58,8 +58,13 @@
                 </div>
                 <div class="col-md-3 col-md-offset-1 side-bar">
                     <div class="sidebar-post ">
-                        <h3>Sidebar</h3>
-                        <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam architecto atque consequuntur corporis debitis enim error exercitationem illo incidunt, minus, necessitatibus nisi nostrum officia praesentium quibusdam quis vel vitae voluptates!</span><span>Autem distinctio doloremque exercitationem explicabo hic iste, officiis reprehenderit vero? Asperiores aspernatur, atque blanditiis commodi dolore ea facere in nihil nobis perspiciatis quos, reiciendis repellat saepe sapiente tempora ut voluptate.</span><span>Asperiores cumque deserunt distinctio ex excepturi ipsum labore, laborum libero magnam maiores minus quam quia quis, rerum suscipit tempore voluptates? Aspernatur esse, est incidunt labore odio temporibus totam! Dolores, in!</span></p>
+                        <div class="sidebar-event">
+                            {% for event in events %}
+                                <h2 class="event-title">{{ event.title }}</h2>
+                                <p class="event-description">{{ event.title }}</p>
+                                <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>
