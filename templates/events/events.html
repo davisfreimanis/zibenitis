@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Events</title>
-</head>
-<body>
-<h1>Events</h1>
-{% for event in events %}
-    <h2 class="event-title">
-        {{ event.title }}
-    </h2>
+{% extends 'base.html' %}
+{% block events %}
+    {% for event in events %}
+        <h2 class="event-title">
+            {{ event.title }}
+        </h2>
 
-    <p class="event-description">
-        {{ event.description }}
-    </p>
-    <p class="event-location">
-        {{ event.location }} @ {{ event.date }}
-    </p>
-{% endfor %}
-
-</body>
-</html>
+        <p class="event-description">
+            {{ event.description }}
+        </p>
+        <p class="event-location">
+            {{ event.location }} @ {{ event.date }}
+        </p>
+    {% endfor %}
+{% endblock %}
