@@ -28,6 +28,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Enable tables and other non-core features
+MARKDOWN_EXTENSIONS = ['extra']
 
 # Application definition
 
