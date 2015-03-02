@@ -10,5 +10,6 @@ class Event(models.Model):
     def __str__(self):
         return self.title
 
-    def short_description(self):
+    # Should return the first x words in the description.
+    def short_description(self, x):
         return
