@@ -5,7 +5,7 @@ from events.models import Event
 def event_brief(request):
     events = Event.objects.order_by('date')
     # events = Event.objects.all()  # order_by('events__event_date') //not working?
-    return render(request, 'base.html', {'events': events})  # A list for the side bar. Title and date
+    return render(request, 'events/events.html', {'events': events})  # A list for the side bar. Title and date
 
 
 def event_detail(request, event_id):
