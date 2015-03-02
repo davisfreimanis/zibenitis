@@ -28,6 +28,8 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Enable tables and other non-core features
+MARKDOWN_EXTENSIONS = ['extra']
 
 # Application definition
 
@@ -38,6 +40,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_markdown',
     'dancers',
     'blog',
 )
@@ -89,4 +92,7 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 STATIC_URL = '/static/'
 
 # Adding definition of media (file) storage directroy
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media/')]
+MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
+
+# Added change from the web repository
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
