@@ -1,0 +1,15 @@
+body {
+    background-color: burlywood;
+}
+
+h1 {
+    font-size: 200px
+}
+
+.blogEntryHeader {
+    color: hotpink;
+}
+
+a {
+    color: aqua;
+}

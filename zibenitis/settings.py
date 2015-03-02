@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'django_markdown',
     'dancers',
     'blog',
+    'events',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -85,10 +86,10 @@ USE_TZ = True
 
 # Template files like .html
 # https://docs.djangoproject.com/en/1.7/intro/tutorial02/
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
-
-# Static files (CSS, JavaScript, Images)
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates'), ]  # possible to add multiple paths to directories
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  # possible to add multiple paths to directories
+# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
 # Adding definition of media (file) storage directroy
