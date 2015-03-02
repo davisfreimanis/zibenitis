@@ -14,5 +14,18 @@
             </h2>
         </div>
         {% endfor %}
+        <h1> Upload form </h1>
+        <form action="{% url 'index' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.pic.label_tag }}</p>
+            <p>
+                {{ form.pic.errors }}
+                {{ form.pic }}
+            </p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+        <h1> Debugging text output </h1>
+        <p> {{data}} </p>
     {% endblock %}
 
