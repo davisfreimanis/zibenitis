@@ -1,0 +1,32 @@
+[  
+    {  
+        "model":"events.event",
+        "fields":{  
+            "location":"\u00d6saringvagen 10, Upplands bro",
+            "title":"Liel\u0101 talka",
+            "date":"2015-03-07T11:00:00Z",
+            "description":"Laik\u0101 laik\u0101 m\u0113s sakopsim z\u0101li un sagatavosim to gaid\u0101majam lielm\u0113\u0123in\u0101jumam. Par talku atbild\u012bg\u0101s personas ir Ineta (tel. nr. 0735992752) un Lauris (tel. nr. 0723310016). Uz talku ar\u012b ir j\u0101ierodas visiem. "
+        },
+        "pk":2
+    },
+    {  
+        "model":"events.event",
+        "fields":{  
+            "location":"\u00d6saringvagen 10, Upplands bro",
+            "title":"Pilnsapulce",
+            "date":"2015-03-07T14:00:00Z",
+            "description":"Uz to ir j\u0101ierodas piln\u012bgi visiem! P\u0113c pilnsapulces notiks papildus m\u0113\u0123in\u0101jums."
+        },
+        "pk":3
+    },
+    {  
+        "model":"events.event",
+        "fields":{  
+            "location":"\u00d6saringvagen 10, Upplands bro",
+            "title":"Lielm\u0113\u0123in\u0101jums",
+            "date":"2015-03-14T09:00:00Z",
+            "description":"Deju lielm\u0113\u0123in\u0101jums ar J. Purvi\u0146u notiks ned\u0113\u013cu v\u0113l\u0101k, 14. un 15. mart\u0101. Abas dienas dejosim Upplands Bro, 14. mart\u0101 s\u0101kam no plkst. 11:00 un turpin\u0101m visu dienu, p\u0113c tam ir iesp\u0113ja palikt pa nakti, un 15. mart\u0101 s\u0101kam dejot no plkst. 10:00 un turpin\u0101m l\u012bdz apm\u0113ram 14:00."
+        },
+        "pk":4
+    }
+]
