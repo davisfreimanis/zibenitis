@@ -2,14 +2,77 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>
-            {% block title %}{% endblock %}
-        </title>
-        </head>
+        
+        <!-- IE compability, duh -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        {% load staticfiles %}
+        <!-- Bootstrap -->
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.css' %}" />
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <title>{% block title %}{% endblock %}</title>
+    </head>
     <body>
-        <div class="content">
-            {% block content %}
-            {% endblock %}
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+        
+        <div class="navbar-inverse navbar-static-top">
+            <div class="container">
+                <div class="navbar-brand">Zibenitis</div>
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse navHeaderCollapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Media</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Support us!</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+        <div class="container">
+            <div class="jumbotron">
+                <h1 class="jumbotron-title">Zibenitis blog</h1>
+                <p class="jumbotron-paragraph">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="row">
+                <div class="col-md-8 blog-post-container">
+                    <!-- Blog entries -->
+                    {% block content %}
+                    {% endblock %}
+                </div>
+                <div class="col-md-3 col-md-offset-1 side-bar">
+                    <div class="sidebar-post ">
+                        <div class="sidebar-event">
+                            {% for event in events %}
+                                <h2 class="event-title">{{ event.title }}</h2>
+                                <p class="event-description">{{ event.title }}</p>
+                                <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar float-left">
+            <p class="navbar-text text-center">This is a footer</p>
+        </div>
+
     </body>
 </html>
