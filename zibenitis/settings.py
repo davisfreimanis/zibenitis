@@ -88,12 +88,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/intro/tutorial02/
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates'), ]  # possible to add multiple paths to directories
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]  # possible to add multiple paths to directories
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static-loc'), ]  # possible to add multiple paths to directories
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 
 # Adding definition of media (file) storage directroy
-MEDIA_ROOT = [os.path.join(BASE_DIR, 'media')]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Added change from the web repository
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

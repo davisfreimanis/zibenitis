@@ -2,6 +2,7 @@
 *.sqlite3
 *.swp
 migrations
+media/dancers_pic/*
 
 #pycharm
 *.iml

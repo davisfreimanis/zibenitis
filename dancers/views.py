@@ -13,11 +13,11 @@ def index(request):
     # Handle file upload
     if request.method == 'POST':
         form = UploadFileForm(request.POST, request.FILES)
-        datatxt = "Here comes debugging output, I am at 1, form.is_valid = %d" %form.is_valid()
+        datatxt = "Here comes debugging output, I am at 1, form.is_valid = %d" %( form.is_valid() )
         if form.is_valid():
             newpic = Picture(pic = request.FILES['pic'])
             newpic.save()
-            datatxt = str("%s, %s, " %(MEDIA_ROOT,newpic.filename) )
+            datatxt = " %s." %(newpic.filename) 
 
            # Redirect to the document list after POST
             return HttpResponseRedirect(reverse('dancers.views.index'))
