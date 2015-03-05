@@ -12,4 +12,5 @@ class Person(models.Model):
         return self.first_name+" "+self.last_name
 
 class Picture(models.Model):
-    pic = models.FileField(upload_to='dancers_pic')
+    pic = models.ImageField(upload_to='dancers_pic', max_length=500)
+
