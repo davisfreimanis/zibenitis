@@ -10,6 +10,6 @@ def blog(request):
 
 
 def post(request, post_id):
+    events = Event.objects.order_by('date')
     post = get_object_or_404(Post, id=post_id)
-    return render(request, 'blog/post.html', {'post': post})
-
+    return render(request, 'blog/post.html', {'post': post, 'events': events})
