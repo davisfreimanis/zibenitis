@@ -1,4 +1,6 @@
 {% extends 'base.html' %}
+{% load django_markdown %}
+
 {% block title %} TDK Zibenitis {% endblock %}
 
 {% block content %}
@@ -9,7 +11,7 @@
                 {{post.title}}
             </a>
         </h2>
-        <p class="blogEntryHeader">{{post.content}}</p>
+        <p class="blogEntryHeader">{{post.content|markdown|truncatewords_html:50}}</p>
         <p>
             Posted on
             <time datetime="{{post.created|date:"c"}}">
