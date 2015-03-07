@@ -1,15 +1,29 @@
- {% extends 'base.html' %}
-     
-     
-    {% block title %} Zibenitis {% endblock %}
-     
-    {% block content %}
+{% extends 'base.html' %}
+
+{% block title %} TDK Zibenitis {% endblock %}
+{% block pagetitle %} Aubout us {% endblock %}
+{% block pagesubtitle %} Who we are, who we are governed by {% endblock %}     
+          
+{% block pagecontents %}
+    <div class="col-sm-9">
         <h1> Dancer list </h1>
-        {% for person in persons %}
-        <div class="person">
-            <p> {{person.first_name}} {{person.last_name}} </p> 
-            <p><img src="../media/{{person.picture}}" alt="Smiley face" height="100" width="100"</p>
+        <br>
+        <div>
+        <ul>
+            {% for person in persons %}
+            <dnen>
+                <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
+                <h4> {{person.first_name}} {{person.last_name}} </h4>
+            </dnen>
+            {% endfor %}
+        </ul>
         </div>
-        {% endfor %}
-    {% endblock %}
+    </div>
+    <div class="col-sm-3 side-bar">
+        <div class="sidebar-post ">
+            <div class="sidebar-events">
+            </div>
+        </div>
+    </div>
+{% endblock %}
 
