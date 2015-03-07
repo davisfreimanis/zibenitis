@@ -11,6 +11,7 @@
         <!-- Bootstrap -->
         <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'dancers/dancers.css' %}" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -48,28 +49,12 @@
 
         <div class="container">
             <div class="jumbotron">
-                <h1 class="jumbotron-title">Zibenitis blog</h1>
-                <p class="jumbotron-paragraph">Lorem ipsum dolor sit amet</p>
+                <h1 class="jumbotron-title"> {% block pagetitle %}{% endblock %} </h1>
+                <p class="jumbotron-paragraph"> {% block pagesubtitle %}{% endblock %} </p>
             </div>
             <div class="row">
-                <div class="col-sm-8 blog-post-container">
-                    <!-- Blog entries -->
-                    {% block content %}
-                    {% endblock %}
-                </div>
-                <div class="col-sm-3 col-sm-offset-1 side-bar">
-{#                    {% block events %}#}
-{#                    {% endblock %}#}
-                    <div class="sidebar-post ">
-                        <div class="sidebar-events">
-                            {% for event in events %}
-                                <h2 class="event-title">{{ event.title }}</h2>
-                                <p class="event-description">{{ event.description|truncatewords:10 }}</p>
-                                <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
-                            {% endfor %}
-                        </div>
-                    </div>
-                </div>
+                {% block pagecontents %}
+                {% endblock %}
             </div>
         </div>
 

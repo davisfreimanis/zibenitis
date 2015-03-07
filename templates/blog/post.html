@@ -2,8 +2,10 @@
 {% load django_markdown %}
  
 {% block title %}{{post.title}}{% endblock %}
- 
-{% block content %}
+{% block pagetitle %} Zibenitis blog {% endblock %}
+{% block pagesubtitle %} Lorem ipsum dolor sit amet {% endblock %}}
+
+{% block pagecontents %}
 <article>
     <header>
         <h1> {{post.title}} </h1>
