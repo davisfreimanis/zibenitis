@@ -11,11 +11,13 @@ cd $REPOS && git pull
 
 python3 manage.py makemigrations
 python3 manage.py migrate
+python3 manage.py loaddata data/data.json
+python3 manage.py loaddata data/event_data.json
 
 python3 manage.py collectstatic --noinput
 
 chown -R www-data:www-data $REPOS
-/etc/init.d/apache2 restart
+/etc/init.d/apache2 restartd
 
 
 lockfile-remove $LOCK
