@@ -10,5 +10,3 @@ Developers
 * Davis Freimanis
 * Kaspars Ozolins
 * Kaspars Skels
-
-
