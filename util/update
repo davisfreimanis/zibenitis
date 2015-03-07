@@ -1,0 +1,22 @@
+#!/bin/bash
+
+REPOS=/home/www/zibenitis
+
+# force lock for single script executing
+LOCK="/tmp/update"
+
+lockfile-create $LOCK
+
+cd $REPOS && git pull
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+python3 manage.py collectstatic --noinput
+
+chown -R www-data:www-data $REPOS
+/etc/init.d/apache2 restart
+
+
+lockfile-remove $LOCK
+
