@@ -4,6 +4,7 @@
 migrations
 media/dancers_pic/*
 !media/dancers_pic/default_pic.png
+*Old*
 
 #pycharm
 *.iml
