@@ -11,4 +11,3 @@ Developers
 * Kaspars Ozolins
 * Kaspars Skels
 
-
