@@ -7,6 +7,7 @@
 
 {% block pagecontents %}
     <div class="col-sm-8 blog-post-container">
+
         <!-- Blog entries -->
         {% for post in posts %}
         <div class="blog-post">
@@ -24,7 +25,24 @@
             </p>
         </div>
         {% endfor %}
+
+        <div class="pagination">
+            <span class="step-links">
+                {% if posts.has_previous %}
+                    <a href="?page={{ posts.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                    Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+                </span>
+
+                {% if posts.has_next %}
+                    <a href="?page={{ posts.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
+
     <div class="col-sm-3 col-sm-offset-1 side-bar">
         <div class="sidebar-post ">
             <div class="sidebar-events">
@@ -36,5 +54,6 @@
            </div>
         </div>
     </div>
+
 {% endblock %}
 
