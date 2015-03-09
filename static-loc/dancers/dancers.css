@@ -11,3 +11,27 @@
     color:#212121;
     text-shadow:0 1px 2px #999;
 }
+
+.personbtn {
+  display: inline-block;
+  width:150px;
+  height:150px;
+  margin-bottom: 5px;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: top;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height:110px;
+  border-radius: 4px;
+  background-color: rgba(1, 1, 1, 0.0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
