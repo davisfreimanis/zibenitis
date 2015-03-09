@@ -3,18 +3,31 @@
 {% block title %} TDK Zibenitis {% endblock %}
 {% block pagetitle %} About us {% endblock %}
 {% block pagesubtitle %} Who we are, who we are governed by {% endblock %}     
-          
+
 {% block pagecontents %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top'
+    });
+});
+</script>
     <div class="col-sm-9">
         <h1> Dancer list </h1>
         <br>
         <div>
         <ul>
             {% for person in persons %}
+<!--
             <div class="persongrid">
                 <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
                 <h4> {{person.first_name}} {{person.last_name}} </h4>
             </div>
+-->
+            <button type="button" class="personbtn" data-toggle="popover" title="{{person.first_name}} {{person.last_name}}" data-content="I am popping up! I want to be full-screen!">
+                <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
+                <h4> {{person.first_name}} {{person.last_name}} </h4>
+            </button>
             {% endfor %}
         </ul>
         </div>
