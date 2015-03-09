@@ -11,10 +11,10 @@
         <div>
         <ul>
             {% for person in persons %}
-            <dnen>
+            <div class="persongrid">
                 <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
                 <h4> {{person.first_name}} {{person.last_name}} </h4>
-            </dnen>
+            </div>
             {% endfor %}
         </ul>
         </div>
