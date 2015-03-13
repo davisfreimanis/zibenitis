@@ -6,7 +6,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = patterns('',
-    # Examples:
     url(r'^$', include('blog.urls'), name='home'),  # think about this!
     url(r'^blog/', include('blog.urls')),
     url(r'^dancers/', include('dancers.urls')),
@@ -14,3 +13,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url('^markdown/', include( 'django_markdown.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Title for /admin
+admin.site.site_header = 'Zibenitis admin'
