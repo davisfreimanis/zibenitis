@@ -1,4 +1,7 @@
 div.navbar-bottom-no-margin {
     margin-bottom: 0px;
     border-radius: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
