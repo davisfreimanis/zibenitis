@@ -3,5 +3,6 @@ from events import views
 
 urlpatterns = patterns('',
     url(r'^$', views.event_brief, name='events'),
+    url(r'^(?P<event_id>\d+)/$', views.event_detail, name='event'),
 )
 
