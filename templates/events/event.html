@@ -3,12 +3,12 @@
  
 {% block title %}TDK Zibenitis{% endblock %}
 {% block pagetitle %}{{event.title}}{% endblock %}
-{% block pagesubtitle %} <span class="glyphicon glyphicon-map-marker"> {{ event.location }} @ {{ event.date }}</span> {% endblock %}}
-
-
+{% block pagesubtitle %}
+    <span class="glyphicon glyphicon-map-marker"></span> {{ event.location }} <br/>
+    <span class="glyphicon glyphicon-time"></span> {{ event.date|date:"d M Y H:i" }}
+{% endblock %}}
 
 {% block pagecontents %}
-
     <p>{{ event.description }}</p>
     <button type="button" class="btn btn-default">
         <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
