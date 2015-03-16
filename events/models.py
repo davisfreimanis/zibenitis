@@ -10,6 +10,10 @@ class Event(models.Model):
     def __str__(self):
         return self.title
 
+    #upcoming events
+    def upcoming_events(self):
+        return
+
     # Should return the first x words in the description.
     def short_description(self, x):
         return
