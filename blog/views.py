@@ -6,6 +6,7 @@ from events.models import Event
 
 def blog(request):
     events = Event.objects.order_by('date')
+
     posts_all = Post.objects.order_by('-created')
     paginator = Paginator(posts_all, 3) # use 3 posts for testing
 

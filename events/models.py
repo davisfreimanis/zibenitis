@@ -1,4 +1,5 @@
 from django.db import models
+from datetime import datetime, timedelta, time
 
 
 class Event(models.Model):
@@ -12,8 +13,5 @@ class Event(models.Model):
 
     #upcoming events
     def upcoming_events(self):
-        return
-
-    # Should return the first x words in the description.
-    def short_description(self, x):
-        return
+        events = Event.objects.filter(datetime.now(), datetime.now())
+        return events

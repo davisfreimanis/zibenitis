@@ -12,6 +12,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'dancers/dancers.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -37,11 +38,42 @@
                 </button>
                 <div class="collapse navbar-collapse navHeaderCollapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="{% url 'blog.views.blog' %}">Blog</a></li>
-                        <li><a href="{% url 'dancers.views.index' %}">About</a></li>
-                        <li><a href="#">Media</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Support us!</a></li>
+                        <li>
+                            <a href="{% url 'blog.views.blog' %}">
+                                <span class="glyphicon glyphicon-home"></span>
+                                Blog
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'dancers.views.index' %}">
+                                <span class="glyphicon glyphicon-search"></span>
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-film"></span>
+                                Media
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                                Events
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-user"></span>
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span class="glyphicon glyphicon-usd"></span>
+                                Support us!
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,8 +90,8 @@
             </div>
         </div>
 
-        <div class="navbar navbar-fixed-bottom navbar-inverse float-left">
-            <p class="navbar-text text-center">This is a footer</p>
+        <div class="navbar navbar-bottom-no-margin">
+            <p class="navbar-text text-center">© Zibenitis 2015</p>
         </div>
 
     </body>
