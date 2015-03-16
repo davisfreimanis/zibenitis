@@ -11,6 +11,7 @@ class Event(models.Model):
     def __str__(self):
         return self.title
 
+    #upcoming events
     def upcoming_events(self):
         events = Event.objects.filter(datetime.now(), datetime.now())
         return events

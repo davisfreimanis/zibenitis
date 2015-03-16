@@ -49,7 +49,7 @@
                 {% for event in events %}
                     <a href="/events/{{ event.id }}"><h2 class="event-title">{{ event.title }}</h2></a>
                     <p class="event-description">{{ event.description|truncatewords:10 }}</p>
-                    <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+                    <p class    ="event-date-location">{{ event.date }} @ {{ event.location }}</p>
                 {% endfor %}
            </div>
         </div>
