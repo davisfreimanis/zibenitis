@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
-{% block events %}
-    {% for event in events %}
-        <h2 class="event-title">
-            {{ event.title }}
-        </h2>
-        <p class="event-description">
-            {{ event.description }}
-        </p>
-        <p class="event-location">
-            {{ event.location }} @ {{ event.date }}
-        </p>
-    {% endfor %}
+{% load django_markdown %}
+ 
+{% block title %}TDK Zibenitis{% endblock %}
+{% block pagetitle %}Events{% endblock %}
+{% block pagesubtitle %}Upcoming events{% endblock %}}
+
+{% block pagecontents %}
+
+    <ul>
+        {% for event in events %}
+            <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
