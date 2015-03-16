@@ -6,9 +6,15 @@
 {% block pagesubtitle %}Upcoming events{% endblock %}}
 
 {% block pagecontents %}
-
+    <h1>Upcoming</h1>
     <ul>
         {% for event in events %}
+            <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
+        {% endfor %}
+    </ul>
+    <h1>Passed</h1>
+    <ul>
+        {% for event in passed_events %}
             <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
         {% endfor %}
     </ul>
