@@ -7,23 +7,23 @@
 
 {% block pagecontents %}
     <div class="col-sm-8 blog-post-container">
-
         <!-- Blog entries -->
         {% for post in posts %}
-        <div class="blog-post">
-            <h2>
-                <a href="/blog/{{post.id}}/">
-                    {{post.title}}
-                </a>
-            </h2>
-            <p class="blogEntryHeader">{{post.content|markdown|truncatewords_html:50}}</p>
-            <p>
-                Posted on
-                <time datetime="{{post.created|date:"c"}}">
-                {{post.created|date}}
-                </time>
-            </p>
-        </div>
+            <div class="blog-post">
+                <h2>
+                    <a href="/blog/{{post.id}}/">
+                        {{post.title}}
+                    </a>
+                </h2>
+                <p class="blogEntryHeader">{{post.content|markdown|truncatewords_html:50}}</p>
+                <p>
+                    Posted on
+                    <time datetime="{{post.created|date:"c"}}">
+                    {{post.created|date}}
+                    </time>
+                </p>
+            </div>
+            <hr/>
         {% endfor %}
 
         <div class="pagination">
@@ -43,18 +43,17 @@
         </div>
     </div>
 
-    <div class="col-sm-3 col-sm-offset-1 side-bar">
-        <div class="sidebar-post ">
-            <div class="sidebar-events">
-                {% for event in events %}
-                    <a href="/events/{{ event.id }}">
-                        <h2 class="event-title">{{ event.title }}</h2>
-                    </a>
-                    <p class="event-description">{{ event.description|truncatewords:10 }}</p>
-                    <p class    ="event-date-location">{{ event.date }} @ {{ event.location }}</p>
-                {% endfor %}
-           </div>
-        </div>
+    <!-- <div class="col-sm-3 col-sm-offset-1 side-bar"> -->
+    <div class="col-sm-4 side-bar">
+        {% for event in events %}
+            <div class="well sidebar-event">
+                <a href="/events/{{ event.id }}">
+                    <h2 class="event-title">{{ event.title }}</h2>
+                </a>
+                <p class="event-description">{{ event.description|truncatewords:10 }}</p>
+                <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+            </div>
+        {% endfor %}
     </div>
 
 {% endblock %}
