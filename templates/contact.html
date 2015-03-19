@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load django_markdown %}
+ 
+{% block title %}TDK Zibenitis{% endblock %}
+{% block pagetitle %} Contact {% endblock %}
+{% block pagesubtitle %} Lorem ipsum dolor sit amet {% endblock %}}
+
+{% block pagecontents %}
+    <div class="col-sm-12">
+        <h1>Valde</h1>
+        <hr/>
+    </div>
+    {% for person in administration %}
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+            <img class="img-responsive img-circle" src="../media/{{ person.picture }}" alt=""/>
+            <h2 style="text-align: center">{{ person.first_name }} {{ person.last_name }}</h2>
+            <p style="text-align: center">{{ person.email }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

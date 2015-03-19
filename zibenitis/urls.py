@@ -4,6 +4,7 @@ from django.contrib import admin
 # Imports for static file treatmenet
 from django.conf import settings
 from django.conf.urls.static import static
+from zibenitis import views
 
 urlpatterns = patterns('',
     url(r'^$', include('blog.urls'), name='home'),  # think about this!
@@ -11,7 +12,8 @@ urlpatterns = patterns('',
     url(r'^dancers/', include('dancers.urls')),
     url(r'^events/', include('events.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url('^markdown/', include( 'django_markdown.urls')),
+    url(r'^contact/$', views.contact_persons, name='contact'),
+    url('^markdown/', include('django_markdown.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Title for /admin

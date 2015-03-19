@@ -16,3 +16,8 @@ class Person(models.Model):
     def __str__(self):
         return self.first_name+" "+self.last_name
 
+    # Just some temporary email generation :)
+    def email(self):
+        mail = self.first_name[:2] + self.last_name[:3] + "@zibenitis.se"
+        return mail.lower()
+
