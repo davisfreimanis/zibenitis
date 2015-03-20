@@ -1,6 +1,4 @@
-/* TODO make footer stay at the bottom
-use this one:
-http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+/* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
 html {
     overflow-y: scroll;
 }
@@ -19,3 +17,22 @@ div.jumbotron {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 */
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push {
+    height: 4em;
+    margin-bottom: 0px;
+}
