@@ -1,7 +1,9 @@
-.sidebar-events {
-    border: 1px solid lightskyblue;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    padding: 10px;
+.sidebar-event {
+
+}
+
+.event-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
