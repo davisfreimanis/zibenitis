@@ -9,9 +9,13 @@
 {% endblock %}}
 
 {% block pagecontents %}
-    <p>{{ event.description }}</p>
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
-    </button>
+    <div class="col-md-12">
+        <div class="well">
+            <p>{{ event.description }}</p>
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
+            </button>
+        </div>
+    </div>
 
 {% endblock %}

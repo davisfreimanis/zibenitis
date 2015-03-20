@@ -20,4 +20,3 @@ class Person(models.Model):
     def email(self):
         mail = self.first_name[:2] + self.last_name[:3] + "@zibenitis.se"
         return mail.lower()
-
