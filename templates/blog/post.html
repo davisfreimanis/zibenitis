@@ -6,22 +6,24 @@
 {% block pagesubtitle %} Lorem ipsum dolor sit amet {% endblock %}}
 
 {% block pagecontents %}
-<article>
-    <header>
-        <h1> {{post.title}} </h1>
-        <p>
-            Posted on
-            <time datetime="{{post.created|date:"c"}}">
-            {{post.created|date}}
-            </time>
-        </p>
-    </header>
-    <p class="description">
-        {{post.description}}
-    </p>
-    {{post.content|markdown}}
-    <button type="button" class="btn btn-default">
-        <span class="glyphicon glyphicon-menu-left"><a href="javascript:history.go(-1)">Atpakal</a></span>
-    </button>
-</article>
+    <div class="col-md-12">
+        <article class="well">
+            <header>
+                <h1> {{post.title}} </h1>
+                <p>
+                    Posted on
+                    <time datetime="{{post.created|date:"c"}}">
+                    {{post.created|date}}
+                    </time>
+                </p>
+            </header>
+            <p class="description">
+                {{post.description}}
+            </p>
+            {{post.content|markdown}}
+            <button type="button" class="btn btn-default">
+                <span class="glyphicon glyphicon-menu-left"><a href="javascript:history.go(-1)">Atpakal</a></span>
+            </button>
+        </article>
+    </div>
 {% endblock %}
