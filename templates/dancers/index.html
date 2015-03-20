@@ -5,29 +5,35 @@
 {% block pagesubtitle %} Who we are, who we are governed by {% endblock %}     
 
 {% block pagecontents %}
-<script type="text/javascript">
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        placement : 'top'
-    });
-});
-</script>
     <div class="col-sm-12">
         <h1> Dancer list </h1>
         <br>
         <div>
         <ul>
             {% for person in persons %}
-<!--
-            <div class="persongrid">
-                <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
-                <h4> {{person.first_name}} {{person.last_name}} </h4>
+            <div class="modal fade" id="basicModal{{person.id}}" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modalfs">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="myModalLabel">{{person.first_name}} {{person.last_name}}</h4>
+                        </div>
+                        <div class="modal-body">
+                           <p align="center"><img style="max-width:200px;max-height:200px;" src="../media/{{person.picture}}" class="img-rounded"></p>
+                           <br>
+                           <p> Description of the person </p>
+                           <p> Description of the person </p>
+                           <p> Description of the person </p>
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
--->
-            <button type="button" class="personbtn" data-toggle="popover" title="{{person.first_name}} {{person.last_name}}" data-content="I am popping up! I want to be full-screen!">
+            <a href="#" type="button" class="personbtn" data-toggle="modal" data-target="#basicModal{{person.id}}" title="{{person.first_name}} {{person.last_name}}">
                 <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-rounded"></p>
                 <h4> {{person.first_name}} {{person.last_name}} </h4>
-            </button>
+            </a>
             {% endfor %}
         </ul>
         </div>
