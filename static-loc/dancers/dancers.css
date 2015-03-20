@@ -12,6 +12,15 @@
     text-shadow:0 1px 2px #999;
 }
 
+/* Setting the size of modal */
+.modalfs {
+  width: 95%;
+  height: 90%;
+  margin: 2.5% 2.5% 2.5% 2.5%;
+  overflow-y: scroll;  
+}
+
+/* Styling the "buttons" of each individual person */
 .personbtn {
   display: inline-block;
   width:150px;
@@ -34,5 +43,23 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  
+}
+.personbtn:focus,
+.personbtn:active:focus,
+.personbtn.active:focus,
+.personbtn.focus,
+.personbtn:active.focus,
+.personbtn.active.focus {
+  outline: thin dotted;
+  outline-color: rgba(1, 1, 1, 0.0);
+}
+
+.personbtn:link,
+.personbtn:visited,
+.personbtn:hover,
+.personbtn:active {
+    color: rgba(1, 1, 1, 1.0);
+    text-decoration: none;
 }
 
