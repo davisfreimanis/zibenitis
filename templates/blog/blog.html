@@ -7,53 +7,60 @@
 
 {% block pagecontents %}
     <div class="col-sm-8 blog-post-container">
-        <!-- Blog entries -->
-        {% for post in posts %}
-            <div class="blog-post">
-                <h2>
-                    <a href="/blog/{{post.id}}/">
-                        {{post.title}}
-                    </a>
-                </h2>
-                <p class="blogEntryHeader">{{post.content|markdown|truncatewords_html:50}}</p>
-                <p>
-                    Posted on
-                    <time datetime="{{post.created|date:"c"}}">
-                    {{post.created|date}}
-                    </time>
-                </p>
-            </div>
-            <hr/>
-        {% endfor %}
+        <div class="well">
+            <!-- Blog entries -->
+            {% for post in posts %}
+                <div class="blog-post">
+                    <h2>
+                        <a href="/blog/{{post.id}}/">
+                            {{post.title}}
+                        </a>
+                    </h2>
+                    <p class="blogEntryHeader">{{post.content|markdown|truncatewords_html:50}}</p>
+                    <p>
+                        Posted on
+                        <time datetime="{{post.created|date:"c"}}">
+                        {{post.created|date}}
+                        </time>
+                    </p>
+                </div>
+                <hr/>
+            {% endfor %}
 
-        <div class="pagination">
-            <span class="step-links">
-                {% if posts.has_previous %}
-                    <a href="?page={{ posts.previous_page_number }}">previous</a>
-                {% endif %}
+            <div class="pagination">
+                <span class="step-links">
+                    {% if posts.has_previous %}
+                        <a href="?page={{ posts.previous_page_number }}">previous</a>
+                    {% endif %}
 
-                <span class="current">
-                    Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+                    <span class="current">
+                        Page {{ posts.number }} of {{ posts.paginator.num_pages }}
+                    </span>
+
+                    {% if posts.has_next %}
+                        <a href="?page={{ posts.next_page_number }}">next</a>
+                    {% endif %}
                 </span>
-
-                {% if posts.has_next %}
-                    <a href="?page={{ posts.next_page_number }}">next</a>
-                {% endif %}
-            </span>
+            </div>
         </div>
     </div>
 
     <!-- <div class="col-sm-3 col-sm-offset-1 side-bar"> -->
     <div class="col-sm-4 side-bar">
-        {% for event in events %}
-            <div class="well sidebar-event">
-                <a href="/events/{{ event.id }}">
-                    <h2 class="event-title">{{ event.title }}</h2>
-                </a>
-                <p class="event-description">{{ event.description|truncatewords:10 }}</p>
-                <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
-            </div>
-        {% endfor %}
+        <div class="well">
+            <h1 class="future-events">Future Events</h1>
+            <hr/>
+            {% for event in events %}
+                <div class="sidebar-event">
+                    <a href="/events/{{ event.id }}">
+                        <h2 class="event-title">{{ event.title }}</h2>
+                    </a>
+                    <p class="event-description">{{ event.description|truncatewords:10 }}</p>
+                    <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+                </div>
+                <hr/>
+            {% endfor %}
+        </div>
     </div>
 
 {% endblock %}

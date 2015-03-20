@@ -1,6 +1,10 @@
-/* TODO
+/* TODO make footer stay at the bottom
 use this one:
 http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+html {
+    overflow-y: scroll;
+}
+
 div.navbar-bottom-no-margin {
     margin-bottom: 0px;
     border-radius: 0;
