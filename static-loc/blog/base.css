@@ -35,6 +35,7 @@ div.jumbotron {
 }
 html, body {
     height: 100%;
+    background-image: url("/media/swirl_pattern.png");
 }
 
 .wrapper {
