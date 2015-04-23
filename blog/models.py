@@ -8,7 +8,7 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = MarkdownField()
     created = models.DateTimeField(default=datetime.now())
-    image = models.ImageField(upload_to='blog')
+    image = models.ImageField(upload_to='blog', default='dancers_pic/default_pic.png')
 
     def __str__(self):
         return self.title
