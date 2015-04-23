@@ -1,4 +1,25 @@
 /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+    background-image: url("/media/swirl_pattern.png");
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push {
+    height: 4em;
+    margin-bottom: 0px;
+}
+
 html {
     overflow-y: scroll;
 }
@@ -21,31 +42,9 @@ div.navbar-bottom-no-margin {
     width: 100%;
 }
 
-/*
-div.jumbotron {
-    background-image: url("/media/zib.jpg");
-    background-size: cover;
-    color: #ffffff;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+li.facebook-icon > a {
+    padding-left: 0px;
 }
-*/
-
-* {
-    margin: 0;
-}
-html, body {
-    height: 100%;
-    background-image: url("/media/swirl_pattern.png");
-}
-
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -4em;
-}
-
-.footer, .push {
-    height: 4em;
-    margin-bottom: 0px;
+li.youtube-icon > a {
+    padding-left: 0px;
 }
