@@ -1,14 +1,32 @@
 {% extends 'base.html' %}
+{% load django_markdown %}
 
 {% block title %} TDK Zibenitis {% endblock %}
 {% block pagetitle %} About us {% endblock %}
-{% block pagesubtitle %} Who we are, who we are governed by {% endblock %}     
+{% block pagesubtitle %} Who we are, who we are governed by {% endblock %}
 
 {% block pagecontents %}
     <div class="col-sm-12">
-        <h1> Dancer list </h1>
-        <br>
-        <div>
+{#        <h1> Dancer list </h1> #}
+{#        <br>  #}
+{#        <div>  #}
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Short history
+            </div>
+            <li class="list-group-item">
+                {% for hist in history %}
+                <p>{{hist.content|markdown}}</p>            
+                {% endfor %}
+            </li>
+        </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Dancer list
+            </div>
+        <li class="list-group-item">
         <ul>
             {% for person in persons %}
             <div class="modal fade" id="basicModal{{person.id}}" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
@@ -36,7 +54,43 @@
             </a>
             {% endfor %}
         </ul>
+        </li>
         </div>
+
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                Contact us
+            </div>
+            {% for cp in cpers %}
+            <li class="list-group-item">
+                <div style="width: 100%; display: table;">
+                    <div style="display: table-row">
+                        <div style="width: 120px; display: table-cell;">
+                            <p class="text-indent: 50px;"><img style="max-width:100px;max-height:100px;" src="../media/{{cp.person.picture}}" class="img-rounded"></p>
+                        </div>
+                        <div style="display: table-cell; vertical-align: top;">
+                            <h4>{{cp.role}}</h4>
+                            <ul>
+                                <li>Vards Uzvards: {{cp.person.first_name}} {{cp.person.last_name}}</li> 
+                                <li>E-pasts: {{cp.person.email_n}} at {{cp.person.email_d}}</li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </div>
+
     </div>
+
+{#    <div class="col-sm-4">#}
+{#        <div class="panel panel-info">#}
+{#            <div class="panel-heading">#}
+{#                <br>#}
+{#            </div>#}
+{#            blabla#}
+{#        </div>#}
+{#    </div>#}
+
 {% endblock %}
 
