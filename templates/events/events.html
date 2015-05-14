@@ -12,6 +12,8 @@
             <ul>
                 {% for event in events %}
                     <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
+                {% empty %}
+                    <li>No upcoming events.</li>
                 {% endfor %}
             </ul>
         </div>
@@ -22,6 +24,8 @@
             <ul>
                 {% for event in passed_events %}
                     <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
+                {% empty %}
+                    <li>No passed events.</li>
                 {% endfor %}
             </ul>
         </div>
