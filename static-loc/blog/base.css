@@ -54,5 +54,5 @@ li.youtube-icon > a {
 }
 
 a:hover {
-    color: hotpink;
+    color: #ffff00 !important;
 }
