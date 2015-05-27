@@ -5572,12 +5572,12 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #d6e9c6;
 }
 .panel-info {
-  border-color: #ffe119;
+  border-color: #B5B5B5;
 }
 .panel-info > .panel-heading {
   color: #ffe119;
   background-color: #004358;
-  border-color: #ffe119;
+  border-color: #B5B5B5;
 }
 .panel-info > .panel-heading > a {
   color: #ffe119;
