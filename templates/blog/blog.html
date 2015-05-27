@@ -14,24 +14,20 @@
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" style="max-height: 400px" role="listbox">
-        <div class="item active">
-            <img src="/media/zib1.png" alt="...">
-            <div class="carousel-caption">
-                ...
+        {% for slide in slides %}
+            <!-- First slide must be active -->
+            {% if forloop.first %}
+                <div class="item active">
+            {% else %}
+                <div class="item">
+            {% endif %}
+                <img src="/media/{{ slide.image }}" alt="{{ slide.description }}">
+                <div class="carousel-caption">
+                    <h3>{{ slide.title }}</h3>
+                    <h6>{{ slide.description }}</h6>
+                </div>
             </div>
-        </div>
-        <div class="item">
-            <img src="/media/zib2.png" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
-        </div>
-        <div class="item">
-            <img src="/media/zib3.png" alt="...">
-            <div class="carousel-caption">
-                ...
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     <!-- Controls -->
@@ -48,7 +44,6 @@
 
 {% block pagecontents %}
     <div class="col-sm-8 blog-post-container">
-
         <div class="panel panel-info">
             <div class="panel-heading">
                 <span class="glyphicon glyphicon-calendar"></span>

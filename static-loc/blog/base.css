@@ -8,6 +8,12 @@ html, body {
     background-image: url("/media/swirl_pattern.png");
 }
 
+p, h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .wrapper {
     min-height: 100%;
     height: auto !important;
@@ -55,4 +61,19 @@ li.youtube-icon > a {
 
 a:hover {
     color: #ffff00 !important;
+}
+
+.event-map {
+    position: relative;
+    padding-bottom: 45%;
+    height: 0;
+    overflow: hidden;
+}
+
+.event-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 500px;
 }
