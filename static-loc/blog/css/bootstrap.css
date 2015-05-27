@@ -6255,6 +6255,14 @@ button.close {
     margin-top: -15px;
     font-size: 30px;
   }
+
+@media only screen and (min-width : 1200px) {
+  .carousel-caption
+  {
+    top: 44%;
+  }
+}
+
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
     margin-left: -15px;
