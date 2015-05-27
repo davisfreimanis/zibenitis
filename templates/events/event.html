@@ -11,6 +11,11 @@
 {% block pagecontents %}
     <div class="col-md-12">
         <div class="well">
+
+            <div class="event-map">
+                <iframe width="600" height="500" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{ event.location }}&key=AIzaSyAEQihBKM3PNtdf6Nbpm9FlW3ksbt1IY9M"></iframe>
+            </div>
+
             <p>{{ event.description }}</p>
             <button type="button" class="btn btn-default">
                 <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
