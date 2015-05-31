@@ -5,7 +5,7 @@
 }
 html, body {
     height: 100%;
-    background-image: url("/media/swirl_pattern.png");
+    /*background-image: url("/media/swirl_pattern.png");*/
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -57,10 +57,6 @@ li.facebook-icon > a {
 }
 li.youtube-icon > a {
     padding-left: 0px;
-}
-
-a:hover {
-    color: #ffff00 !important;
 }
 
 .event-map {
