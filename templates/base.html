@@ -104,14 +104,10 @@
             <div class="container">
                 {% block carousel %}
                 {% endblock %}
-                <div class="row">
-                    <div class="well">
-                        {% block pagecontents %}
-                        {% endblock %}
-                        {% block content %}
-                        {% endblock %}
-                    </div>
-                </div>
+                {% block pagecontents %}
+                {% endblock %}
+                {% block content %}
+                {% endblock %}
             </div>
             <div class="push"></div>
         </div>

@@ -14,7 +14,7 @@
         <div class="col-md-6">
 		    {% if object.caption %}<p>{{ object.caption|safe }}</p>{% endif %}
 		    <a href="{{ object.image.url }}">
-		        <img src="{{ object.get_display_url }}" class="thumbnail" alt="{{ object.title }}">
+		        <img src="{{ object.get_display_url }}" class="thumbnail img-responsive" alt="{{ object.title }}">
 		    </a>
         </div>
         <div class="col-md-6">

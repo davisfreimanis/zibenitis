@@ -5,6 +5,7 @@
 
 {% block content %}
 
+
     <div class="row col-lg-12">
         <h1 class="page-header">{% trans "Latest photo galleries" %}</h1>
     </div>
@@ -23,15 +24,13 @@
 		</aside>
 
 		<main class="col-md-10">
-			
-			{% if latest %}
-			    {% for gallery in latest %}
-			    	{% include "photologue/includes/gallery_sample.html" %}
-			    {% endfor %}
-			{% else %}
-			    <p>{% trans "No galleries were found" %}.</p>
-			{% endif %}
-			
+            {% if latest %}
+                {% for gallery in latest %}
+                    {% include "photologue/includes/gallery_sample.html" %}
+                {% endfor %}
+            {% else %}
+                <p>{% trans "No galleries were found" %}.</p>
+            {% endif %}
 		</main>
 
 	</div>
