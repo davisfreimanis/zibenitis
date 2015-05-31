@@ -32,7 +32,6 @@ ALLOWED_HOSTS = []
 MARKDOWN_EXTENSIONS = ['extra']
 
 # Application definition
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -40,11 +39,18 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django_markdown',
     'dancers',
     'blog',
     'events',
+    'photologue',
+    'sortedm2m',
+    # 'facebook_gallery',
 )
+
+# Sites framework (photologue)
+SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -98,3 +104,6 @@ MEDIA_URL = '/media/'
 
 # Added change from the web repository
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# FACEBOOK_APP_ID = '785488654898269'
+# FACEBOOK_APP_SECRET = '527fd09531c45afaa6f50c0b86c72fda'

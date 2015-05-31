@@ -105,8 +105,12 @@
                 {% block carousel %}
                 {% endblock %}
                 <div class="row">
-                    {% block pagecontents %}
-                    {% endblock %}
+                    <div class="well">
+                        {% block pagecontents %}
+                        {% endblock %}
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
             </div>
             <div class="push"></div>
