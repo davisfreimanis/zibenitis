@@ -1,11 +1,17 @@
 /* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
 
 * {
-    margin: 0;
+	margin: 0;
 }
 html, body {
-    height: 100%;
-    /*background-image: url("/media/swirl_pattern.png");*/
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+footer, .push {
+	height: 50px; /* '.push' must be the same height as 'footer' */
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -14,24 +20,10 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -4em;
-}
-
-.footer, .push {
-    height: 4em;
-    margin-bottom: 0px;
-}
-
 html {
     overflow-y: scroll;
-}
-
-.navbar {
-    margin-bottom: 30px;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar-brand > span {
@@ -44,12 +36,6 @@ html {
 
 .carousel-inner > .item > img {
     margin: 0 auto;
-}
-
-div.navbar-bottom-no-margin {
-    margin-bottom: 0px;
-    border-radius: 0;
-    width: 100%;
 }
 
 li.facebook-icon > a {
@@ -72,4 +58,8 @@ li.youtube-icon > a {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.footer-copyright {
+    margin-left: 15px;
 }
