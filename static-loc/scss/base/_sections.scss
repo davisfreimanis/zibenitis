@@ -1,0 +1,90 @@
+$underline-height: 3px;
+
+$news-section-bg-color: #ffeb17;
+$news-article-bg-color: #fff;
+$news-header-color: #fff;
+$news-text-color: #666;
+
+$events-section-bg-color: #1ec2ff;
+
+$dancers-section-bg-color: white;
+$dancers-header-color: #1ec2ff;
+
+$history-section-bg-color: #ffeb17;
+
+$gallery-section-bg-color: #1ec2ff;
+
+$contact-section-bg-color: white;
+
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  div.container {
+    div.row {
+      h1 {
+        text-align: center;
+      }
+      div.col-md-4 {
+        height: 200px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: white;
+        margin-left:15px;
+        width:31.6%;
+      }
+    }
+  }
+}
+
+section.news {
+  background-color: $news-section-bg-color;
+  h1.news-title {
+    color: $news-header-color;
+  }
+  hr.news-title-underline {
+    border-top: $underline-height solid $news-header-color;
+  }
+  div {
+    h3 {
+      color: $news-text-color;
+    }
+  }
+}
+
+section.events {
+  background-color: $events-section-bg-color;
+  h1.dancers-title {
+    color: $dancers-header-color;
+  }
+  hr.news-title-underline {
+    border-top: $underline-height solid $news-header-color;
+  }
+  div {
+    h3 {
+      color: $news-text-color;
+    }
+  }
+}
+
+section.dancers {
+  background-color: $dancers-section-bg-color;
+}
+
+section.history {
+  background-color: $history-section-bg-color;
+}
+
+section.gallery {
+  background-color: $gallery-section-bg-color;
+}
+
+section.contact {
+  background-color: $contact-section-bg-color;
+}
