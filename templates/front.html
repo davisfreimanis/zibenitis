@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load django_markdown %}
+
+{% block title %} TDK Zibenitis {% endblock %}
+
+{% block carousel %}
+    <div class="container">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" style="max-height: 400px" role="listbox">
+            {% for slide in slides %}
+                <!-- First slide must be active -->
+                {% if forloop.first %}
+                    <div class="item active">
+                {% else %}
+                    <div class="item">
+                {% endif %}
+                    <img src="/media/{{ slide.image }}" alt="{{ slide.description }}">
+                    <div class="carousel-caption">
+                        <h3>{{ slide.title }}</h3>
+                        <h6>{{ slide.description }}</h6>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+{% block pagecontents %}
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <h1 class="news-title">Aktuālie notikumi</h1>
+                <hr class="news-title-underline"/>
+                {% for n in news %}
+                    <div class="col-md-4">
+                        <h3>{{ n.title }}</h3>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section class="dancers">
+        <div class="container">
+            <div class="row">
+                <h1 class="dancers-title">Dejotāji</h1>
+                <hr class="dancers-title-underline"/>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="container">
+            <!-- <div class="col-sm-3 col-sm-offset-1 side-bar"> -->
+            <div class="col-sm-4 side-bar">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <a href="{% url 'events.views.event_brief' %}">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                            Future Events
+                        </a>
+                    </div>
+                    <ul class="list-group">
+
+                        {% if events %}
+                            {% for event in events %}
+                                <li class="list-group-item">
+                                    <a href="/events/{{ event.id }}">
+                                        <h2 class="event-title">{{ event.title }}</h2>
+                                    </a>
+                                    <p class="event-description">{{ event.description|truncatewords:10 }}</p>
+                                    <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
+                                </li>
+                            {% endfor %}
+                        {% else %}
+                            <li class="list-group-item">
+                                <p>No upcoming events.</p>
+                            </li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="history">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <section class="gallery">
+        <div class="container">
+
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+
+        </div>
+    </section>
+
+
+{% endblock %}

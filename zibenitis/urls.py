@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 from zibenitis import views
 
 urlpatterns = patterns('',
-    url(r'^$', include('blog.urls'), name='home'),  # think about this!
+    url(r'^$', views.front_page, name='home'),  # think about this!
     url(r'^blog/', include('blog.urls')),
     url(r'^dancers/', include('dancers.urls')),
     url(r'^events/', include('events.urls')),

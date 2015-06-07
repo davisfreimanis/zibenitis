@@ -1,0 +1,49 @@
+$logo-font-size: 150%;
+$logo-color: white;
+
+$navigation-bg-color: #6CBFFF;
+$navigation-height: 64px;
+
+$button-color: $logo-color;
+$button-text-color: $navigation-bg-color;
+
+.navbar-wrapper {
+  background-color: $navigation-bg-color;
+  height: $navigation-height;
+  margin-bottom: 0;
+  border: 0;
+  .container {
+    a {
+      .navbar-brand {
+        font-size: $logo-font-size;
+        color: $logo-color;
+        height: $navigation-height;
+        line-height: inherit;
+      }
+    }
+    button.navbar-toggle {
+      span.icon-bar {
+
+      }
+    }
+    div {
+      ul.nav {
+        li {
+          a {
+            button {
+              color: $button-text-color;
+              span.glyphicon {
+              }
+            }
+            button.facebook-button {
+
+            }
+            button.youtube-button {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
