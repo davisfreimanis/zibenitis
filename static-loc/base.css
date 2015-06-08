@@ -1,5 +1,3 @@
-/* http://ryanfait.com/resources/footer-stick-to-bottom-of-page/ */
-
 * {
 	margin: 0;
 }
@@ -8,10 +6,10 @@ html, body {
 }
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+	margin: 0 auto -50px; // the bottom margin is the negative value of the footer's height
 }
 footer, .push {
-	height: 50px; /* '.push' must be the same height as 'footer' */
+	height: 50px; //'.push' must be the same height as 'footer'
 }
 
 p, h1, h2, h3, h4, h5, h6 {

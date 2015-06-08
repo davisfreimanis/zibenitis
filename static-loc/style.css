@@ -1,0 +1,71 @@
+/**
+* Global
+*/
+body {
+  background-color: #edeff0;
+  color: #222;
+  font-size: 200%;
+  line-height: 150%; }
+
+.navbar-wrapper {
+  background-color: #6CBFFF;
+  height: 64px;
+  margin-bottom: 0;
+  border: 0; }
+  .navbar-wrapper .container a .navbar-brand {
+    font-size: 150%;
+    color: white;
+    height: 64px;
+    line-height: inherit; }
+  .navbar-wrapper .container div ul.nav li a button {
+    color: #6CBFFF; }
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  section div.container div.row h1 {
+    text-align: center; }
+  section div.container div.row div.col-md-4 {
+    height: 200px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    margin-left: 15px;
+    width: 31.6%; }
+
+section.news {
+  background-color: #ffeb17; }
+  section.news h1.news-title {
+    color: #fff; }
+  section.news hr.news-title-underline {
+    border-top: 3px solid #fff; }
+  section.news div h3 {
+    color: #666; }
+
+section.events {
+  background-color: #1ec2ff; }
+  section.events h1.dancers-title {
+    color: #1ec2ff; }
+  section.events hr.news-title-underline {
+    border-top: 3px solid #fff; }
+  section.events div h3 {
+    color: #666; }
+
+section.dancers {
+  background-color: white; }
+
+section.history {
+  background-color: #ffeb17; }
+
+section.gallery {
+  background-color: #1ec2ff; }
+
+section.contact {
+  background-color: white; }
+
+/*# sourceMappingURL=style.css.map */
