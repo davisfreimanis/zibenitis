@@ -4,43 +4,42 @@
 {% block title %} TDK Zibenitis {% endblock %}
 
 {% block carousel %}
-    <div class="container">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
 
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner" style="max-height: 400px" role="listbox">
-            {% for slide in slides %}
-                <!-- First slide must be active -->
-                {% if forloop.first %}
-                    <div class="item active">
-                {% else %}
-                    <div class="item">
-                {% endif %}
-                    <img src="/media/{{ slide.image }}" alt="{{ slide.description }}">
-                    <div class="carousel-caption">
-                        <h3>{{ slide.title }}</h3>
-                        <h6>{{ slide.description }}</h6>
-                    </div>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" style="max-height: 400px" role="listbox">
+        {% for slide in slides %}
+            <!-- First slide must be active -->
+            {% if forloop.first %}
+                <div class="item active">
+            {% else %}
+                <div class="item">
+            {% endif %}
+                <img class="img-responsive" src="/media/{{ slide.image }}" alt="{{ slide.description }}">
+                <div class="carousel-caption">
+                    <h3>{{ slide.title }}</h3>
+                    <h6>{{ slide.description }}</h6>
                 </div>
-            {% endfor %}
-        </div>
-
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+            </div>
+        {% endfor %}
     </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
 </div>
 {% endblock %}
 
@@ -48,13 +47,20 @@
     <section class="news">
         <div class="container">
             <div class="row">
-                <h1 class="news-title">Aktuālie notikumi</h1>
+                <a href="{% url 'blog' %}">
+                    <h1 class="news-title">Aktuālie notikumi</h1>
+                </a>
                 <hr class="news-title-underline"/>
                 {% for n in news %}
                     <div class="col-md-4">
-                        <h3>{{ n.title }}</h3>
+                        <div class="cont">
+                            <h3 news-post-title>{{ n.title }}</h3>
+                            <p news-post-content>{{ n.content|truncatechars:100 }}</p>
+                            <button class="btn btn-default"><a href="/blog/{{n.id}}/">Lasīt vairāk</a></button>
+                        </div>
                     </div>
                 {% endfor %}
+                <button class="btn btn-default"><a href="{% url 'blog' %}">Skatīt vēl</a></button>
             </div>
         </div>
     </section>
@@ -64,6 +70,17 @@
             <div class="row">
                 <h1 class="dancers-title">Dejotāji</h1>
                 <hr class="dancers-title-underline"/>
+                {% for d in dancers %}
+                    <div class="col-md-4">
+                        <div class="cont">
+                            <img class="img-responsive img-circle" src="../media/{{d.picture}}" alt=""/>
+                            <h3 style="text-align: center">{{ d.first_name }} {{ d.last_name }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+                <a href="{% url 'dancers' %}">
+                    <button class="btn btn-default">Skatīt vēl</button>
+                </a>
             </div>
         </div>
     </section>
