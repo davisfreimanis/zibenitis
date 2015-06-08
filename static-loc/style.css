@@ -30,13 +30,17 @@ section {
   padding-bottom: 50px; }
   section div.container div.row h1 {
     text-align: center; }
+  section div.container div.row hr {
+    width: 90%; }
   section div.container div.row div.col-md-4 {
-    height: 200px;
+    height: 450px;
     margin-bottom: 15px;
-    padding: 10px;
-    background-color: white;
-    margin-left: 15px;
-    width: 31.6%; }
+    padding-left: 15px;
+    padding-right: 15px; }
+    section div.container div.row div.col-md-4 div.cont {
+      background-color: #ffffff;
+      height: inherit;
+      padding: 15px; }
 
 section.news {
   background-color: #ffeb17; }
@@ -44,8 +48,10 @@ section.news {
     color: #fff; }
   section.news hr.news-title-underline {
     border-top: 3px solid #fff; }
-  section.news div h3 {
+  section.news div.col-md-4 div.cont h3 {
     color: #666; }
+  section.news div.col-md-4 div.cont button {
+    float: right; }
 
 section.events {
   background-color: #1ec2ff; }
