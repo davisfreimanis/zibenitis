@@ -9,10 +9,11 @@
 
         {% load staticfiles %}
         <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'dancers/dancers.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/base.css' %}" />
+{#        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />#}
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -26,9 +27,9 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{% static 'blog/js/bootstrap.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
         <div class="wrapper">
-            <div class="navbar navbar-default navbar-static-top">
+            <div class="navbar-wrapper navbar navbar-default navbar-static-top">
                 <div class="container">
                     <a href="{% url 'blog.views.blog' %}">
                         <div class="navbar-brand">
@@ -45,27 +46,31 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li>
                                 <a href="{% url 'blog.views.blog' %}">
-                                    <span class="glyphicon glyphicon-home"></span>
-                                    Blog
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-home"></span> Blog
+                                    </button>
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'dancers.views.index' %}">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                    About us
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-search"></span> About us
+                                    </button>
                                 </a>
                             </li>
                             <li>
                                 <a href="{% url 'events.views.event_brief' %}">
-                                    <span class="glyphicon glyphicon-calendar"></span>
-                                    Events
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-calendar"></span> Events
+                                    </button>
                                 </a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <span class="glyphicon glyphicon-film"></span>
-                                    Media
-                                    <b class="caret"></b>
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-film"></span> Media
+                                        <b class="caret"></b>
+                                    </button>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/photos">Pictures</a></li>
@@ -80,18 +85,24 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <span class="glyphicon glyphicon-usd"></span>
-                                    Support us!
+                                    <button type="button" class="btn btn-default">
+                                        <span class="glyphicon glyphicon-usd"></span>
+                                        Support us!
+                                    </button>
                                 </a>
                             </li>
                             <li class="facebook-icon">
                                 <a href="http://www.facebook.com/zibenitis">
-                                    <img src="/media/facebook.png" height="20px" alt=""/>
+                                    <button type="button" class="btn btn-default facebook-button">
+                                        <img src="/media/facebook.png" height="20px" alt=""/>
+                                    </button>
                                 </a>
                             </li>
                             <li class="youtube-icon">
                                 <a href="http://www.youtube.com">
-                                    <img src="/media/youtube.png" height="20px" alt=""/>
+                                    <button type="button" class="btn btn-default youtube-button">
+                                        <img src="/media/youtube.png" height="20px" alt=""/>
+                                    </button>
                                 </a>
                             </li>
                         </ul>
@@ -99,16 +110,13 @@
                 </div>
             </div>
 
+            {% block carousel %}
+            {% endblock %}
+            {% block pagecontents %}
+            {% endblock %}
+            {% block content %}
+            {% endblock %}
 
-
-            <div class="container">
-                {% block carousel %}
-                {% endblock %}
-                {% block pagecontents %}
-                {% endblock %}
-                {% block content %}
-                {% endblock %}
-            </div>
             <div class="push"></div>
         </div>
         <div class="nav navbar-default navbar-static-top footer">
