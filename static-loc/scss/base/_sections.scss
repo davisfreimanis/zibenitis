@@ -31,13 +31,19 @@ section {
       h1 {
         text-align: center;
       }
+      hr {
+        width: 90%;
+      }
       div.col-md-4 {
-        height: 200px;
+        height: 450px;
         margin-bottom: 15px;
-        padding: 10px;
-        background-color: white;
-        margin-left:15px;
-        width:31.6%;
+        padding-left: 15px;
+        padding-right: 15px;
+        div.cont {
+          background-color: #ffffff;
+          height: inherit;
+          padding: $text-padding;
+        }
       }
     }
   }
@@ -51,9 +57,14 @@ section.news {
   hr.news-title-underline {
     border-top: $underline-height solid $news-header-color;
   }
-  div {
-    h3 {
-      color: $news-text-color;
+  div.col-md-4 {
+    div.cont {
+      h3 {
+        color: $news-text-color;
+      }
+      button {
+        float: right;
+      }
     }
   }
 }
