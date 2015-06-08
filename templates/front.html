@@ -87,34 +87,26 @@
 
     <section class="events">
         <div class="container">
-            <!-- <div class="col-sm-3 col-sm-offset-1 side-bar"> -->
-            <div class="col-sm-4 side-bar">
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <a href="{% url 'events.views.event_brief' %}">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                            Future Events
-                        </a>
-                    </div>
-                    <ul class="list-group">
-
+            <h1 class="events-title">Pasākumi</h1>
+            <hr class="events-title-underline"/>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="cont">
                         {% if events %}
-                            {% for event in events %}
-                                <li class="list-group-item">
-                                    <a href="/events/{{ event.id }}">
-                                        <h2 class="event-title">{{ event.title }}</h2>
-                                    </a>
-                                    <p class="event-description">{{ event.description|truncatewords:10 }}</p>
-                                    <p class="event-date-location">{{ event.date }} @ {{ event.location }}</p>
-                                </li>
+                            {% for e in events %}
+                                <h3>{{ e.title }}</h3>
+                                <p>{{ e.description }}</p>
+                                <a href="../events/{{ e.id }}">
+                                    <button class="btn btn-default">Lasīt vēl</button>
+                                </a>
                             {% endfor %}
+                            <a href="{% url 'events' %}">
+                                <button class="btn btn-default">Skatīt vēl</button>
+                            </a>
                         {% else %}
-                            <li class="list-group-item">
-                                <p>No upcoming events.</p>
-                            </li>
-                        {% endif %}
 
-                    </ul>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,9 +6,12 @@ $news-header-color: #fff;
 $news-text-color: #666;
 
 $events-section-bg-color: #1ec2ff;
+$events-header-color: #fff;
+$events-text-color: #fff;
 
-$dancers-section-bg-color: white;
+$dancers-section-bg-color: #fff;
 $dancers-header-color: #1ec2ff;
+$dancers-text-color: #1ec2ff;
 
 $history-section-bg-color: #ffeb17;
 
@@ -35,7 +38,7 @@ section {
         width: 90%;
       }
       div.col-md-4 {
-        height: 450px;
+        height: 400px;
         margin-bottom: 15px;
         padding-left: 15px;
         padding-right: 15px;
@@ -71,15 +74,15 @@ section.news {
 
 section.events {
   background-color: $events-section-bg-color;
-  h1.dancers-title {
-    color: $dancers-header-color;
+  h1.events-title {
+    color: $events-header-color;
   }
-  hr.news-title-underline {
-    border-top: $underline-height solid $news-header-color;
+  hr.events-title-underline {
+    border-top: $underline-height solid $events-header-color;
   }
   div {
     h3 {
-      color: $news-text-color;
+      color: $events-text-color;
     }
   }
 }
