@@ -94,7 +94,7 @@ section.events {
       color: #fff; }
 
 section.dancers {
-  background-color: #4ca1af; }
+  background-color: #4cffff; }
   section.dancers h1.dancers-title {
     color: #fff; }
   section.dancers hr.dancers-title-underline {
@@ -102,7 +102,7 @@ section.dancers {
   section.dancers div {
     height: auto; }
     section.dancers div div.cont {
-      background-color: #4ca1af; }
+      background-color: #4cffff; }
       section.dancers div div.cont img {
         margin: auto; }
       section.dancers div div.cont h3 {
@@ -128,7 +128,7 @@ section.gallery {
     border-top: 3px solid #fff; }
 
 section {
-  background-color: #4ca1af; }
+  background-color: #4cffff; }
   section div.container div.row h1.dancers-title {
     text-align: center;
     color: #fff; }
