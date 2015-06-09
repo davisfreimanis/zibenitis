@@ -30,6 +30,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden; }
 
 section {
+  padding: 15px;
   padding-top: 50px;
   padding-bottom: 50px; }
   section div.container div.row h1 {
@@ -37,7 +38,6 @@ section {
   section div.container div.row hr {
     width: 80%; }
   section div.container div.row div.col-md-4 {
-    height: 400px;
     margin-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px; }
@@ -54,12 +54,14 @@ section.news {
     color: #fff; }
   section.news hr.news-title-underline {
     border-top: 3px solid #fff; }
-  section.news div.col-md-4 div.cont {
-    background-color: #fff; }
-    section.news div.col-md-4 div.cont h3 {
-      color: #666; }
-    section.news div.col-md-4 div.cont button {
-      float: right; }
+  section.news div.col-md-4 {
+    height: 400px; }
+    section.news div.col-md-4 div.cont {
+      background-color: #fff; }
+      section.news div.col-md-4 div.cont h3 {
+        color: #666; }
+      section.news div.col-md-4 div.cont button {
+        float: right; }
 
 section.events {
   background-color: #1ec2ff; }
@@ -94,12 +96,14 @@ section.dancers {
     color: #fff; }
   section.dancers hr.dancers-title-underline {
     border-top: 3px solid #fff; }
-  section.dancers div.col-md-4 div.cont {
-    background-color: #4ca1af; }
-    section.dancers div.col-md-4 div.cont img {
-      margin: auto; }
-    section.dancers div.col-md-4 div.cont h3 {
-      color: #fff; }
+  section.dancers div.col-md-4 {
+    height: auto; }
+    section.dancers div.col-md-4 div.cont {
+      background-color: #4ca1af; }
+      section.dancers div.col-md-4 div.cont img {
+        margin: auto; }
+      section.dancers div.col-md-4 div.cont h3 {
+        color: #fff; }
 
 section.history {
   background-color: #ffeb17; }
@@ -121,11 +125,20 @@ section.gallery {
     border-top: 3px solid #fff; }
 
 section {
+  background-color: #4ca1af; }
+  section div.container div.row h1.dancers-title {
+    text-align: center;
+    color: #fff; }
+  section div.container div.row hr.dancers-title-underline {
+    border-top: 3px solid #fff;
+    width: 80%; }
+
+section.contacts {
   background-color: white; }
-  section div.container div.row h1.contacts-title {
+  section.contacts div.container div.row h1.contacts-title {
     text-align: center;
     color: #1ec2ff; }
-  section div.container div.row hr.contacts-title-underline {
+  section.contacts div.container div.row hr.contacts-title-underline {
     border-top: 3px solid #1ec2ff;
     width: 80%; }
 

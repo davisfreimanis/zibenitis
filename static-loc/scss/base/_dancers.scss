@@ -1,0 +1,15 @@
+section {
+  background-color: $dancers-section-bg-color;
+  div.container {
+    div.row {
+      h1.dancers-title {
+        text-align: center;
+        color: $dancers-header-color;
+      }
+      hr.dancers-title-underline {
+        border-top: $underline-height solid $dancers-header-color;
+        width: $underline-width;
+      }
+    }
+  }
+}
