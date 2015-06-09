@@ -18,6 +18,9 @@ body {
   .navbar-wrapper .container div ul.nav li a button {
     color: #5ec6be; }
 
+div.footer div ul .navbar-text {
+  margin-left: 15px; }
+
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #5ec6be; }
 
@@ -111,5 +114,19 @@ section.history {
 
 section.gallery {
   background-color: #1ec2ff; }
+  section.gallery h1.gallery-title {
+    color: #fff; }
+  section.gallery hr.gallery-title-underline {
+    width: 80%;
+    border-top: 3px solid #fff; }
+
+section {
+  background-color: white; }
+  section div.container div.row h1.contacts-title {
+    text-align: center;
+    color: #1ec2ff; }
+  section div.container div.row hr.contacts-title-underline {
+    border-top: 3px solid #1ec2ff;
+    width: 80%; }
 
 /*# sourceMappingURL=style.css.map */
