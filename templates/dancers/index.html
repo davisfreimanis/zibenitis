@@ -62,41 +62,6 @@
                     </li>
                     </div>
 
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            Contact us
-                        </div>
-                        {% for cp in cpers %}
-                        <li class="list-group-item">
-                            <div style="width: 100%; display: table;">
-                                <div style="display: table-row">
-                                    <div style="width: 120px; display: table-cell;">
-                                        <p class="text-indent: 50px;"><img style="max-width:100px;max-height:100px;" src="../media/{{cp.person.picture}}" class="img-circle"></p>
-                                    </div>
-                                    <div style="display: table-cell; vertical-align: top;">
-                                        <h4>{{cp.role}}</h4>
-                                        <ul>
-                                            <li>Vards Uzvards: {{cp.person.first_name}} {{cp.person.last_name}}</li>
-                                            <li>E-pasts: {{cp.person.email_n}} at {{cp.person.email_d}}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </div>
-
-                </div>
-
-            {#    <div class="col-sm-4">#}
-            {#        <div class="panel panel-info">#}
-            {#            <div class="panel-heading">#}
-            {#                <br>#}
-            {#            </div>#}
-            {#            blabla#}
-            {#        </div>#}
-            {#    </div>#}
-
             </div>
         </div>
     </section>
