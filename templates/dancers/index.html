@@ -12,9 +12,6 @@
                 <h1 class="dancers-title">Dejotāji</h1>
                 <hr class="dancers-title-underline"/>
                 <div class="col-sm-12">
-            {#        <h1> Dancer list </h1> #}
-            {#        <br>  #}
-            {#        <div>  #}
 
                     <div class="panel panel-info">
                         <div class="panel-heading">
@@ -33,31 +30,35 @@
                         </div>
                     <li class="list-group-item">
                     <ul>
+                        <div class="row">
                         {% for person in persons %}
-                        <div class="modal fade" id="basicModal{{person.id}}" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
-                            <div class="modalfs">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h4 class="modal-title" id="myModalLabel">{{person.first_name}} {{person.last_name}}</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                       <p align="center"><img style="max-width:200px;max-height:200px;" src="../media/{{person.picture}}" class="img-circle"></p>
-                                       <br>
-                                       <p> Description of the person </p>
-                                       <p> Description of the person </p>
-                                       <p> Description of the person </p>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <div class="col-md-3">
+                                <div class="modal fade" id="basicModal{{person.id}}" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                                    <div class="modalfs">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title" id="myModalLabel">{{person.first_name}} {{person.last_name}}</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                               <p align="center"><img style="max-width:200px;max-height:200px;" src="../media/{{person.picture}}" class="img-circle"></p>
+                                               <br>
+                                               <p> Description of the person </p>
+                                               <p> Description of the person </p>
+                                               <p> Description of the person </p>
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="#" type="button" class="personbtn" data-toggle="modal" data-target="#basicModal{{person.id}}" title="{{person.first_name}} {{person.last_name}}">
+                                    <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-circle"></p>
+                                    <h4> {{person.first_name}} {{person.last_name}} </h4>
+                                </a>
                             </div>
-                        </div>
-                        <a href="#" type="button" class="personbtn" data-toggle="modal" data-target="#basicModal{{person.id}}" title="{{person.first_name}} {{person.last_name}}">
-                            <p><img style="max-width:100px;max-height:100px;" src="../media/{{person.picture}}" class="img-circle"></p>
-                            <h4> {{person.first_name}} {{person.last_name}} </h4>
-                        </a>
                         {% endfor %}
+                        </div>
                     </ul>
                     </li>
                     </div>
