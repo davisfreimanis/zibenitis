@@ -48,6 +48,16 @@ $button-text-color: $navigation-bg-color;
   }
 }
 
+div.footer {
+  div {
+    ul {
+      .navbar-text {
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
   background-color: $navigation-bg-color;
 }
