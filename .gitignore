@@ -10,3 +10,5 @@ media/dancers_pic/*
 #pycharm
 *.iml
 .idea/
+
+.sass-cache
