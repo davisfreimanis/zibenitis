@@ -99,13 +99,13 @@ section.dancers {
     color: #fff; }
   section.dancers hr.dancers-title-underline {
     border-top: 3px solid #fff; }
-  section.dancers div.col-md-4 {
+  section.dancers div {
     height: auto; }
-    section.dancers div.col-md-4 div.cont {
+    section.dancers div div.cont {
       background-color: #4ca1af; }
-      section.dancers div.col-md-4 div.cont img {
+      section.dancers div div.cont img {
         margin: auto; }
-      section.dancers div.col-md-4 div.cont h3 {
+      section.dancers div div.cont h3 {
         color: #fff; }
 
 section.history {
