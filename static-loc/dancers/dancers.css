@@ -1,8 +1,8 @@
 
 .persongrid {
     display:inline-block;
-    width:150px;
-    height:150px;
+    width:auto;
+    height:auto;
     box-shadow:0 0 5px 0 #ccc;
     margin-bottom:5px;
     text-align:center;
@@ -30,8 +30,8 @@
 /* Styling the "buttons" of each individual person */
 .personbtn {
   display: inline-block;
-  width:150px;
-  height:150px;
+  width:auto;
+  height:autog;
   margin-bottom: 5px;
   font-weight: normal;
   text-align: center;
