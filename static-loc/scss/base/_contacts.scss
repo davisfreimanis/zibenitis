@@ -1,0 +1,15 @@
+section.contacts {
+  background-color: $contacts-section-bg-color;
+  div.container {
+    div.row {
+      h1.contacts-title {
+        text-align: center;
+        color: $contacts-header-color;
+      }
+      hr.contacts-title-underline {
+        border-top: $underline-height solid $contacts-header-color;
+        width: $underline-width;
+      }
+    }
+  }
+}

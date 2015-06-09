@@ -5,6 +5,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 section {
+  padding: $text-padding;
   padding-top: 50px;
   padding-bottom: 50px;
   div.container {
@@ -16,7 +17,6 @@ section {
         width: $underline-width;
       }
       div.col-md-4 {
-        height: 400px;
         margin-bottom: 15px;
         padding-left: 15px;
         padding-right: 15px;
@@ -42,6 +42,7 @@ section.news {
     border-top: $underline-height solid $news-header-color;
   }
   div.col-md-4 {
+    height: 400px;
     div.cont {
       background-color: $news-article-bg-color;
       h3 {
@@ -101,6 +102,7 @@ section.dancers {
     border-top: $underline-height solid $dancers-header-color;
   }
   div.col-md-4 {
+    height: auto;
     div.cont {
       background-color: $dancers-section-bg-color;
       img {
