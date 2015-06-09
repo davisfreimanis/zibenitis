@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 def front_page(request):
     slides = Carousel.objects.order_by('title')[:3]
-    random_dancers = Person.objects.order_by('?')[:4g]
+    random_dancers = Person.objects.order_by('?')[:4]
     now = datetime.today() - timedelta(hours=12)  # 12 hours
     upcoming_events = Event.objects.filter(date__gte=now).order_by('date')[:3]  # posts that are upcoming
     recent_news = Post.objects.order_by('-created')[:3]
