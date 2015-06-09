@@ -18,6 +18,9 @@ body {
   .navbar-wrapper .container div ul.nav li a button {
     color: #5ec6be; }
 
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #5ec6be; }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -108,8 +111,5 @@ section.history {
 
 section.gallery {
   background-color: #1ec2ff; }
-
-section.contact {
-  background-color: white; }
 
 /*# sourceMappingURL=style.css.map */
