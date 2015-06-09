@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from dancers.models import Person
+from dancers.models import Person, Contact_person
 from events.models import Event
 from blog.models import Post
 from blog.models import Carousel
@@ -18,5 +18,5 @@ def front_page(request):
 
 
 def contact_persons(request):
-    administration = Person.objects.order_by('last_name')
+    administration = Contact_person.objects.all()
     return render(request, 'contact.html', {'administration': administration})
