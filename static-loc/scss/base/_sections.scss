@@ -21,8 +21,6 @@ $history-text-bg-color: #fff;
 
 $gallery-section-bg-color: #1ec2ff;
 
-$contact-section-bg-color: white;
-
 
 p, h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
@@ -157,8 +155,4 @@ section.history {
 
 section.gallery {
   background-color: $gallery-section-bg-color;
-}
-
-section.contact {
-  background-color: $contact-section-bg-color;
 }

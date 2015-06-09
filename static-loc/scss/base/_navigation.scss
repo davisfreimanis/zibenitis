@@ -47,3 +47,7 @@ $button-text-color: $navigation-bg-color;
     }
   }
 }
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: $navigation-bg-color;
+}
