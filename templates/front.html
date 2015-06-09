@@ -60,7 +60,11 @@
                         </div>
                     </div>
                 {% endfor %}
-                <button class="btn btn-default"><a href="{% url 'blog' %}">Skatīt vēl</a></button>
+            </div>
+            <div class="row">
+                <a href="{% url 'blog' %}">
+                    <button class="btn btn-default see-more">Skatīt vēl</button>
+                </a>
             </div>
         </div>
     </section>
@@ -68,7 +72,9 @@
     <section class="dancers">
         <div class="container">
             <div class="row">
-                <h1 class="dancers-title">Dejotāji</h1>
+                <a href="{% url 'dancers' %}">
+                    <h1 class="dancers-title">Dejotāji</h1>
+                </a>
                 <hr class="dancers-title-underline"/>
                 {% for d in dancers %}
                     <div class="col-md-4">
@@ -78,8 +84,10 @@
                         </div>
                     </div>
                 {% endfor %}
+            </div>
+            <div class="row">
                 <a href="{% url 'dancers' %}">
-                    <button class="btn btn-default">Skatīt vēl</button>
+                    <button class="btn btn-default see-more">Skatīt vēl</button>
                 </a>
             </div>
         </div>
@@ -87,40 +95,83 @@
 
     <section class="events">
         <div class="container">
-            <h1 class="events-title">Pasākumi</h1>
-            <hr class="events-title-underline"/>
             <div class="row">
-                <div class="col-sm-4">
-                    <div class="cont">
-                        {% if events %}
-                            {% for e in events %}
+                <a href="{% url 'events' %}">
+                    <h1 class="events-title">Pasākumi</h1>
+                </a>
+                <hr class="events-title-underline"/>
+
+                {% if events %}
+                    {% for e in events %}
+                        <div class="col-md-4">
+                            <div class="cont">
                                 <h3>{{ e.title }}</h3>
+                                <div class="event-map">
+                                    <iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{ e.location }}&key=AIzaSyAEQihBKM3PNtdf6Nbpm9FlW3ksbt1IY9M"></iframe>
+                                </div>
                                 <p>{{ e.description }}</p>
                                 <a href="../events/{{ e.id }}">
                                     <button class="btn btn-default">Lasīt vēl</button>
                                 </a>
-                            {% endfor %}
-                            <a href="{% url 'events' %}">
-                                <button class="btn btn-default">Skatīt vēl</button>
-                            </a>
-                        {% else %}
+                            </div>
+                        </div>
+                    {% endfor %}
 
-                        {% endif %}
-                    </div>
-                </div>
+                {% else %}
+
+                {% endif %}
+
+            </div>
+            <div class="row">
+                {% if events %}
+                    <a href="{% url 'events' %}">
+                        <button class="btn btn-default see-more">Skatīt vēl</button>
+                    </a>
+                {% else %}
+                    <h2 class="no-events">Nav pasaakumi</h2>
+                {% endif %}
             </div>
         </div>
     </section>
 
     <section class="history">
         <div class="container">
-
+            <div class="row">
+                <h1 class="history-title">Par mums</h1>
+                <hr class="history-title-underline"/>
+                <div class="col-md-12">
+                    {% for h in history %}
+                        <p>{{h.content|markdown}}</p>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </section>
 
     <section class="gallery">
         <div class="container">
-
+            <div class="row">
+                <h1 class="gallery-title">
+                    Galerija
+                </h1>
+                <hr class="gallery-title-underline"/>
+                {% if object_list %}
+                    {% for gallery in object_list %}
+                        <div class="row col-lg-12">
+                            <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
+                            <p class="muted"><small>{{ gallery.date_added }}</small></p>
+                            {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
+                            {% for photo in gallery.sample %}
+                                <a href="{{ photo.get_absolute_url }}">
+                                     <img src="{{ photo.get_thumbnail_url }}" class="thumbnail" alt="{{ photo.title }}">
+                                </a>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="row col-lg-12">Empty</div>
+                {% endif %}
+            </div>
         </div>
     </section>
 

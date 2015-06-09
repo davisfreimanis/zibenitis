@@ -3,12 +3,10 @@
 */
 body {
   background-color: #edeff0;
-  color: #222;
-  font-size: 200%;
-  line-height: 150%; }
+  color: #222; }
 
 .navbar-wrapper {
-  background-color: #6CBFFF;
+  background-color: #5ec6be;
   height: 64px;
   margin-bottom: 0;
   border: 0; }
@@ -18,7 +16,7 @@ body {
     height: 64px;
     line-height: inherit; }
   .navbar-wrapper .container div ul.nav li a button {
-    color: #6CBFFF; }
+    color: #5ec6be; }
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
@@ -31,27 +29,31 @@ section {
   section div.container div.row h1 {
     text-align: center; }
   section div.container div.row hr {
-    width: 90%; }
+    width: 80%; }
   section div.container div.row div.col-md-4 {
     height: 400px;
     margin-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px; }
     section div.container div.row div.col-md-4 div.cont {
-      background-color: #ffffff;
       height: inherit;
       padding: 15px; }
+  section div.container div.row button.see-more {
+    margin: auto;
+    display: block; }
 
 section.news {
-  background-color: #ffeb17; }
+  background-color: #ffe118; }
   section.news h1.news-title {
     color: #fff; }
   section.news hr.news-title-underline {
     border-top: 3px solid #fff; }
-  section.news div.col-md-4 div.cont h3 {
-    color: #666; }
-  section.news div.col-md-4 div.cont button {
-    float: right; }
+  section.news div.col-md-4 div.cont {
+    background-color: #fff; }
+    section.news div.col-md-4 div.cont h3 {
+      color: #666; }
+    section.news div.col-md-4 div.cont button {
+      float: right; }
 
 section.events {
   background-color: #1ec2ff; }
@@ -59,14 +61,50 @@ section.events {
     color: #fff; }
   section.events hr.events-title-underline {
     border-top: 3px solid #fff; }
-  section.events div h3 {
-    color: #fff; }
+  section.events div div.cont {
+    background-color: white; }
+    section.events div div.cont h3 {
+      color: black; }
+    section.events div div.cont .event-map {
+      position: relative;
+      padding-bottom: 50%;
+      height: 0;
+      overflow: hidden; }
+    section.events div div.cont .event-map iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    section.events div div.cont p {
+      color: black; }
+    section.events div div.cont h2.no-events {
+      text-align: center;
+      color: #fff; }
 
 section.dancers {
-  background-color: #fff; }
+  background-color: #4ca1af; }
+  section.dancers h1.dancers-title {
+    color: #fff; }
+  section.dancers hr.dancers-title-underline {
+    border-top: 3px solid #fff; }
+  section.dancers div.col-md-4 div.cont {
+    background-color: #4ca1af; }
+    section.dancers div.col-md-4 div.cont img {
+      margin: auto; }
+    section.dancers div.col-md-4 div.cont h3 {
+      color: #fff; }
 
 section.history {
   background-color: #ffeb17; }
+  section.history h1.history-title {
+    color: #fff; }
+  section.history hr.history-title-underline {
+    border-top: 3px solid #fff; }
+  section.history div.col-md-12 {
+    background-color: #fff; }
+    section.history div.col-md-12 p {
+      color: #000; }
 
 section.gallery {
   background-color: #1ec2ff; }
