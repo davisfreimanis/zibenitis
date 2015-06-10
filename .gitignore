@@ -12,3 +12,7 @@ media/dancers_pic/*
 .idea/
 
 .sass-cache
+
+static-loc/style.css 
+static-loc/style.css.map
+
