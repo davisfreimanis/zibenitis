@@ -37,21 +37,25 @@ nav.navbar {
     color: white;
     padding-top: 5px; }
   nav.navbar ul li a {
-    color: white; }
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px; }
+    nav.navbar ul li a span.youtube-nav.facebook-nav {
+      margin-left: 15px; }
   nav.navbar ul li a:hover {
     background-color: #3fb2a9; }
   nav.navbar ul li.blog-active {
-    background-color: #ffe118; }
+    background-color: #6baf4f; }
     nav.navbar ul li.blog-active a {
-      background-color: #ffe118; }
+      background-color: #6baf4f; }
     nav.navbar ul li.blog-active a:hover {
-      background-color: #e4c600; }
+      background-color: #568c3f; }
   nav.navbar ul li.about-active {
-    background-color: #ffeb17; }
+    background-color: #fff55d; }
     nav.navbar ul li.about-active a {
-      background-color: #ffeb17; }
+      background-color: #fff55d; }
     nav.navbar ul li.about-active a:hover {
-      background-color: #e3cf00; }
+      background-color: #fff22a; }
   nav.navbar ul li.event-active {
     background-color: #ff6f6b; }
     nav.navbar ul li.event-active a {
@@ -84,6 +88,17 @@ p, h1, h2, h3, h4, h5, h6 {
   text-overflow: ellipsis;
   overflow: hidden; }
 
+#myCarousel {
+  width: 100%; }
+
+.carousel-inner .item {
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
 section {
   padding: 15px;
   padding-top: 50px;
@@ -108,19 +123,8 @@ section {
     -moz-border-radius: 50px;
     border-radius: 50px; }
 
-#myCarousel {
-  width: 100%; }
-
-.carousel-inner .item {
-  width: 100%;
-  height: 400px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
 section.news {
-  background-color: #ffe118; }
+  background-color: #6baf4f; }
   section.news h1.news-title {
     color: #fff; }
   section.news hr.news-title-underline {
@@ -162,29 +166,29 @@ section.events {
       color: #fff; }
 
 section.dancers {
-  background-color: #1ec2ff; }
+  background-color: #63e9ff; }
   section.dancers h1.dancers-title {
-    color: #ffe118; }
+    color: #fff55d; }
   section.dancers hr.dancers-title-underline {
-    border-top: 3px solid #ffe118; }
+    border-top: 3px solid #fff55d; }
   section.dancers div {
     height: auto; }
     section.dancers div div.cont {
       padding: 15px;
-      background-color: #1ec2ff; }
+      background-color: #63e9ff; }
       section.dancers div div.cont img {
         margin: auto;
         display: block; }
       section.dancers div div.cont h3.dancer-name {
         text-align: center;
-        color: #ffe118; }
+        color: #fff55d; }
 
 section.history {
-  background-color: #ffeb17; }
+  background-color: #fff55d; }
   section.history h1.history-title {
-    color: #1ec2ff; }
+    color: #fff; }
   section.history hr.history-title-underline {
-    border-top: 3px solid #1ec2ff; }
+    border-top: 3px solid #fff; }
   section.history div.col-md-12 div.cont {
     background-color: #fff; }
     section.history div.col-md-12 div.cont p {
@@ -199,12 +203,12 @@ section.gallery {
     border-top: 3px solid #fff; }
 
 section {
-  background-color: #1ec2ff; }
+  background-color: #63e9ff; }
   section div.container div.row h1.dancers-title {
     text-align: center;
-    color: #ffe118; }
+    color: #fff55d; }
   section div.container div.row hr.dancers-title-underline {
-    border-top: 3px solid #ffe118;
+    border-top: 3px solid #fff55d;
     width: 80%; }
 
 section.contacts {
