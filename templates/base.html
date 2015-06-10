@@ -72,21 +72,17 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown {% if social_active %}class='social-acitve'{% endif %}">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false">Mēdiji <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="http://www.facebook.com/zibenitis">Facebook</a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA">Youtube</a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li  {% if contact_active %}class="contact-active"{% endif %}>
-                                <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakts</a>
+                                <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakti</a>
                             </li>
+                            <li>
+                                <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="20px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg">Facebook</span></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><img src="/media/youtube.png" height="20px"
+                                                                                                        alt=""/><span class="youtube-nav hidden-sm hidden-md hidden-lg">Youtube</span></a>
+                            </li>
+                            
                         </ul>
 
 
