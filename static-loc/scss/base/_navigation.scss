@@ -24,6 +24,11 @@ nav.navbar {
     li {
       a {
         color: $logo-color;
+        padding-left: 10px;
+        padding-right: 10px;
+        span.youtube-nav.facebook-nav {
+          margin-left: 15px;
+        }
       }
       a:hover {
         background-color: darken($navigation-bg-color, $link-hover-darken);
