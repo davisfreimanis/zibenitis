@@ -22,11 +22,14 @@ nav.navbar {
   }
   ul {
     height: 50px;
-    li {
+    li.navigation {
+      height: 50px;
+      background-color: $navigation-bg-color;
       a {
         color: $logo-color;
         padding-left: 10px;
         padding-right: 10px;
+        background-color: $navigation-bg-color;
         span.youtube-nav.facebook-nav {
           margin-left: 15px;
         }
@@ -78,8 +81,11 @@ nav.navbar {
       a:hover {
         background-color: darken($contacts-section-bg-color, $link-hover-darken);
       }
-      a:active {
-        background-color: darken($contacts-section-bg-color, $link-hover-darken);
+    }
+    li {
+      ul.dropdown-menu {
+        background-color: $navigation-bg-color;
+        border: none;
       }
     }
   }

@@ -54,14 +54,18 @@ nav.navbar {
     padding-top: 5px; }
   nav.navbar ul {
     height: 50px; }
-    nav.navbar ul li a {
-      color: white;
-      padding-left: 10px;
-      padding-right: 10px; }
-      nav.navbar ul li a span.youtube-nav.facebook-nav {
-        margin-left: 15px; }
-    nav.navbar ul li a:hover {
-      background-color: #3fb2a9; }
+    nav.navbar ul li.navigation {
+      height: 50px;
+      background-color: #5ec6be; }
+      nav.navbar ul li.navigation a {
+        color: white;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: #5ec6be; }
+        nav.navbar ul li.navigation a span.youtube-nav.facebook-nav {
+          margin-left: 15px; }
+      nav.navbar ul li.navigation a:hover {
+        background-color: #3fb2a9; }
     nav.navbar ul li.blog-active {
       background-color: #6baf4f; }
       nav.navbar ul li.blog-active a {
@@ -87,8 +91,9 @@ nav.navbar {
         background-color: white; }
       nav.navbar ul li.contact-active a:hover {
         background-color: #e6e6e6; }
-      nav.navbar ul li.contact-active a:active {
-        background-color: #e6e6e6; }
+    nav.navbar ul li ul.dropdown-menu {
+      background-color: #5ec6be;
+      border: none; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #5ec6be; }
