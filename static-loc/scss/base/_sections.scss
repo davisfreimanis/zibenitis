@@ -124,13 +124,15 @@ section.dancers {
   div {
     height: auto;
     div.cont {
+      padding: 15px;
       background-color: $dancers-section-bg-color;
       img {
         margin: auto;
+        display: block;
       }
       h3.dancer-name {
         text-align: center;
-        color: #000000;
+        color: $dancers-header-color;
       }
     }
   }
