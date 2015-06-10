@@ -5,27 +5,72 @@ body {
   background-color: #edeff0;
   color: #222; }
 
+h1 {
+  -webkit-text-stroke: 1px #999;
+  font-size: 350%; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
 p, h1, h2, h3, h4, h5, h6 {
-  font-family: "Comic Sans MS", sans-serif; }
+  font-family: "Josefin Sans", sans-serif; }
+
+nav.navbar {
+  background-color: #5ec6be;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0; }
+  nav.navbar button.navbar-toggle {
+    border-color: white; }
+    nav.navbar button.navbar-toggle span.icon-bar {
+      background-color: white; }
+  nav.navbar a.navbar-brand {
+    color: white; }
 
 .navbar-wrapper {
   background-color: #5ec6be;
-  height: 64px;
+  height: auto;
   margin-bottom: 0;
   border: 0; }
-  .navbar-wrapper .container a .navbar-brand {
+  .navbar-wrapper .container-fluid a .navbar-brand {
     font-size: 150%;
     color: white;
-    height: 64px;
+    height: auto;
     line-height: inherit; }
-  .navbar-wrapper .container div ul.nav li a button {
-    color: #5ec6be; }
+  .navbar-wrapper .container-fluid button.navbar-toggle {
+    border-color: white; }
+    .navbar-wrapper .container-fluid button.navbar-toggle span.icon-bar {
+      background-color: #fff; }
 
 div.footer div ul .navbar-text {
   margin-left: 15px; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #5ec6be; }
+
+li.blog_active {
+  background-color: #ffe118; }
+
+li.about_active {
+  background-color: #ffeb17; }
+
+li.event_active {
+  background-color: #1ec2ff; }
+
+li.media_active {
+  background-color: #1ec2ff; }
+
+li.contact_active {
+  background-color: white; }
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
@@ -49,7 +94,12 @@ section {
       padding: 15px; }
   section div.container div.row button.see-more {
     margin: auto;
-    display: block; }
+    margin-top: 30px;
+    display: block;
+    padding: 15px 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px; }
 
 section.news {
   background-color: #ffe118; }
@@ -105,7 +155,8 @@ section.dancers {
       background-color: #4cffff; }
       section.dancers div div.cont img {
         margin: auto; }
-      section.dancers div div.cont h3 {
+      section.dancers div div.cont h3.dancer-name {
+        text-align: center;
         color: #fff; }
 
 section.history {
@@ -114,9 +165,9 @@ section.history {
     color: #fff; }
   section.history hr.history-title-underline {
     border-top: 3px solid #fff; }
-  section.history div.col-md-12 {
+  section.history div.col-md-12 div.cont {
     background-color: #fff; }
-    section.history div.col-md-12 p {
+    section.history div.col-md-12 div.cont p {
       color: #000; }
 
 section.gallery {

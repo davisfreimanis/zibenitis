@@ -14,6 +14,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'dancers/dancers.css' %}" />
 {#        <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />#}
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+        <script src="{% static 'bootstrap/js/navigation.js' %}"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -29,8 +31,72 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
         <div class="wrapper">
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="{% url 'home' %}">Zibenītis</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li {% if blog_active %}class="blog_active"{% endif %}>
+                                <a href="{% url 'blog.views.blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li {% if about_active %}class="about_active"{% endif %}>
+                                <a href="{% url 'dancers.views.index' %}">Par mums</a>
+                            </li>
+                            <li {% if event_active %}class="event_active"{% endif %}>
+                                <a href="{% url 'events' %}">Pasākumi</a>
+                            </li>
+                            <li class="dropdown {% if media_active %}class='media_active'{% endif %}">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false">Galerija <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="/photos">Bildes</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Video</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown {% if social_active %}class='social_acitve'{% endif %}">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                   aria-expanded="false">Mēdiji <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="http://www.facebook.com/zibenitis">Facebook</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA">Youtube</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li  {% if contact_active %}class="contact_active"{% endif %}>
+                                <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakts</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+
+        <!--
             <div class="navbar-wrapper navbar navbar-default navbar-static-top">
-                <div class="container">
+                <div class="container-fluid">
                     <a href="{% url 'home' %}">
                         <div class="navbar-brand">
                             <img src="/media/laimes.png" alt="logo" height="100%" width="auto" style="float: left; margin-right: 5px"/>
@@ -102,7 +168,7 @@
                     </div>
                 </div>
             </div>
-
+-->
             {% block carousel %}
             {% endblock %}
             {% block pagecontents %}
