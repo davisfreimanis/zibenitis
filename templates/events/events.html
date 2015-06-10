@@ -2,8 +2,7 @@
 {% load django_markdown %}
 
 {% block title %}TDK Zibenitis{% endblock %}
-{% block pagetitle %}Events{% endblock %}
-{% block pagesubtitle %}Upcoming events{% endblock %}}
+{% block pagetitle %}Pasākumi{% endblock %}
 
 {% block pagecontents %}
     <section class="events">
@@ -13,24 +12,24 @@
                 <hr class="events-title-underline"/>
                 <div class="col-md-8">
                     <div class="well upcoming-events">
-                        <h1>Upcoming</h1>
+                        <h1>Nākami pasākumi</h1>
                         <ul>
                             {% for event in events %}
                                 <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
                             {% empty %}
-                                <li>No upcoming events.</li>
+                                <li>Nav plānoti pasākumi</li>
                             {% endfor %}
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="well passed-events">
-                        <h1>Passed</h1>
+                        <h1>Bijušie pasākumi</h1>
                         <ul>
                             {% for event in passed_events %}
                                 <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
                             {% empty %}
-                                <li>No passed events.</li>
+                                <li>Nav bijuši pasākumi</li>
                             {% endfor %}
                         </ul>
                     </div>

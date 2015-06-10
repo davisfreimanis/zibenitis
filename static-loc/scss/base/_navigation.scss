@@ -21,6 +21,7 @@ nav.navbar {
     padding-top: 5px;
   }
   ul {
+    height: 50px;
     li {
       a {
         color: $logo-color;
@@ -75,6 +76,9 @@ nav.navbar {
         background-color: $contacts-section-bg-color;
       }
       a:hover {
+        background-color: darken($contacts-section-bg-color, $link-hover-darken);
+      }
+      a:active {
         background-color: darken($contacts-section-bg-color, $link-hover-darken);
       }
     }
