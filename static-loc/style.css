@@ -52,48 +52,46 @@ nav.navbar {
   nav.navbar a.navbar-brand {
     color: white;
     padding-top: 5px; }
-  nav.navbar ul {
-    height: 50px; }
-    nav.navbar ul li.navigation {
-      height: 50px;
+  nav.navbar ul li.navigation {
+    height: 50px;
+    background-color: #5ec6be; }
+    nav.navbar ul li.navigation a {
+      color: white;
+      padding-left: 10px;
+      padding-right: 10px;
       background-color: #5ec6be; }
-      nav.navbar ul li.navigation a {
-        color: white;
-        padding-left: 10px;
-        padding-right: 10px;
-        background-color: #5ec6be; }
-        nav.navbar ul li.navigation a span.youtube-nav.facebook-nav {
-          margin-left: 15px; }
-      nav.navbar ul li.navigation a:hover {
-        background-color: #3fb2a9; }
-    nav.navbar ul li.blog-active {
+      nav.navbar ul li.navigation a span.youtube-nav.facebook-nav {
+        margin-left: 15px; }
+    nav.navbar ul li.navigation a:hover {
+      background-color: #3fb2a9; }
+  nav.navbar ul li.blog-active {
+    background-color: #6baf4f; }
+    nav.navbar ul li.blog-active a {
       background-color: #6baf4f; }
-      nav.navbar ul li.blog-active a {
-        background-color: #6baf4f; }
-      nav.navbar ul li.blog-active a:hover {
-        background-color: #568c3f; }
-    nav.navbar ul li.about-active {
+    nav.navbar ul li.blog-active a:hover {
+      background-color: #568c3f; }
+  nav.navbar ul li.about-active {
+    background-color: #fff55d; }
+    nav.navbar ul li.about-active a {
       background-color: #fff55d; }
-      nav.navbar ul li.about-active a {
-        background-color: #fff55d; }
-      nav.navbar ul li.about-active a:hover {
-        background-color: #fff22a; }
-    nav.navbar ul li.event-active {
+    nav.navbar ul li.about-active a:hover {
+      background-color: #fff22a; }
+  nav.navbar ul li.event-active {
+    background-color: #ff6f6b; }
+    nav.navbar ul li.event-active a {
       background-color: #ff6f6b; }
-      nav.navbar ul li.event-active a {
-        background-color: #ff6f6b; }
-      nav.navbar ul li.event-active a:hover {
-        background-color: #ff3d38; }
-    nav.navbar ul li.contact-active {
+    nav.navbar ul li.event-active a:hover {
+      background-color: #ff3d38; }
+  nav.navbar ul li.contact-active {
+    background-color: white; }
+    nav.navbar ul li.contact-active a {
+      color: #1ec2ff;
       background-color: white; }
-      nav.navbar ul li.contact-active a {
-        color: #1ec2ff;
-        background-color: white; }
-      nav.navbar ul li.contact-active a:hover {
-        background-color: #e6e6e6; }
-    nav.navbar ul li ul.dropdown-menu {
-      background-color: #5ec6be;
-      border: none; }
+    nav.navbar ul li.contact-active a:hover {
+      background-color: #e6e6e6; }
+  nav.navbar ul li ul.dropdown-menu {
+    background-color: #5ec6be;
+    border: none; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #5ec6be; }
