@@ -33,7 +33,7 @@
         <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
         <div class="wrapper">
 
-            <nav class="navbar navbar-default">
+            <nav class="navbar">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -50,16 +50,16 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li {% if blog_active %}class="blog_active"{% endif %}>
+                            <li {% if blog_active %}class="blog-active"{% endif %}>
                                 <a href="{% url 'blog.views.blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
                             </li>
-                            <li {% if about_active %}class="about_active"{% endif %}>
+                            <li {% if about_active %}class="about-active"{% endif %}>
                                 <a href="{% url 'dancers.views.index' %}">Par mums</a>
                             </li>
-                            <li {% if event_active %}class="event_active"{% endif %}>
+                            <li {% if event_active %}class="event-active"{% endif %}>
                                 <a href="{% url 'events' %}">Pasākumi</a>
                             </li>
-                            <li class="dropdown {% if media_active %}class='media_active'{% endif %}">
+                            <li class="dropdown {% if media_active %}class='media-active'{% endif %}">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false">Galerija <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -71,7 +71,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="dropdown {% if social_active %}class='social_acitve'{% endif %}">
+                            <li class="dropdown {% if social_active %}class='social-acitve'{% endif %}">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false">Mēdiji <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -83,7 +83,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li  {% if contact_active %}class="contact_active"{% endif %}>
+                            <li  {% if contact_active %}class="contact-active"{% endif %}>
                                 <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakts</a>
                             </li>
                         </ul>
@@ -183,7 +183,7 @@
             <div class="container">
                 <ul class="nav navbar-nav navbar-right">
                     <li><p class="navbar-text footer-copyright">© Zibenitis 2015</p></li>
-                    <li><a href="/admin/"><span class="glyphicon glyphicon-cog"></span> Admin</a></li>
+                    <li><p class="navbar-text"><a href="/admin/"><span class="glyphicon glyphicon-cog"></span>Admin</a></p></li>
                 </ul>
             </div>
         </div>

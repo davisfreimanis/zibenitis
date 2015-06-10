@@ -136,7 +136,9 @@
     <section class="history">
         <div class="container">
             <div class="row">
-                <h1 class="history-title">Par mums</h1>
+                <a href="{% url 'dancers' %}">
+                    <h1 class="history-title">Par mums</h1>
+                </a>
                 <hr class="history-title-underline"/>
                 <div class="col-md-12">
                     {% for h in history %}
@@ -149,6 +151,7 @@
         </div>
     </section>
 
+    <!--
     <section class="gallery">
         <div class="container">
             <div class="row">
@@ -175,6 +178,6 @@
             </div>
         </div>
     </section>
-
+    -->
 
 {% endblock %}
