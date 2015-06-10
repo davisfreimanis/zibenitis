@@ -12,12 +12,12 @@
         {% for slide in slides %}
             <!-- First slide must be active -->
             {% if forloop.first %}
-                <div style="background: url(/media/{{ slide.image }}) no-repeat center center fixed; background-size: cover;-webkit-background-size: cover;
+                <div style="background: url(/media/{{ slide.image }}) no-repeat center center; background-size: cover;-webkit-background-size: cover;
                         -moz-background-size: cover;
                         -o-background-size: cover;"
                      class="item active">
             {% else %}
-                <div style="background: url(/media/{{ slide.image }}) no-repeat center center fixed; background-size: cover;-webkit-background-size: cover;
+                <div style="background: url(/media/{{ slide.image }}) no-repeat center center; background-size: cover;-webkit-background-size: cover;
                         -moz-background-size: cover;
                         -o-background-size: cover;" class="item">
             {% endif %}
