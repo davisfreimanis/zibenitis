@@ -5,42 +5,33 @@
 
 {% block carousel %}
 
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" style="max-height: 400px" role="listbox">
-        {% for slide in slides %}
-            <!-- First slide must be active -->
-            {% if forloop.first %}
-                <div class="item active">
-            {% else %}
-                <div class="item">
-            {% endif %}
-                <img class="img-responsive" src="/media/{{ slide.image }}" alt="{{ slide.description }}">
-                <div class="carousel-caption">
-                    <h3>{{ slide.title }}</h3>
-                    <h6>{{ slide.description }}</h6>
-                </div>
-            </div>
-        {% endfor %}
+<div id="myCarousel" class="carousel slide">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+     <div class="item active ad1">
+        <div class="carousel-caption">
+           <h4>First Thumbnail label</h4>
+           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
+     </div>
+     <div class="item ad2">
+        <div class="carousel-caption">
+            <h4>Second Thumbnail label</h4>
+            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+         </div>
+     </div>
+     <div class="item ad3">
+        <div class="carousel-caption">
+           <h4>Third Thumbnail label</h4>
+           <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        </div>
     </div>
-
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+
 {% endblock %}
 
 {% block pagecontents %}
