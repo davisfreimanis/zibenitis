@@ -65,7 +65,7 @@ li.about_active {
   background-color: #ffeb17; }
 
 li.event_active {
-  background-color: #1ec2ff; }
+  background-color: #ff6f6b; }
 
 li.media_active {
   background-color: #1ec2ff; }
@@ -129,7 +129,7 @@ section.news {
         float: right; }
 
 section.events {
-  background-color: #1ec2ff; }
+  background-color: #ff6f6b; }
   section.events h1.events-title {
     color: #fff; }
   section.events hr.events-title-underline {
@@ -156,27 +156,29 @@ section.events {
       color: #fff; }
 
 section.dancers {
-  background-color: #4cffff; }
+  background-color: #1ec2ff; }
   section.dancers h1.dancers-title {
-    color: #fff; }
+    color: #ffe118; }
   section.dancers hr.dancers-title-underline {
-    border-top: 3px solid #fff; }
+    border-top: 3px solid #ffe118; }
   section.dancers div {
     height: auto; }
     section.dancers div div.cont {
-      background-color: #4cffff; }
+      padding: 15px;
+      background-color: #1ec2ff; }
       section.dancers div div.cont img {
-        margin: auto; }
+        margin: auto;
+        display: block; }
       section.dancers div div.cont h3.dancer-name {
         text-align: center;
-        color: #000000; }
+        color: #ffe118; }
 
 section.history {
   background-color: #ffeb17; }
   section.history h1.history-title {
-    color: #fff; }
+    color: #1ec2ff; }
   section.history hr.history-title-underline {
-    border-top: 3px solid #fff; }
+    border-top: 3px solid #1ec2ff; }
   section.history div.col-md-12 div.cont {
     background-color: #fff; }
     section.history div.col-md-12 div.cont p {
@@ -191,12 +193,12 @@ section.gallery {
     border-top: 3px solid #fff; }
 
 section {
-  background-color: #4cffff; }
+  background-color: #1ec2ff; }
   section div.container div.row h1.dancers-title {
     text-align: center;
-    color: #fff; }
+    color: #ffe118; }
   section div.container div.row hr.dancers-title-underline {
-    border-top: 3px solid #fff;
+    border-top: 3px solid #ffe118;
     width: 80%; }
 
 section.contacts {
