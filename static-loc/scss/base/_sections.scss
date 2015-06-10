@@ -38,6 +38,34 @@ section {
   }
 }
 
+
+
+#myCarousel {
+    width: 100%;
+}
+.carousel-control {
+    margin-top: 20px;
+}
+.carousel-inner .item {
+    width: 100%;
+    height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.ad1 {
+    background: url(/media/carousel/zib4.jpg) no-repeat center center fixed;
+}
+.ad2 {
+    background: url(/media/carousel/zib5.jpg) no-repeat center center fixed;
+}
+.ad3 {
+    background: url(/media/carousel/zib6.jpg) no-repeat center center fixed;
+}
+
+
+
 section.news {
   background-color: $news-section-bg-color;
   h1.news-title {
