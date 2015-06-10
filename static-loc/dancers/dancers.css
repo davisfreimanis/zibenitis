@@ -37,7 +37,7 @@
   text-align: center;
   vertical-align: top;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;

@@ -6,6 +6,8 @@ from blog.models import Carousel
 from dancers.models import History
 from datetime import datetime, timedelta
 
+active = True
+
 
 def front_page(request):
     slides = Carousel.objects.order_by('title')[:3]
@@ -19,4 +21,4 @@ def front_page(request):
 
 def contact_persons(request):
     administration = Contact_person.objects.all()
-    return render(request, 'contact.html', {'administration': administration})
+    return render(request, 'contact.html', {'administration': administration, 'contact_active': active})

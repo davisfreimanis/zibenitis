@@ -27,7 +27,12 @@ section {
       }
       button.see-more {
         margin: auto;
+        margin-top: 30px;
         display: block;
+        padding: 15px 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
       }
     }
   }
@@ -108,7 +113,8 @@ section.dancers {
       img {
         margin: auto;
       }
-      h3 {
+      h3.dancer-name {
+        text-align: center;
         color: $dancers-text-color;
       }
     }
@@ -124,9 +130,11 @@ section.history {
     border-top: $underline-height solid $history-header-color;
   }
   div.col-md-12 {
-    background-color: $history-text-bg-color;
-    p {
-      color: $history-text-color;
+    div.cont {
+      background-color: $history-text-bg-color;
+      p {
+        color: $history-text-color;
+      }
     }
   }
 }

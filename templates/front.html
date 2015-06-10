@@ -53,7 +53,7 @@
                 <hr class="news-title-underline"/>
                 {% for n in news %}
                     <div class="col-md-4">
-                        <div class="cont">
+                        <div class="well cont">
                             <h3 news-post-title>{{ n.title }}</h3>
                             <p news-post-content>{{ n.content|truncatechars:100 }}</p>
                             <button class="btn btn-default"><a href="/blog/{{n.id}}/">Lasīt vairāk</a></button>
@@ -80,7 +80,7 @@
                     <div class="col-md-3">
                         <div class="cont">
                             <img class="img-responsive img-circle" src="../media/{{d.picture}}" alt=""/>
-                            <h3 style="text-align: center">{{ d.first_name }} {{ d.last_name }}</h3>
+                            <h3 class="dancer-name">{{ d.first_name }} {{ d.last_name }}</h3>
                         </div>
                     </div>
                 {% endfor %}
@@ -104,7 +104,7 @@
                 {% if events %}
                     {% for e in events %}
                         <div class="col-md-4">
-                            <div class="cont">
+                            <div class="well cont">
                                 <h3>{{ e.title }}</h3>
                                 <div class="event-map">
                                     <iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{ e.location }}&key=AIzaSyAEQihBKM3PNtdf6Nbpm9FlW3ksbt1IY9M"></iframe>
@@ -141,7 +141,9 @@
                 <hr class="history-title-underline"/>
                 <div class="col-md-12">
                     {% for h in history %}
-                        <p>{{h.content|markdown}}</p>
+                        <div class="well cont">
+                            <p>{{h.content|markdown}}</p>
+                        </div>
                     {% endfor %}
                 </div>
             </div>

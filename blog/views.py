@@ -6,6 +6,9 @@ from blog.models import Carousel
 from datetime import datetime, timedelta
 
 
+active = True # for navigation highlighting
+
+
 def blog(request):
     now = datetime.today() - timedelta(hours=12)  # 12 hours
     events = Event.objects.filter(date__gte=now).order_by('date')[:3]  # get the three nearest events
@@ -23,9 +26,11 @@ def blog(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
-    return render(request, 'blog/blog.html', {'posts': posts, 'events': events, 'slides': slides})  #
+
+
+    return render(request, 'blog/blog.html', {'posts': posts, 'events': events, 'slides': slides, 'blog_active': active})
 
 
 def post(request, post_id):
     post = get_object_or_404(Post, id=post_id)
-    return render(request, 'blog/post.html', {'post': post})
+    return render(request, 'blog/post.html', {'post': post, 'blog_active': active})

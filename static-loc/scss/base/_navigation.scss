@@ -1,18 +1,33 @@
 $logo-font-size: 150%;
-$logo-color: white;
 
-$navigation-bg-color: #5ec6be;
-$navigation-height: 64px;
+$navigation-height: auto;
 
 $button-color: $logo-color;
 $button-text-color: $navigation-bg-color;
+
+nav.navbar {
+  background-color: $navigation-bg-color;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  button.navbar-toggle {
+    border-color: $logo-color;
+    span.icon-bar {
+      background-color: $logo-color;
+    }
+  }
+  a.navbar-brand {
+    color: $logo-color;
+  }
+}
+
 
 .navbar-wrapper {
   background-color: $navigation-bg-color;
   height: $navigation-height;
   margin-bottom: 0;
   border: 0;
-  .container {
+  .container-fluid {
     a {
       .navbar-brand {
         font-size: $logo-font-size;
@@ -22,27 +37,9 @@ $button-text-color: $navigation-bg-color;
       }
     }
     button.navbar-toggle {
+      border-color: white;
       span.icon-bar {
-
-      }
-    }
-    div {
-      ul.nav {
-        li {
-          a {
-            button {
-              color: $button-text-color;
-              span.glyphicon {
-              }
-            }
-            button.facebook-button {
-
-            }
-            button.youtube-button {
-
-            }
-          }
-        }
+        background-color: #fff;
       }
     }
   }
@@ -60,4 +57,23 @@ div.footer {
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
   background-color: $navigation-bg-color;
+}
+
+li.blog_active {
+    background-color: $news-section-bg-color;
+}
+li.about_active {
+  background-color: $history-section-bg-color;
+}
+li.event_active {
+  background-color: $events-section-bg-color;
+}
+li.media_active {
+  background-color: $gallery-section-bg-color;
+}
+li.social_active {
+
+}
+li.contact_active {
+  background-color: $contacts-section-bg-color;
 }
