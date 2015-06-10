@@ -20,61 +20,84 @@ nav.navbar {
     color: $logo-color;
     padding-top: 5px;
   }
-}
-
-
-.navbar-wrapper {
-  background-color: $navigation-bg-color;
-  height: $navigation-height;
-  margin-bottom: 0;
-  border: 0;
-  .container-fluid {
-    a {
-      .navbar-brand {
-        font-size: $logo-font-size;
+  ul {
+    li {
+      a {
         color: $logo-color;
-        height: $navigation-height;
-        line-height: inherit;
+      }
+      a:hover {
+        background-color: darken($navigation-bg-color, $link-hover-darken);
       }
     }
-    button.navbar-toggle {
-      border-color: white;
-      span.icon-bar {
-        background-color: #fff;
+
+    li.blog-active {
+      background-color: $news-section-bg-color;
+      a {
+        background-color: $news-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($news-section-bg-color, $link-hover-darken);
+      }
+    }
+    li.about-active {
+      background-color: $history-section-bg-color;
+      a {
+        background-color: $history-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($history-section-bg-color, $link-hover-darken);
+      }
+    }
+    li.event-active {
+      background-color: $events-section-bg-color;
+      a {
+        background-color: $events-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($events-section-bg-color, $link-hover-darken);
+      }
+    }
+    li.media-active {
+
+    }
+    li.social-active {
+
+    }
+    li.contact-active {
+      background-color: $contacts-section-bg-color;
+      a {
+        color: $contacts-header-color;
+        background-color: $contacts-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($contacts-section-bg-color, $link-hover-darken);
       }
     }
   }
 }
 
-div.footer {
-  div {
-    ul {
-      .navbar-text {
-        margin-left: 15px;
-      }
-    }
-  }
-}
+
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
   background-color: $navigation-bg-color;
 }
 
-li.blog_active {
-    background-color: $news-section-bg-color;
-}
-li.about_active {
-  background-color: $history-section-bg-color;
-}
-li.event_active {
-  background-color: $events-section-bg-color;
-}
-li.media_active {
-  background-color: $gallery-section-bg-color;
-}
-li.social_active {
 
-}
-li.contact_active {
-  background-color: $contacts-section-bg-color;
+
+div.footer {
+  background-color: $navigation-bg-color;
+  div {
+    ul {
+      .navbar-text {
+        margin-left: 15px;
+        color: $logo-color;
+        a {
+          color: $logo-color;
+        }
+        a:hover {
+          color: darken($logo-color, $link-hover-darken);
+        }
+      }
+    }
+  }
 }

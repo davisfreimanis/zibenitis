@@ -36,42 +36,48 @@ nav.navbar {
   nav.navbar a.navbar-brand {
     color: white;
     padding-top: 5px; }
-
-.navbar-wrapper {
-  background-color: #5ec6be;
-  height: auto;
-  margin-bottom: 0;
-  border: 0; }
-  .navbar-wrapper .container-fluid a .navbar-brand {
-    font-size: 150%;
-    color: white;
-    height: auto;
-    line-height: inherit; }
-  .navbar-wrapper .container-fluid button.navbar-toggle {
-    border-color: white; }
-    .navbar-wrapper .container-fluid button.navbar-toggle span.icon-bar {
-      background-color: #fff; }
-
-div.footer div ul .navbar-text {
-  margin-left: 15px; }
+  nav.navbar ul li a {
+    color: white; }
+  nav.navbar ul li a:hover {
+    background-color: #3fb2a9; }
+  nav.navbar ul li.blog-active {
+    background-color: #ffe118; }
+    nav.navbar ul li.blog-active a {
+      background-color: #ffe118; }
+    nav.navbar ul li.blog-active a:hover {
+      background-color: #e4c600; }
+  nav.navbar ul li.about-active {
+    background-color: #ffeb17; }
+    nav.navbar ul li.about-active a {
+      background-color: #ffeb17; }
+    nav.navbar ul li.about-active a:hover {
+      background-color: #e3cf00; }
+  nav.navbar ul li.event-active {
+    background-color: #ff6f6b; }
+    nav.navbar ul li.event-active a {
+      background-color: #ff6f6b; }
+    nav.navbar ul li.event-active a:hover {
+      background-color: #ff3d38; }
+  nav.navbar ul li.contact-active {
+    background-color: white; }
+    nav.navbar ul li.contact-active a {
+      color: #1ec2ff;
+      background-color: white; }
+    nav.navbar ul li.contact-active a:hover {
+      background-color: #e6e6e6; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: #5ec6be; }
 
-li.blog_active {
-  background-color: #ffe118; }
-
-li.about_active {
-  background-color: #ffeb17; }
-
-li.event_active {
-  background-color: #ff6f6b; }
-
-li.media_active {
-  background-color: #1ec2ff; }
-
-li.contact_active {
-  background-color: white; }
+div.footer {
+  background-color: #5ec6be; }
+  div.footer div ul .navbar-text {
+    margin-left: 15px;
+    color: white; }
+    div.footer div ul .navbar-text a {
+      color: white; }
+    div.footer div ul .navbar-text a:hover {
+      color: #e6e6e6; }
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
