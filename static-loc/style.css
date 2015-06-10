@@ -104,9 +104,6 @@ section {
 #myCarousel {
   width: 100%; }
 
-.carousel-control {
-  margin-top: 20px; }
-
 .carousel-inner .item {
   width: 100%;
   height: 400px;
@@ -180,7 +177,7 @@ section.dancers {
         margin: auto; }
       section.dancers div div.cont h3.dancer-name {
         text-align: center;
-        color: #fff; }
+        color: #000000; }
 
 section.history {
   background-color: #ffeb17; }
