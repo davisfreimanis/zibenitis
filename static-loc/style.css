@@ -220,4 +220,8 @@ section.contacts {
     border-top: 3px solid #1ec2ff;
     width: 80%; }
 
+.vertical-align {
+  display: flex;
+  align-items: center; }
+
 /*# sourceMappingURL=style.css.map */
