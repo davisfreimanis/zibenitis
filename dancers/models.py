@@ -38,6 +38,7 @@ class Person(models.Model):
 class Contact_person(models.Model):
     person = models.ForeignKey(Person)
     role = models.CharField(max_length=100)
+    order = models.IntegerField()
     
     def __str__(self):
         return self.role+" "+self.person.first_name
