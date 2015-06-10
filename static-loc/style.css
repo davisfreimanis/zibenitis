@@ -112,15 +112,6 @@ section {
   -o-background-size: cover;
   background-size: cover; }
 
-.ad1 {
-  background: url(/media/carousel/zib4.jpg) no-repeat center center fixed; }
-
-.ad2 {
-  background: url(/media/carousel/zib5.jpg) no-repeat center center fixed; }
-
-.ad3 {
-  background: url(/media/carousel/zib6.jpg) no-repeat center center fixed; }
-
 section.news {
   background-color: #ffe118; }
   section.news h1.news-title {
