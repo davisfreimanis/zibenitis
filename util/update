@@ -12,6 +12,7 @@ cd $REPOS && git pull
 python3 manage.py makemigrations
 python3 manage.py migrate
 
+scss static-loc/scss/style.scss static-loc/style.css
 python3 manage.py collectstatic --noinput
 
 chown -R www-data:www-data $REPOS
