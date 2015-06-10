@@ -34,7 +34,8 @@ nav.navbar {
     nav.navbar button.navbar-toggle span.icon-bar {
       background-color: white; }
   nav.navbar a.navbar-brand {
-    color: white; }
+    color: white;
+    padding-top: 5px; }
 
 .navbar-wrapper {
   background-color: #5ec6be;
