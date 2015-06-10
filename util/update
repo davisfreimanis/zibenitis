@@ -13,6 +13,7 @@ python3 manage.py makemigrations
 python3 manage.py migrate
 
 python3 manage.py collectstatic --noinput
+scss static-loc/scss/style.scss static-loc/style.css
 
 chown -R www-data:www-data $REPOS
 /etc/init.d/apache2 restartd
