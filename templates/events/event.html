@@ -9,21 +9,28 @@
 {% endblock %}}
 
 {% block pagecontents %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="well">
-
+    <section class="events">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="events-title">{{ event.title }}</h1>
+                    <hr class="events-title-underline"/>
                     <div class="event-map">
                         <iframe width="600" height="300" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/search?q={{ event.location }}&key=AIzaSyAEQihBKM3PNtdf6Nbpm9FlW3ksbt1IY9M"></iframe>
                     </div>
 
-                    <p>{{ event.description }}</p>
-                    <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
-                    </button>
+                    <div class="well">
+                        <p>{{ event.description }}</p>
+
+                        <p><span class="glyphicon glyphicon-map-marker"></span> {{ event.location }}</p>
+                        <p><span class="glyphicon glyphicon-time"></span> {{ event.date }}</p>
+
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}
