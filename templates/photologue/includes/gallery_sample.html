@@ -5,7 +5,7 @@
 <div>
     
     <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-    <p class="muted"><small>{% trans "Published" %} {{ gallery.date_added }}</small></p>
+    <p class="muted"><small>{% trans "Publicēts" %} {{ gallery.date_added }}</small></p>
     {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
 
     <div class="row">
