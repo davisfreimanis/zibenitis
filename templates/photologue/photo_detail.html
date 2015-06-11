@@ -1,12 +1,11 @@
 {% extends "photologue/root.html" %}
 {% load photologue_tags i18n %}
 
-{% block title %}{{ object.title }}{% endblock %}
-
 {% block content %}
 
     <div class="row col-lg-12">
-        <h1 class="page-header">{{ object.title }}</h1>
+        <h1 class="gallery-title">{{ object.title }}</h1>
+        <hr class="gallery-title-underline"/>
         <p class="muted"><small>{% trans "Published" %} {{ object.date_added }}</small></p>
     </div>
 
@@ -19,7 +18,6 @@
         </div>
         <div class="col-md-6">
             {% if object.public_galleries %}
-                <p>{% trans "This photo is found in the following galleries" %}:</p>
                 <table>
                     {% for gallery in object.public_galleries %}
                         <tr>
