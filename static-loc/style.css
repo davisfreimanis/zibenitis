@@ -62,9 +62,9 @@ nav.navbar {
   nav.navbar ul li.navigation a:hover {
     background-color: #3fb2a9; }
   nav.navbar ul li.blog-active a {
-    background-color: #4ca1af; }
+    background-color: #105B63; }
   nav.navbar ul li.blog-active a:hover {
-    background-color: #3d808b; }
+    background-color: #093337; }
   nav.navbar ul li.about-active a {
     background-color: #fec334; }
   nav.navbar ul li.about-active a:hover {
@@ -145,7 +145,7 @@ section {
     border-radius: 50px; }
 
 section.news {
-  background-color: #4ca1af; }
+  background-color: #105B63; }
   section.news h1.news-title {
     color: #fff; }
   section.news hr.news-title-underline {
