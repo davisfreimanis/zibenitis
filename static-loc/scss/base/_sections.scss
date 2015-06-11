@@ -4,6 +4,11 @@ p, h1, h2, h3, h4, h5, h6 {
     overflow: hidden;
 }
 
+h2.no-events {
+  text-align: center;
+  color: $events-header-color;
+}
+
 #myCarousel {
     width: 100%;
 }
@@ -92,10 +97,6 @@ section.events {
       }
       p {
         color: $events-text-color;
-      }
-      h2.no-events {
-        text-align: center;
-        color: $events-header-color;
       }
     }
   }
