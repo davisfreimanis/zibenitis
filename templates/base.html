@@ -16,7 +16,6 @@
         <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="{{MEDIA_URL}}favicon.ico" />
-        <script src="{% static 'bootstrap/js/navigation.js' %}"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -59,7 +58,7 @@
                             <li class="navigation {% if event_active %}event-active{% endif %}">
                                 <a href="{% url 'events' %}">Pasākumi</a>
                             </li>
-                            <li class="dropdown navigation {% if media_active %}class='media-active'{% endif %}">
+                            <li class="dropdown navigation navigation-gallery {% if media_active %}class='media-active'{% endif %}">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                    aria-expanded="false">Galerija <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
@@ -75,11 +74,11 @@
                                 <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakti</a>
                             </li>
                             <li class="navigation">
-                                <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="18px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg">Facebook</span></a>
+                                <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="18px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
                             </li>
                             <li class="navigation">
                                 <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><img src="/media/youtube.png" height="18px"
-                                                                                                        alt=""/><span class="youtube-nav hidden-sm hidden-md hidden-lg">Youtube</span></a>
+                                                                                                        alt=""/><span class="youtube-nav hidden-sm hidden-md hidden-lg"> Youtube</span></a>
                             </li>
 
                         </ul>

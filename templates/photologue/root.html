@@ -2,6 +2,11 @@
 {% block title %}TDK Zibenitis{% endblock %}
 {% block pagecontents %}
     <section class="gallery">
+        <script>
+            if ($(".gallery").length) {
+                $(".navigation-gallery").addClass("media-active");
+            }
+        </script>
         <div class="container">
             {% block content %}
 
