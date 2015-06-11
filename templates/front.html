@@ -68,30 +68,6 @@
         </div>
     </section>
 
-    <section class="dancers">
-        <div class="container">
-            <div class="row">
-                <a href="{% url 'dancers' %}">
-                    <h1 class="dancers-title">Dejotāji</h1>
-                </a>
-                <hr class="dancers-title-underline"/>
-                {% for d in dancers %}
-                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                        <div class="cont">
-                            <img class="img-thumbnail img-responsive img-circle" src="../media/{{d.picture}}" alt=""/>
-                            <h3 class="dancer-name">{{ d.first_name }} {{ d.last_name }}</h3>
-                        </div>
-                    </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <a href="{% url 'dancers' %}">
-                    <button class="btn btn-default see-more">Skatīt vēl</button>
-                </a>
-            </div>
-        </div>
-    </section>
-
     <section class="events">
         <div class="container">
             <div class="row">
@@ -127,8 +103,32 @@
                         <button class="btn btn-default see-more">Skatīt vēl</button>
                     </a>
                 {% else %}
-                    <h2 class="no-events">Nav pasaakumi</h2>
+                    <h2 class="no-events">Nav pasākumi plānoti</h2>
                 {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <section class="dancers">
+        <div class="container">
+            <div class="row">
+                <a href="{% url 'dancers' %}">
+                    <h1 class="dancers-title">Dejotāji</h1>
+                </a>
+                <hr class="dancers-title-underline"/>
+                {% for d in dancers %}
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="cont">
+                            <img class="img-thumbnail img-responsive img-circle" src="../media/{{d.picture}}" alt=""/>
+                            <h3 class="dancer-name">{{ d.first_name }} {{ d.last_name }}</h3>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <a href="{% url 'dancers' %}">
+                    <button class="btn btn-default see-more">Skatīt vēl</button>
+                </a>
             </div>
         </div>
     </section>
