@@ -22,8 +22,6 @@ nav.navbar {
   }
   ul {
     li.navigation {
-      height: 50px;
-      background-color: $navigation-bg-color;
       a {
         font-size: 120%;
         color: $logo-color;
@@ -40,7 +38,6 @@ nav.navbar {
     }
 
     li.blog-active {
-      background-color: $news-section-bg-color;
       a {
         background-color: $news-section-bg-color;
       }
@@ -49,7 +46,6 @@ nav.navbar {
       }
     }
     li.about-active {
-      background-color: $history-section-bg-color;
       a {
         background-color: $history-section-bg-color;
       }
@@ -58,7 +54,6 @@ nav.navbar {
       }
     }
     li.event-active {
-      background-color: $events-section-bg-color;
       a {
         background-color: $events-section-bg-color;
       }
@@ -67,13 +62,15 @@ nav.navbar {
       }
     }
     li.media-active {
-
-    }
-    li.social-active {
-
+      a {
+        color: $gallery-header-color;
+        background-color: $gallery-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($gallery-section-bg-color, $link-hover-darken);
+      }
     }
     li.contact-active {
-      background-color: $contacts-section-bg-color;
       a {
         color: $contacts-header-color;
         background-color: $contacts-section-bg-color;
