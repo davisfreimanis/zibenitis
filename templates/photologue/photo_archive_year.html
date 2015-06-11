@@ -1,20 +1,18 @@
 {% extends "photologue/root.html" %}
 {% load i18n %}
 
-{% block title %}{% blocktrans with show_year=year|date:"Y" %}Photos for {{ show_year }}{% endblocktrans %}{% endblock %}
-
-
 {% block content %}
 
     <div class="row col-lg-12">
-        <h1 class="page-header">{% blocktrans with show_year=year|date:"Y" %}Photos for {{ show_year }}{% endblocktrans %}</h1>
+        <h1 class="gallery-title">{% blocktrans with show_year=year|date:"Y" %}Bildes {{ show_year }}{% endblocktrans %}</h1>
+        <hr class="gallery-title-underline"/>
     </div>
 
 	<div class="row">
 
 		<aside class="col-md-2">
 
-			<h4>{% trans "Filter by month" %}</h4>
+			<h4>{% trans "Filtrēt mēnesi" %}</h4>
 			<ul>
 			{% for date in date_list %}
 				<li><a href="{% url 'photologue:photo-archive-month' date.year date|date:"m"|lower %}">{{ date|date:"F" }}</a></li>
@@ -34,10 +32,10 @@
 				    {% endfor %}
 				</div>
 			{% else %}
-				<p>{% trans "No photos were found" %}.</p>
+				<p>{% trans "Nav bildes" %}.</p>
 			{% endif %}
 
-		    <div><a href="{% url 'photologue:pl-photo-archive' %}" class="btn btn-default">{% trans "View all photos" %}</a></div>
+		    <div><a href="{% url 'photologue:pl-photo-archive' %}" class="btn btn-default">{% trans "Visas bildes" %}</a></div>
 
 		</main>
 

@@ -27,19 +27,21 @@
                             </div>
                     {% endfor %}
                         <div class="pagination well">
-                            <span class="step-links">
-                                {% if posts.has_previous %}
-                                    <a href="?page={{ posts.previous_page_number }}"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                                {% endif %}
+                            <p>
+                                <span class="step-links">
+                                    {% if posts.has_previous %}
+                                        <a href="?page={{ posts.previous_page_number }}"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                                    {% endif %}
 
-                                <span class="current">
-                                    Lapa {{ posts.number }} no {{ posts.paginator.num_pages }}
+                                    <span class="current">
+                                        Lapa {{ posts.number }} no {{ posts.paginator.num_pages }}
+                                    </span>
+
+                                    {% if posts.has_next %}
+                                        <a href="?page={{ posts.next_page_number }}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                                    {% endif %}
                                 </span>
-
-                                {% if posts.has_next %}
-                                    <a href="?page={{ posts.next_page_number }}"><span class="glyphicon glyphicon-chevron-right"></span></a>
-                                {% endif %}
-                            </span>
+                            </p>
                         </div>
                     </div>
                 </div>

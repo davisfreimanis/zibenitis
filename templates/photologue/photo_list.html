@@ -1,12 +1,11 @@
 {% extends "photologue/root.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "All photos" %}{% endblock %}
-
 {% block content %}
 
     <div class="row col-lg-12">
-        <h1 class="page-header">{% trans "All photos" %}</h1>
+        <h1 class="gallery-title">{% trans "Visas bildes" %}</h1>
+        <hr class="gallery-title-underline"/>
     </div>
 
 	{% if object_list %}
@@ -18,7 +17,7 @@
 		    {% endfor %}
 		</div>
 	{% else %}
-		<div class="row">{% trans "No photos were found" %}.</div>
+		<div class="row">{% trans "Nav bildes" %}.</div>
 	{% endif %}
 
 	{% include "photologue/includes/paginator.html" %}

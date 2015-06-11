@@ -1,12 +1,16 @@
 .pagination {
   margin: auto;
   display: block;
-  padding: 15px 50px;
+  padding: 15px 30px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
   width: 200px;
   span.step-links {
     margin: auto;
+  }
+  p {
+    text-align: center;
+    margin: 0;
   }
 }

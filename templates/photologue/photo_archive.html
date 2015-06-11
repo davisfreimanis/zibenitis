@@ -1,19 +1,18 @@
 {% extends "photologue/root.html" %}
 {% load i18n %}
 
-{% block title %}{% trans "Latest photos" %}{% endblock %}
-
 {% block content %}
 
     <div class="row col-lg-12">
-        <h1 class="page-header">{% trans "Latest photos" %}</h1>
+        <h1 class="gallery-title">{% trans "Latest photos" %}</h1>
+        <hr class="gallery-title-underline"/>
     </div>
 
 	<div class="row">
 		
 		<aside class="col-md-2">
 
-			<h4>{% trans "Filter by year" %}</h4>
+			<h4>{% trans "Filtrēt gadu" %}</h4>
 			<ul>
 			{% for date in date_list %}
 				<li><a href="{% url 'photologue:pl-photo-archive-year' date.year %}">{{ date|date:"Y" }}</a></li>
@@ -31,7 +30,7 @@
 			        </a>
 			    {% endfor %}
 			{% else %}
-				<p>{% trans "No photos were found" %}.</p>
+				<p>{% trans "Nav bildes" %}.</p>
 			{% endif %}
 
 		</main>

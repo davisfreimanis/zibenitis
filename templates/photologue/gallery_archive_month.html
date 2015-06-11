@@ -1,19 +1,18 @@
 {% extends "photologue/root.html" %}
 {% load i18n %}
 
-{% block title %}{% blocktrans with show_month=month|date:"F Y" %}Galleries for {{ show_month }}{% endblocktrans %}{% endblock %}
-
 {% block content %}
 
     <div class="row col-lg-12">
-        <h1 class="page-header">{% blocktrans with show_month=month|date:"F Y" %}Galleries for {{ show_month }}{% endblocktrans %}</h1>
+        <h1 class="gallery-title">{% blocktrans with show_month=month|date:"F Y" %}Galerijas {{ show_month }}{% endblocktrans %}</h1>
+        <hr class="gallery-title-underline"/>
     </div>
 
     <div class="row">
 
         <aside class="col-md-2">
 
-            <h4>{% trans "Filter by day" %}</h4>
+            <h4>{% trans "Filtrēt dienu" %}</h4>
             <ul>
             {% for date in date_list %}
                 <li><a href="{% url 'photologue:gallery-archive-day' date.year date|date:"m"|lower date.day %}">{{ date|date:"d" }}</a></li>
@@ -29,10 +28,10 @@
                     {% include "photologue/includes/gallery_sample.html" %}
                 {% endfor %}
             {% else %}
-                <p>{% trans "No galleries were found." %}</p>
+                <p>{% trans "Nav galerijas" %}</p>
             {% endif %}
 
-            <div><a href="{% url 'photologue:pl-gallery-archive-year' month.year %}" class="btn btn-default">{% trans "View all galleries for year" %}</a></div>
+            <div><a href="{% url 'photologue:pl-gallery-archive-year' month.year %}" class="btn btn-default">{% trans "Visas gada galerijas" %}</a></div>
 
         </main>
 
