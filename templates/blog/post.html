@@ -6,30 +6,33 @@
 {% block pagesubtitle %} Lorem ipsum dolor sit amet {% endblock %}}
 
 {% block pagecontents %}
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <article class="well">
-                    <header>
-                        <h1> {{ post.title }} </h1>
-
-                        <p>
-                            Posted on
-                            <time datetime="{{ post.created|date:"c"}}">
-                                {{ post.created|date }}
-                            </time>
+    <section class="news">
+        <div class="container">
+            <div class="row">
+                <h1 class="news-title"> {{ post.title }} </h1>
+                <hr class="news-title-underline"/>
+                <div class="col-md-12">
+                    <article class="well">
+                        <header>
+                            <p>
+                                Publicēts
+                                <time datetime="{{ post.created|date:"c" }}">
+                                    {{ post.created|date }}
+                                </time>
+                            </p>
+                        </header>
+                        <p class="description">
+                            {{ post.description }}
                         </p>
-                    </header>
-                    <p class="description">
-                        {{ post.description }}
-                    </p>
-                    {{ post.content|markdown }}
-                    <button type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-menu-left"><a
-                                href="javascript:history.go(-1)">Atpakal</a></span>
-                    </button>
-                </article>
+                        {{ post.content|markdown }}
+                    </article>
+
+                    <a href="javascript:history.go(-1)">
+                        <button class="btn btn-default see-more"><p><span class="glyphicon glyphicon-menu-left">Atpakaļ</span></p>
+                        </button>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 {% endblock %}

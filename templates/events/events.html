@@ -24,12 +24,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="well passed-events">
-                        <h1>Bijušie pasākumi</h1>
+                        <h1>Aizvadītie pasākumi</h1>
                         <ul>
                             {% for event in passed_events %}
                                 <li><a href="/events/{{ event.id }}">{{ event.title }} - {{ event.date|date:"d b Y" }}</a></li>
                             {% empty %}
-                                <li>Nav bijušie pasākumi</li>
+                                <li>Nav aizvadīti pasākumi</li>
                             {% endfor %}
                         </ul>
                     </div>

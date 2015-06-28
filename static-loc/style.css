@@ -20,6 +20,9 @@ a:hover {
 a:active {
   text-decoration: none; }
 
+section p {
+  font-size: 150%; }
+
 p, h1, h2, h3, h4, h5, h6 {
   font-family: "Josefin+Sans", sans-serif; }
 
@@ -52,7 +55,7 @@ nav.navbar {
     color: white;
     padding-top: 5px; }
   nav.navbar ul li.navigation a {
-    font-size: 120%;
+    font-size: 110%;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
@@ -150,14 +153,16 @@ section.news {
     color: #fff; }
   section.news hr.news-title-underline {
     border-top: 3px solid #fff; }
-  section.news div.col-md-4 {
-    height: 400px; }
-    section.news div.col-md-4 div.cont {
-      background-color: #fff; }
-      section.news div.col-md-4 div.cont h3 {
-        color: #666; }
-      section.news div.col-md-4 div.cont button {
-        float: right; }
+  section.news div.row {
+    height: auto; }
+    section.news div.row div.col-md-4 {
+      height: 300px; }
+      section.news div.row div.col-md-4 div.cont {
+        background-color: #fff; }
+        section.news div.row div.col-md-4 div.cont h3 {
+          color: #666; }
+        section.news div.row div.col-md-4 div.cont button {
+          float: right; }
 
 section.events {
   background-color: #fec334; }
