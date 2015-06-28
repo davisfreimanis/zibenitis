@@ -67,15 +67,18 @@ section.news {
   hr.news-title-underline {
     border-top: $underline-height solid $news-header-color;
   }
-  div.col-md-4 {
-    height: 400px;
-    div.cont {
-      background-color: $news-article-bg-color;
-      h3 {
-        color: $news-text-color;
-      }
-      button {
-        float: right;
+  div.row {
+    height: auto;
+    div.col-md-4 {
+      height: 300px;
+      div.cont {
+        background-color: $news-article-bg-color;
+        h3 {
+          color: $news-text-color;
+        }
+        button {
+          float: right;
+        }
       }
     }
   }

@@ -8,6 +8,7 @@ class Event(models.Model):
     date = models.DateTimeField()
     duration = models.FloatField(default=1)
     location = models.CharField(max_length=50)
+    information = models.CharField(max_length=50, default="")
 
     def __str__(self):
         return self.title

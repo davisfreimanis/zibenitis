@@ -23,7 +23,8 @@
                         <p>{{ event.description }}</p>
 
                         <p><span class="glyphicon glyphicon-map-marker"></span> {{ event.location }}</p>
-                        <p><span class="glyphicon glyphicon-time"></span> {{ event.date }}</p>
+                        <p><span class="glyphicon glyphicon-time"></span> {{ event.date|date:"H:i" }} - {{ event.finish_time|date:"H:i" }}</p>
+                        <p><span class="glyphicon glyphicon-info-sign"></span><a href="{{ event.information }}"> {{ event.information }}</a></p>
 
                         <button type="button" class="btn btn-default">
                             <span class="glyphicon glyphicon-menu-left"><a href="/events">Atpakal</a></span>
