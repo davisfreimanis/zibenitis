@@ -70,14 +70,10 @@ section.news {
   div.row {
     height: auto;
     div.col-md-4 {
-      height: 300px;
       div.cont {
         background-color: $news-article-bg-color;
-        h3 {
+        h2 {
           color: $news-text-color;
-        }
-        button {
-          float: right;
         }
       }
     }

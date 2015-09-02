@@ -155,14 +155,10 @@ section.news {
     border-top: 3px solid #fff; }
   section.news div.row {
     height: auto; }
-    section.news div.row div.col-md-4 {
-      height: 300px; }
-      section.news div.row div.col-md-4 div.cont {
-        background-color: #fff; }
-        section.news div.row div.col-md-4 div.cont h3 {
-          color: #666; }
-        section.news div.row div.col-md-4 div.cont button {
-          float: right; }
+    section.news div.row div.col-md-4 div.cont {
+      background-color: #fff; }
+      section.news div.row div.col-md-4 div.cont h2 {
+        color: #666; }
 
 section.events {
   background-color: #fec334; }
