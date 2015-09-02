@@ -8,13 +8,19 @@ class Post(models.Model):
     title = models.CharField(max_length=255)
     content = MarkdownField()
     created = models.DateTimeField(default=datetime.now())
-    image = models.ImageField(upload_to='blog', default='dancers_pic/default_pic.png')
+    image = models.ImageField(upload_to='blog', blank=True, null=True)
 
     def __str__(self):
         return self.title
 
     def get_absolute_url(self):
         return reverse('blog.views.post', args=[self.title])
+
+    def check_if_picture(self):
+        if not self.image:
+            return False
+        else:
+            return True
 
 
 class Carousel(models.Model):

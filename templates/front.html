@@ -54,7 +54,14 @@
                 {% for n in news %}
                     <div class="col-md-4">
                         <div class="well cont">
-                            <h3 news-post-title>{{ n.title }}</h3>
+                            <a href="/blog/{{ n.id }}">
+                                <h2 news-post-title>{{ n.title }}</h2>
+                            </a>
+
+                            {% if n.check_if_picture %}
+                                <img class="img-responsive" src="../media/{{n.image}}" alt=""/>
+                            {% endif %}
+
                             <p news-post-content>{{ n.content|truncatechars:100 }}</p>
                             <button class="btn btn-default"><a href="/blog/{{n.id}}/">Lasīt vairāk</a></button>
                         </div>
