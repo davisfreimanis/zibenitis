@@ -62,7 +62,7 @@
                                 <img class="img-responsive" src="../media/{{n.image}}" alt=""/>
                             {% endif %}
 
-                            <p news-post-content>{{ n.content|truncatechars:100 }}</p>
+                            <p news-post-content>{{ n.content|markdown|truncatechars:100 }}</p>
                             <button class="btn btn-default"><a href="/blog/{{n.id}}/">Lasīt vairāk</a></button>
                         </div>
                     </div>
