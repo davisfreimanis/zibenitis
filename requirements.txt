@@ -1,0 +1,6 @@
+Django
+django-markdown
+django-photologue
+pytz
+photologue
+
