@@ -29,13 +29,13 @@ class Person(models.Model):
     email_n = models.CharField(max_length=50,default='tdk.zibenitis')
     email_d = models.CharField(max_length=50,default='gmail.com')
 
-    def __str__(self):
-        return self.first_name+" "+self.last_name
-
     # Just some temporary email generation :)
     def email(self):
         mail = self.first_name[:2] + self.last_name[:3] + "@zibenitis.se"
         return mail.lower()
+
+    def __str__(self):
+        return self.first_name+" "+self.last_name
 
 
 # We define a class, which stores contant/administrative persons for the contact section
