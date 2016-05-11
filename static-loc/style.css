@@ -72,21 +72,21 @@ nav.navbar {
   nav.navbar ul li.blog-active a:hover {
     background-color: #093337; }
   nav.navbar ul li.about-active a {
-    background-color: #fec334; }
+    background-color: #105B63; }
   nav.navbar ul li.about-active a:hover {
     background-color: #feb401; }
   nav.navbar ul li.event-active a {
-    background-color: #fec334; }
+    background-color: #105B63; }
   nav.navbar ul li.event-active a:hover {
     background-color: #feb401; }
   nav.navbar ul li.media-active a {
     color: #fff;
-    background-color: #ff626b; }
+    background-color: #105B63; }
   nav.navbar ul li.media-active a:hover {
     background-color: #ff2f3b; }
   nav.navbar ul li.contact-active a {
-    color: #1ec2ff;
-    background-color: white; }
+    color: white;
+    background-color: #105B63; }
   nav.navbar ul li.contact-active a:hover {
     background-color: #e6e6e6; }
   nav.navbar ul li ul.dropdown-menu {
@@ -164,7 +164,7 @@ section.news {
         color: #666; }
 
 section.events {
-  background-color: #fec334; }
+  background-color: #105B63; }
   section.events h1.events-title {
     color: #fff; }
   section.events hr.events-title-underline {
@@ -195,7 +195,7 @@ section.dancers {
         color: #fff; }
 
 section.history {
-  background-color: #fec334; }
+  background-color: #105B63; }
   section.history h1.history-title {
     color: #fff; }
   section.history hr.history-title-underline {
@@ -206,7 +206,7 @@ section.history {
       color: #000; }
 
 section.gallery {
-  background-color: #ff626b; }
+  background-color: #105B63; }
   section.gallery h1.gallery-title {
     color: #fff;
     border: none; }
@@ -238,12 +238,12 @@ section {
     width: 80%; }
 
 section.contacts {
-  background-color: white; }
+  background-color: #105B63; }
   section.contacts div.container div.row h1.contacts-title {
     text-align: center;
-    color: #1ec2ff; }
+    color: white; }
   section.contacts div.container div.row hr.contacts-title-underline {
-    border-top: 3px solid #1ec2ff;
+    border-top: 3px solid white;
     width: 80%; }
 
 .vertical-align {
