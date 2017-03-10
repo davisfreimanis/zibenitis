@@ -2,7 +2,6 @@
 *.sqlite3
 *.swp
 migrations
-media/photologue/
 media/dancers_pic/*
 !media/dancers_pic/default_pic.png
 *Old*

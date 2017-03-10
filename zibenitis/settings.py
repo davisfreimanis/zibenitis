@@ -44,13 +44,8 @@ INSTALLED_APPS = (
     'dancers',
     'blog',
     'events',
-    'photologue',
     'sortedm2m',
-    # 'facebook_gallery',
 )
-
-# Sites framework (photologue)
-SITE_ID = 1
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -105,6 +100,3 @@ MEDIA_URL = '/media/'
 
 # Added change from the web repository
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-# FACEBOOK_APP_ID = '785488654898269'
-# FACEBOOK_APP_SECRET = '527fd09531c45afaa6f50c0b86c72fda'
