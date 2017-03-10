@@ -6,7 +6,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from zibenitis import views
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^$', views.front_page, name='home'),  # think about this!
     url(r'^blog/', include('blog.urls')),
     url(r'^dancers/', include('dancers.urls')),
@@ -14,7 +14,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^contact/$', views.contact_persons, name='contact'),
     url('^markdown/', include('django_markdown.urls')),
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Title for /admin
 admin.site.site_header = 'Zibenitis admin'
