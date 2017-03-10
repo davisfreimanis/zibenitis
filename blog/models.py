@@ -34,7 +34,7 @@ class Carousel(models.Model):
         (2, 'Slide 2'),
         (3, 'Slide 3'),
     )
-    slide = models.IntegerField(default=1, max_length=1, choices=SLIDE_NUMBERS)
+    slide = models.IntegerField(default=1, choices=SLIDE_NUMBERS)
 
     def __str__(self):
         return self.title
