@@ -68,15 +68,6 @@
                             <li class="navigation {% if event_active %}event-active{% endif %}">
                                 <a href="{% url 'events' %}">Pasākumi</a>
                             </li>
-                            <li class="dropdown navigation navigation-gallery {% if media_active %}class='media-active'{% endif %}">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                   aria-expanded="false">Galerija <span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li>
-                                        <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA">Video</a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li class="navigation {% if contact_active %}contact-active{% endif %}">
                                 <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakti</a>
                             </li>
