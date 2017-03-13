@@ -144,15 +144,3 @@ section.history {
   }
 }
 
-section.gallery {
-  background-color: $gallery-section-bg-color;
-  h1.gallery-title {
-    color: $gallery-header-color;
-    border: none;
-  }
-  hr.gallery-title-underline {
-    width: $underline-width;
-    border-top: $underline-height solid $gallery-header-color;
-  }
-}
-

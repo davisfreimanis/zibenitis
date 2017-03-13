@@ -20,14 +20,14 @@ class History(models.Model):
 # We define a single class, which corresponds to enteries of each person.
 class Person(models.Model):
     first_name = models.CharField(max_length=50)
-    mid_name = models.CharField(max_length=50,blank=True)
+    mid_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50)
     date_added = models.DateField(default=timezone.now)
-    picture = models.ImageField(upload_to='dancers_pic', max_length=500, default='dancers_pic/default_pic.png' )
+    picture = models.ImageField(upload_to='dancers_pic', max_length=500, default='dancers_pic/default_pic.png')
     active = models.BooleanField(default=True)
 
-    email_n = models.CharField(max_length=50,default='tdk.zibenitis')
-    email_d = models.CharField(max_length=50,default='gmail.com')
+    email_n = models.CharField(max_length=50, default='tdk.zibenitis')
+    email_d = models.CharField(max_length=50, default='gmail.com')
 
     # Just some temporary email generation :)
     def email(self):
@@ -40,7 +40,7 @@ class Person(models.Model):
 
 # We define a class, which stores contant/administrative persons for the contact section
 class Contact_person(models.Model):
-    person = models.ForeignKey(Person)
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
     role = models.CharField(max_length=100)
     order = models.IntegerField(default=1)
     

@@ -1,5 +1,5 @@
 /**
-* Global
+* Global. To edit CSS, make sure to edit in the SCSS files and NOT style.css
 */
 
 $global-font: 'Josefin+Sans', sans-serif;
@@ -14,7 +14,7 @@ $underline-height: 3px;
 $underline-width: 80%;
 
 $logo-color: white;
-$navigation-bg-color: #5ec6be;
+$navigation-bg-color: #002468;
 
 $news-section-bg-color: #105B63;
 $news-article-bg-color: #fff;
@@ -33,9 +33,6 @@ $history-section-bg-color: #fec334;
 $history-header-color: #fff;
 $history-text-color: #000;
 $history-text-bg-color: #fff;
-
-$gallery-section-bg-color: #ff626b;
-$gallery-header-color: #fff;
 
 $contacts-section-bg-color: white;
 $contacts-header-color: #1ec2ff;
