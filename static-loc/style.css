@@ -125,7 +125,7 @@ section {
   section div.container div.row h1 {
     text-align: center; }
   section div.container div.row hr {
-    width: 80%; }
+    width: 75%; }
   section div.container div.row div.col-md-4 {
     margin-bottom: 15px;
     padding-left: 15px;
@@ -218,7 +218,7 @@ section {
     color: #fff; }
   section div.container div.row hr.dancers-title-underline {
     border-top: 3px solid #fff;
-    width: 80%; }
+    width: 75%; }
 
 section.contacts {
   background-color: white; }
@@ -227,7 +227,7 @@ section.contacts {
     color: #1ec2ff; }
   section.contacts div.container div.row hr.contacts-title-underline {
     border-top: 3px solid #1ec2ff;
-    width: 80%; }
+    width: 75%; }
 
 .vertical-align {
   display: flex;
