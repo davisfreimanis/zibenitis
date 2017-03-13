@@ -1,5 +1,5 @@
 /**
-* Global
+* Global. To edit CSS, make sure to edit in the SCSS files and NOT style.css
 */
 body {
   background-color: #edeff0;
@@ -43,7 +43,6 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100%; }
 
 nav.navbar {
-  /* background-color: #5ec6be; */
   background-color: #002468;
   border: none;
   border-radius: 0;
@@ -64,29 +63,22 @@ nav.navbar {
     nav.navbar ul li.navigation a span.youtube-nav.facebook-nav {
       margin-left: 15px; }
   nav.navbar ul li.navigation a:hover {
-    /* background-color: #3fb2a9; } */
-      background-color: #002468;
-      color: #ffff00; }  
+    background-color: #001235; }
   nav.navbar ul li.blog-active a {
     background-color: #105B63; }
   nav.navbar ul li.blog-active a:hover {
     background-color: #093337; }
   nav.navbar ul li.about-active a {
-    background-color: #105B63; }
+    background-color: #fec334; }
   nav.navbar ul li.about-active a:hover {
     background-color: #feb401; }
   nav.navbar ul li.event-active a {
-    background-color: #105B63; }
+    background-color: #fec334; }
   nav.navbar ul li.event-active a:hover {
     background-color: #feb401; }
-  nav.navbar ul li.media-active a {
-    color: #fff;
-    background-color: #105B63; }
-  nav.navbar ul li.media-active a:hover {
-    background-color: #ff2f3b; }
   nav.navbar ul li.contact-active a {
-    color: white;
-    background-color: #105B63; }
+    color: #1ec2ff;
+    background-color: white; }
   nav.navbar ul li.contact-active a:hover {
     background-color: #e6e6e6; }
   nav.navbar ul li ul.dropdown-menu {
@@ -164,7 +156,7 @@ section.news {
         color: #666; }
 
 section.events {
-  background-color: #105B63; }
+  background-color: #fec334; }
   section.events h1.events-title {
     color: #fff; }
   section.events hr.events-title-underline {
@@ -195,7 +187,7 @@ section.dancers {
         color: #fff; }
 
 section.history {
-  background-color: #105B63; }
+  background-color: #fec334; }
   section.history h1.history-title {
     color: #fff; }
   section.history hr.history-title-underline {
@@ -204,15 +196,6 @@ section.history {
     background-color: #fff; }
     section.history div.col-md-12 div.cont p {
       color: #000; }
-
-section.gallery {
-  background-color: #105B63; }
-  section.gallery h1.gallery-title {
-    color: #fff;
-    border: none; }
-  section.gallery hr.gallery-title-underline {
-    width: 80%;
-    border-top: 3px solid #fff; }
 
 .pagination {
   margin: auto;
@@ -238,55 +221,16 @@ section {
     width: 80%; }
 
 section.contacts {
-  background-color: #105B63; }
+  background-color: white; }
   section.contacts div.container div.row h1.contacts-title {
     text-align: center;
-    color: white; }
+    color: #1ec2ff; }
   section.contacts div.container div.row hr.contacts-title-underline {
-    border-top: 3px solid white;
+    border-top: 3px solid #1ec2ff;
     width: 80%; }
 
 .vertical-align {
   display: flex;
   align-items: center; }
-
-@media (max-width: 1080px) {
-    .navbar-header {
-        float: none;
-    }
-    .navbar-left,.navbar-right {
-        float: none !important;
-    }
-    .navbar-toggle {
-        display: block;
-    }
-    .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    }
-    .navbar-fixed-top {
-        top: 0;
-        border-width: 0 0 1px;
-    }
-    .navbar-collapse.collapse {
-        display: none!important;
-    }
-    .navbar-nav {
-        float: none!important;
-        margin-top: 7.5px;
-    }
-    .navbar-nav>li {
-        float: none;
-    }
-    .navbar-nav>li>a {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-    .collapse.in{
-        display:block !important;
-    }
-}
-
-
 
 /*# sourceMappingURL=style.css.map */
