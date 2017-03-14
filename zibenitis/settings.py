@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Enable tables and other non-core features
 MARKDOWN_EXTENSIONS = ['extra']
 
+SITE_ID = 1
+
 # Application definition
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -39,6 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
     'django_markdown',
     'dancers',
     'blog',
