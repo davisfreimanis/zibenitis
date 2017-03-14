@@ -26,7 +26,7 @@ make_active.short_description = "Make users active"
 
 
 class DancersAdmin(admin.ModelAdmin):
-    list_display = ['first_name', 'last_name', 'active']
+    list_display = [Person.__str__, 'active']
     ordering = ['first_name']
     actions = [make_inactive, make_active]
 
