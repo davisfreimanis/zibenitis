@@ -11,12 +11,21 @@ active = True
 
 def front_page(request):
     slides = Carousel.objects.order_by('title')[:3]
-    random_dancers = Person.objects.order_by('?')[:4]
+    random_dancers = Person.objects.filter(active=True).order_by('?')[:4]
     now = datetime.today() - timedelta(hours=12)  # 12 hours
     upcoming_events = Event.objects.filter(date__gte=now).order_by('date')[:3]  # posts that are upcoming
     recent_news = Post.objects.order_by('-created')[:3]
     history = History.objects.all()
-    return render(request, 'front.html', {'slides': slides, 'dancers': random_dancers, 'events': upcoming_events, 'news': recent_news, 'history': history})
+
+    context = {
+        'slides': slides,
+        'dancers': random_dancers,
+        'events': upcoming_events,
+        'news': recent_news,
+        'history': history
+    }
+
+    return render(request, 'front.html', context)
 
 
 def contact_persons(request):
