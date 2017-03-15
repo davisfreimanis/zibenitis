@@ -1,13 +1,13 @@
 from django_markdown.models import MarkdownField
 from django.db import models
 from django.core.urlresolvers import reverse
-from datetime import datetime
+from django.utils import timezone
 
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
     content = MarkdownField()
-    created = models.DateTimeField(default=datetime.now())
+    created = models.DateTimeField(default=timezone.now)
     image = models.ImageField(upload_to='blog', blank=True, null=True)
 
     def __str__(self):
