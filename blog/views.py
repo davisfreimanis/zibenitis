@@ -26,9 +26,14 @@ def blog(request):
     except EmptyPage:
         posts = paginator.page(paginator.num_pages)
 
+    context = {
+        'posts': posts,
+        'events': events,
+        'slides': slides,
+        'blog_active': active
+    }
 
-
-    return render(request, 'blog/blog.html', {'posts': posts, 'events': events, 'slides': slides, 'blog_active': active})
+    return render(request, 'blog/blog.html', context)
 
 
 def post(request, post_id):
