@@ -32,7 +32,7 @@
                         {{ post.content|markdown }}
                     </article>
 
-                    <a href="javascript:history.go(-1)">
+                    <a href="{% url 'blog' %}">
                         <button class="btn btn-default see-more"><span class="glyphicon glyphicon-chevron-left">Atpakaļ</span>
                         </button>
                     </a>
