@@ -76,6 +76,11 @@ nav.navbar {
     background-color: #fec334; }
   nav.navbar ul li.event-active a:hover {
     background-color: #feb401; }
+  nav.navbar ul li.media-active a {
+    color: #fff;
+    background-color: #ff626b; }
+  nav.navbar ul li.media-active a:hover {
+    background-color: #ff2f3b; }
   nav.navbar ul li.contact-active a {
     color: #1ec2ff;
     background-color: white; }
@@ -196,6 +201,15 @@ section.history {
     background-color: #fff; }
     section.history div.col-md-12 div.cont p {
       color: #000; }
+
+section.gallery {
+  background-color: #ff626b; }
+  section.gallery h1.gallery-title {
+    color: #fff;
+    border: none; }
+  section.gallery hr.gallery-title-underline {
+    width: 75%;
+    border-top: 3px solid #fff; }
 
 .pagination {
   margin: auto;

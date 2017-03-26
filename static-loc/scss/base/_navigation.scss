@@ -61,6 +61,15 @@ nav.navbar {
         background-color: darken($events-section-bg-color, $link-hover-darken);
       }
     }
+    li.media-active {
+      a {
+        color: $gallery-header-color;
+        background-color: $gallery-section-bg-color;
+      }
+      a:hover {
+        background-color: darken($gallery-section-bg-color, $link-hover-darken);
+      }
+    }
     li.contact-active {
       a {
         color: $contacts-header-color;
