@@ -4,10 +4,10 @@ The page covers development and operational info for _Zibenitis_ web page projec
 
 ### Git
 
-Send your SSH public (not private!) key to Kaspars (gmail)
+Add your SSH public key to Github
 
 <pre>
-cat .ssh/id_rsa.pub
+~/.ssh/id_rsa.pub
 </pre>
 
 Set your name and email before committing any code
@@ -20,7 +20,7 @@ git config --global user.email "your.email@example.net"
 Clone git repos, you shall have all rights to pull/push
 
 <pre>
-git clone git@git.zibenitis.se:repos/zibenitis
+git clone git@github.com:davisfreimanis/zibenitis.git
 </pre>
 
 ### Production
@@ -28,8 +28,15 @@ git clone git@git.zibenitis.se:repos/zibenitis
 http://zibenitis.se/
 
 #### Server requirements
+
+##### SCSS
+<pre>
 sudo apt-get install ruby-full
 sudo su -c "gem install sass"
+</pre>
+
+##### Add SECRET_KEY file
+Create a new file in the same folder as settings.py and add the secret key. Ask Davis
 
 ## Dev (development)
 
