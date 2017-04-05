@@ -18,8 +18,22 @@ nav.navbar {
   }
   a.navbar-brand {
     color: $logo-color;
-    padding-top: 5px;
+    font-size: 40px;
+    padding: 5px 15px;
+    line-height: 40px;
+    vertical-align: middle;
+
+    img {
+      margin-right: 20px;
+      margin-top: -5px;
+      height: 40px;
+      display: inline-block;
+    }
   }
+  a.navbar-brand:hover {
+    color: $logo-color;
+  }
+
   ul {
     li.navigation {
       a {
@@ -34,6 +48,7 @@ nav.navbar {
       }
       a:hover {
         background-color: darken($navigation-bg-color, $link-hover-darken);
+        color: $logo-color;
       }
     }
 

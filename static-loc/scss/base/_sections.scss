@@ -55,12 +55,8 @@ section {
   }
 }
 
-
-
-
-
 section.news {
-  background-color: $news-section-bg-color;
+  //background-color: $news-section-bg-color;
   h1.news-title {
     color: $news-header-color;
   }
@@ -127,7 +123,6 @@ section.dancers {
 }
 
 section.history {
-  background-color: $history-section-bg-color;
   h1.history-title {
     color: $history-header-color;
   }

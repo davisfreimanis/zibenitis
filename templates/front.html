@@ -50,29 +50,26 @@
                 <a href="{% url 'blog' %}">
                     <h1 class="news-title">Aktuālie notikumi</h1>
                 </a>
-                <hr class="news-title-underline"/>
-                {% for n in news %}
-                    <div class="col-md-4">
-                        <div class="well cont">
-                            <a href="/blog/{{ n.id }}">
-                                <h2 news-post-title>{{ n.title }}</h2>
-                            </a>
+            </div>
 
+            {% for n in news %}
+                <div class="well cont">
+                    <div class="row">
+                        <div class="col-md-4">
                             {% if n.check_if_picture %}
                                 <img class="img-responsive" src="../media/{{n.image}}" alt=""/>
                             {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <a href="{% url 'blog' %}{{ n.id }}">
+                                <h2 news-post-title>{{ n.title }}</h2>
+                            </a>
 
                             <p news-post-content>{{ n.content|markdown|truncatechars:100 }}</p>
-                            <button class="btn btn-default"><a href="/blog/{{n.id}}/">Lasīt vairāk</a></button>
                         </div>
                     </div>
-                {% endfor %}
-            </div>
-            <div class="row">
-                <a href="{% url 'blog' %}">
-                    <button class="btn btn-default see-more">Skatīt vēl</button>
-                </a>
-            </div>
+                </div>
+            {% endfor %}
         </div>
     </section>
 
@@ -82,7 +79,6 @@
                 <a href="{% url 'events' %}">
                     <h1 class="events-title">Pasākumi</h1>
                 </a>
-                <hr class="events-title-underline"/>
 
                 {% if events %}
                     {% for e in events %}
@@ -123,7 +119,6 @@
                 <a href="{% url 'dancers' %}">
                     <h1 class="dancers-title">Dejotāji</h1>
                 </a>
-                <hr class="dancers-title-underline"/>
                 {% for d in dancers %}
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="cont">
@@ -147,7 +142,6 @@
                 <a href="{% url 'dancers' %}">
                     <h1 class="history-title">Par mums</h1>
                 </a>
-                <hr class="history-title-underline"/>
                 <div class="col-md-12">
                     {% for h in history %}
                         <div class="well cont">
@@ -158,34 +152,5 @@
             </div>
         </div>
     </section>
-
-    <!--
-    <section class="gallery">
-        <div class="container">
-            <div class="row">
-                <h1 class="gallery-title">
-                    Galerija
-                </h1>
-                <hr class="gallery-title-underline"/>
-                {% if object_list %}
-                    {% for gallery in object_list %}
-                        <div class="row col-lg-12">
-                            <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-                            <p class="muted"><small>{{ gallery.date_added }}</small></p>
-                            {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
-                            {% for photo in gallery.sample %}
-                                <a href="{{ photo.get_absolute_url }}">
-                                     <img src="{{ photo.get_thumbnail_url }}" class="thumbnail" alt="{{ photo.title }}">
-                                </a>
-                            {% endfor %}
-                        </div>
-                    {% endfor %}
-                {% else %}
-                    <div class="row col-lg-12">Empty</div>
-                {% endif %}
-            </div>
-        </div>
-    </section>
-    -->
 
 {% endblock %}
