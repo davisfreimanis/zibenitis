@@ -1,5 +1,6 @@
 body {
-  background-color: $body-bg-color;
+  background-image: url("/media/fons.png");
+  background-size: 700px;
   color: $body-text-color;
 }
 
@@ -27,7 +28,11 @@ section p {
   font-size: 150%;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p {
+  font-family: $secondary-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
   font-family: $global-font;
 }
 

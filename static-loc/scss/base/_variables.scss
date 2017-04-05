@@ -2,7 +2,8 @@
 * Global. To edit CSS, make sure to edit in the SCSS files and NOT style.css
 */
 
-$global-font: 'Josefin+Sans', sans-serif;
+$global-font: 'Lato', sans-serif;
+$secondary-font: 'Open Sans', sans-serif;
 $body-bg-color: #374868;
 $body-text-color: #222;
 
@@ -13,29 +14,29 @@ $link-hover-darken: 10%;
 $underline-height: 3px;
 $underline-width: 75%;
 
-$logo-color: white;
-$navigation-bg-color: #002468;
+$logo-color: #ffef38;
+$navigation-bg-color: #265c78;
 
-$news-section-bg-color: #19428c;
+$news-section-bg-color: #275d79;
 $news-article-bg-color: #fff;
-$news-header-color: #fff;
+$news-header-color: black;
 $news-text-color: #666;
 
-$events-section-bg-color: #19428c;
+$events-section-bg-color: #275d79;
 $events-header-color: #fff;
 $events-text-color: black;
 
-$dancers-section-bg-color: #19428c;
+$dancers-section-bg-color: #4ca1af;
 $dancers-header-color: #fff;
 $dancers-text-color: #fff;
 
-$history-section-bg-color: #19428c;
-$history-header-color: #fff;
+$history-section-bg-color: #275d79;
+$history-header-color: black;
 $history-text-color: #000;
 $history-text-bg-color: #fff;
 
-$contacts-section-bg-color: #19428c;
-$contacts-header-color: #1ec2ff;
+$contacts-section-bg-color: #275d79;
+$contacts-header-color: white;
 
-$gallery-section-bg-color: #19428c;
+$gallery-section-bg-color: #275d79;
 $gallery-header-color: #fff;
