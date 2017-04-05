@@ -47,8 +47,9 @@ INSTALLED_APPS = (
     'dancers',
     'blog',
     'events',
+    'stats',
     'photologue',
-     'sortedm2m', # with photologue
+    'sortedm2m', # with photologue
 )
 
 MIDDLEWARE_CLASSES = (

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load django_markdown %}
+
+{% block title %} TDK Zibenitis {% endblock %}
+{% block pagetitle %} Statistics {% endblock %}
+{% block pagesubtitle %}  {% endblock %}
+
+{% block pagecontents %}
+    <section class="stats">
+        <div class="container">
+            <ul class="list-group">
+                {% for rehearsal in rehearsals %}
+                    <li class="list-group-item">
+                        {{ rehearsal.date }}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            <ul class="list-group">
+                {% for person in persons %}
+                    <li class="list-group-item">
+                        <img class="img-thumbnail img-circle img-responsive img-stats" src="../media/{{ person.picture }}"
+                                 alt="{{ person.first_name }} {{ person.last_name }}"
+                                 title="{{ person.first_name }} {{ person.last_name }}"/>
+                        {{ person.first_name }} {{ person.last_name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </section>
+
+{% endblock %}
+
