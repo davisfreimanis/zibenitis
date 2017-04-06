@@ -39,6 +39,8 @@ http://zibenitis.se/
 
 * Add latvian locale to be able to sort names `sudo locale-gen "lv_LV.utf8"`
 
+* Create a local superuser to use adminpanel `python3 manage.py creatsuperuser`
+
 ##### Add SECRET_KEY file
 Create a new file called `secret_key` in the same folder as settings.py and add the secret key. Ask Davis
 
