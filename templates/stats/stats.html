@@ -22,6 +22,11 @@
                         </form>
                     </li>
                 {% endfor %}
+                <li class="list-group-item">
+                    <a href="{% url 'stats:rehearsal-add' %}">
+                        <button type="button" class="btn btn-info center-block">Add new</button>
+                    </a>
+                </li>
             </ul>
 
             <ul class="list-group">
