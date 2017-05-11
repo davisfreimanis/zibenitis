@@ -27,22 +27,28 @@ git clone git@github.com:davisfreimanis/zibenitis.git
 
 http://zibenitis.se/
 
-#### Server requirements
+#### Set up
+* Install python3
+* Install pip3 `sudo apt-get install python3-pip`
+* Install pip modules `sudo pip3 install -r requirements.txt"`
+* Install ruby `sudo apt-get install ruby-full`
+* Install SCSS `sudo su -c "gem install sass"`
 
-##### SCSS
-<pre>
-sudo apt-get install ruby-full
-sudo su -c "gem install sass"
-</pre>
+* Run migrations `python3 manage.py makemigrations` and `python3 manage.py migrate`
+* Generate stylesheets `scss static-loc/scss/style.scss static-loc/style.css`
+
+* Add latvian locale to be able to sort names `sudo locale-gen "lv_LV.utf8"`
+
+* Create a local superuser to use adminpanel `python3 manage.py creatsuperuser`
 
 ##### Add SECRET_KEY file
-Create a new file in the same folder as settings.py and add the secret key. Ask Davis
+Create a new file called `secret_key` in the same folder as settings.py and add the secret key. Ask Davis
 
 ## Dev (development)
 
 ### Languages/Frameworks
 
-* Python 3+ (python-pip3). run "pip3 install -r requirements.txt"
+* Python 3+ (python-pip3)
 * Django 1.9 (Back-end)
 * HTML 5
 * SCSS
