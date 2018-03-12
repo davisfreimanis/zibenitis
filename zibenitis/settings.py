@@ -57,13 +57,14 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_markdown',
+    'markdownx',
     'dancers',
     'blog',
     'events',
     'stats',
+    'utils',
     'photologue',
-    'sortedm2m', # with photologue
+    'sortedm2m',  # with photologue
 )
 
 MIDDLEWARE_CLASSES = (

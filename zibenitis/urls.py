@@ -13,7 +13,7 @@ urlpatterns = [
     url(r'^events/', include('events.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^contact/$', views.contact_persons, name='contact'),
-    url('^markdown/', include('django_markdown.urls')),
+    url(r'^markdownx/', include('markdownx.urls')),
     url(r'^photos/', include('photologue.urls', namespace='photologue')),
     url(r'^stats/', include('stats.urls', namespace='stats')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

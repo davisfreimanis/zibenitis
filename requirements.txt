@@ -1,4 +1,4 @@
 Django
-django-markdown
+django-markdownx
 pytz
 django-photologue

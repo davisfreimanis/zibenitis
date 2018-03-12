@@ -1,6 +1,6 @@
 from django.db import models
 
-from django_markdown.models import MarkdownField
+from markdownx.models import MarkdownxField
 from django.core.urlresolvers import reverse
 from django.conf import settings
 from django.utils import timezone
@@ -9,7 +9,7 @@ from django.utils import timezone
 # A class, specifically for our short history section
 class History(models.Model):
     title = models.CharField(max_length=255)
-    content = MarkdownField()
+    content = MarkdownxField()
     modified = models.DateTimeField(default=timezone.now)
     image = models.ImageField(upload_to='blog', default='dancers_pic/default_pic.png')
 

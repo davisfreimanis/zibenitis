@@ -1,4 +1,4 @@
-from django_markdown.models import MarkdownField
+from markdownx.models import MarkdownxField
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils import timezone
@@ -6,7 +6,7 @@ from django.utils import timezone
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    content = MarkdownField()
+    content = MarkdownxField()
     created = models.DateTimeField(default=timezone.now)
     image = models.ImageField(upload_to='blog', blank=True, null=True)
 

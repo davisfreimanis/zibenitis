@@ -5,8 +5,7 @@ from events.models import Event
 from blog.models import Carousel
 from datetime import datetime, timedelta
 
-
-active = True # for navigation highlighting
+active = True  # for navigation highlighting
 
 
 def blog(request):

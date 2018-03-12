@@ -2,6 +2,7 @@ from django.contrib import admin
 from dancers.models import History
 from dancers.models import Person
 from dancers.models import Contact_person
+from markdownx.admin import MarkdownxModelAdmin
 
 
 def make_inactive(modeladmin, request, queryset):
@@ -32,6 +33,6 @@ class DancersAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin.site.register(History)
+admin.site.register(History, MarkdownxModelAdmin)
 admin.site.register(Person, DancersAdmin)
 admin.site.register(Contact_person)

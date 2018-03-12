@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load django_markdown %}
+{% load markdownx %}
 
 {% block title %} TDK Zibenitis {% endblock %}
 {% block pagetitle %} About us {% endblock %}
@@ -13,7 +13,7 @@
                 <div class="col-sm-12">
                     <div class="well cont">
                         {% for hist in history %}
-                            <p>{{ hist.content|markdown }}</p>
+                            <p>{{ hist.content|markdown|safe }}</p>
                         {% endfor %}
                     </div>
                 </div>
