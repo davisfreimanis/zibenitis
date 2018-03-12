@@ -2,7 +2,8 @@
 * Global. To edit CSS, make sure to edit in the SCSS files and NOT style.css
 */
 body {
-  background-color: #374868;
+  background-image: url("/media/fons.png");
+  background-size: 700px;
   color: #222; }
 
 h1 {
@@ -23,8 +24,11 @@ a:active {
 section p {
   font-size: 150%; }
 
-p, h1, h2, h3, h4, h5, h6 {
-  font-family: "Josefin+Sans", sans-serif; }
+p {
+  font-family: "Open Sans", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", sans-serif; }
 
 .well {
   opacity: 0.95; }
@@ -43,65 +47,76 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 100%; }
 
 nav.navbar {
-  background-color: #002468;
+  background-color: #265c78;
   border: none;
   border-radius: 0;
   margin-bottom: 0; }
   nav.navbar button.navbar-toggle {
-    border-color: white; }
+    border-color: #ffef38; }
     nav.navbar button.navbar-toggle span.icon-bar {
-      background-color: white; }
+      background-color: #ffef38; }
   nav.navbar a.navbar-brand {
-    color: white;
-    padding-top: 5px; }
+    color: #ffef38;
+    font-size: 40px;
+    padding: 5px 15px;
+    line-height: 40px;
+    vertical-align: middle; }
+    nav.navbar a.navbar-brand img {
+      margin-right: 20px;
+      margin-top: -5px;
+      height: 40px;
+      display: inline-block; }
+  nav.navbar a.navbar-brand:hover {
+    color: #ffef38; }
   nav.navbar ul li.navigation a {
     font-size: 110%;
-    color: white;
+    color: #ffef38;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #002468; }
+    background-color: #265c78; }
     nav.navbar ul li.navigation a span.youtube-nav.facebook-nav {
       margin-left: 15px; }
   nav.navbar ul li.navigation a:hover {
-    background-color: #001235; }
+    background-color: #1a3e51;
+    color: #ffef38; }
   nav.navbar ul li.blog-active a {
-    background-color: #19428c; }
+    background-color: #275d79; }
   nav.navbar ul li.blog-active a:hover {
-    background-color: #112e61; }
+    background-color: #1b3f52; }
   nav.navbar ul li.about-active a {
-    background-color: #19428c; }
+    background-color: #275d79; }
   nav.navbar ul li.about-active a:hover {
-    background-color: #112e61; }
+    background-color: #1b3f52; }
   nav.navbar ul li.event-active a {
-    background-color: #19428c; }
+    background-color: #275d79; }
   nav.navbar ul li.event-active a:hover {
-    background-color: #112e61; }
+    background-color: #1b3f52; }
   nav.navbar ul li.media-active a {
     color: #fff;
-    background-color: #19428c; }
+    background-color: #275d79; }
   nav.navbar ul li.media-active a:hover {
-    background-color: #112e61; }
+    background-color: #1b3f52; }
   nav.navbar ul li.contact-active a {
-    color: #1ec2ff;
-    background-color: #19428c; }
+    color: white;
+    background-color: #275d79; }
   nav.navbar ul li.contact-active a:hover {
-    background-color: #112e61; }
+    background-color: #1b3f52; }
   nav.navbar ul li ul.dropdown-menu {
-    background-color: #002468;
+    background-color: #265c78;
     border: none; }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #002468; }
+  background-color: #265c78; }
 
 div.footer {
-  background-color: #002468; }
+  background-color: #265c78; }
   div.footer div ul .navbar-text {
     margin-left: 15px;
-    color: white; }
+    color: #ffef38; }
     div.footer div ul .navbar-text a {
-      color: white; }
+      color: #ffef38; }
     div.footer div ul .navbar-text a:hover {
-      color: #e6e6e6; }
+      color: #ffeb05; }
 
 p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
@@ -147,21 +162,19 @@ section {
     -moz-border-radius: 50px;
     border-radius: 50px; }
 
-section.news {
-  background-color: #19428c; }
-  section.news h1.news-title {
-    color: #fff; }
-  section.news hr.news-title-underline {
-    border-top: 3px solid #fff; }
-  section.news div.row {
-    height: auto; }
-    section.news div.row div.col-md-4 div.cont {
-      background-color: #fff; }
-      section.news div.row div.col-md-4 div.cont h2 {
-        color: #666; }
+section.news h1.news-title {
+  color: black; }
+section.news hr.news-title-underline {
+  border-top: 3px solid black; }
+section.news div.row {
+  height: auto; }
+  section.news div.row div.col-md-4 div.cont {
+    background-color: #fff; }
+    section.news div.row div.col-md-4 div.cont h2 {
+      color: #666; }
 
 section.events {
-  background-color: #19428c; }
+  background-color: #275d79; }
   section.events h1.events-title {
     color: #fff; }
   section.events hr.events-title-underline {
@@ -174,7 +187,7 @@ section.events {
       color: black; }
 
 section.dancers {
-  background-color: #19428c; }
+  background-color: #4ca1af; }
   section.dancers h1.dancers-title {
     color: #fff; }
   section.dancers hr.dancers-title-underline {
@@ -183,7 +196,7 @@ section.dancers {
     height: auto; }
     section.dancers div div.cont {
       padding: 15px;
-      background-color: #19428c; }
+      background-color: #4ca1af; }
       section.dancers div div.cont img {
         margin: auto;
         display: block; }
@@ -191,19 +204,17 @@ section.dancers {
         text-align: center;
         color: #fff; }
 
-section.history {
-  background-color: #19428c; }
-  section.history h1.history-title {
-    color: #fff; }
-  section.history hr.history-title-underline {
-    border-top: 3px solid #fff; }
-  section.history div.col-md-12 div.cont {
-    background-color: #fff; }
-    section.history div.col-md-12 div.cont p {
-      color: #000; }
+section.history h1.history-title {
+  color: black; }
+section.history hr.history-title-underline {
+  border-top: 3px solid black; }
+section.history div.col-md-12 div.cont {
+  background-color: #fff; }
+  section.history div.col-md-12 div.cont p {
+    color: #000; }
 
 section.gallery {
-  background-color: #19428c; }
+  background-color: #275d79; }
   section.gallery h1.gallery-title {
     color: #fff;
     border: none; }
@@ -225,22 +236,13 @@ section.gallery {
     text-align: center;
     margin: 0; }
 
-section {
-  background-color: #19428c; }
-  section div.container div.row h1.dancers-title {
-    text-align: center;
-    color: #fff; }
-  section div.container div.row hr.dancers-title-underline {
-    border-top: 3px solid #fff;
-    width: 75%; }
-
 section.contacts {
-  background-color: #19428c; }
+  background-color: #275d79; }
   section.contacts div.container div.row h1.contacts-title {
     text-align: center;
-    color: #1ec2ff; }
+    color: white; }
   section.contacts div.container div.row hr.contacts-title-underline {
-    border-top: 3px solid #1ec2ff;
+    border-top: 3px solid white;
     width: 75%; }
 
 .vertical-align {
