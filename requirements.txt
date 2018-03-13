@@ -1,4 +1,4 @@
-Django
+Django==1.9.4
 django-markdownx
-pytz
-django-photologue
+pytz==2017.2
+django-photologue==3.6
