@@ -3,6 +3,7 @@ python:
   - '3.5'
   - '3.6'
 install:
+  - locale-gen "lv_LV.utf8"
   - touch zibenitis/secret_key
   - echo testkey > zibenitis/secret_key
   - pip install -r requirements.txt
