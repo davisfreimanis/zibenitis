@@ -1,6 +1,6 @@
-from django.conf.urls import patterns, url
+from django.urls import path
 from dancers import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='dancers'),
+    path('', views.index, name='dancers'),
 ]

@@ -1,7 +1,7 @@
 from django.db import models
 
 from markdownx.models import MarkdownxField
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.conf import settings
 from django.utils import timezone
 

@@ -1,10 +1,10 @@
-from django.conf.urls import patterns, url
+from django.urls import path
 from blog import views
 
 urlpatterns = [
     # ex: /blog/
-    url(r'^$', views.blog, name='blog'),
+    path('', views.blog, name='blog'),
     # ex: /blog/5/
-    url(r'^(?P<post_id>\d+)/$', views.post, name='post')
+    path('<int:post_id>/', views.post, name='post')
 ]
 
