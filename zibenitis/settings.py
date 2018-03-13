@@ -35,6 +35,7 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.request",
             ],
             'debug': DEBUG,
         }
@@ -50,6 +51,7 @@ SITE_ID = 1
 
 # Application definition
 INSTALLED_APPS = (
+    'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -61,18 +63,17 @@ INSTALLED_APPS = (
     'dancers',
     'blog',
     'events',
-    'stats',
     'utils',
     'photologue',
     'sortedm2m',  # with photologue
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )

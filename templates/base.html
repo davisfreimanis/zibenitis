@@ -60,10 +60,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="navigation {% if blog_active %}blog-active{% endif %}">
-                                <a href="{% url 'blog.views.blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
+                                <a href="{% url 'blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="navigation {% if about_active %}about-active{% endif %}">
-                                <a href="{% url 'dancers.views.index' %}">Par mums</a>
+                                <a href="{% url 'dancers' %}">Par mums</a>
                             </li>
                             <li class="navigation {% if event_active %}event-active{% endif %}">
                                 <a href="{% url 'events' %}">Pasākumi</a>
@@ -72,7 +72,7 @@
                                 <a href="/photos">Bildes</a>
                             </li>
                             <li class="navigation {% if contact_active %}contact-active{% endif %}">
-                                <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakti</a>
+                                <a href="{% url 'contact' %}">Kontakti</a>
                             </li>
                             <li class="navigation">
                                 <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="18px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
