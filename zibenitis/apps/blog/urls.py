@@ -1,5 +1,5 @@
 from django.urls import path
-from blog import views
+from zibenitis.apps.blog import views
 
 urlpatterns = [
     # ex: /blog/

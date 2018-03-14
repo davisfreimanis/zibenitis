@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-from blog.models import Post
+from zibenitis.apps.blog.models import Post
 from events.models import Event
-from blog.models import Carousel
+from zibenitis.apps.blog.models import Carousel
 from datetime import datetime, timedelta
 
 active = True  # for navigation highlighting
