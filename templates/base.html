@@ -39,6 +39,7 @@
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
         <div class="wrapper">
 
@@ -75,11 +76,10 @@
                                 <a href="{% url 'contact' %}">Kontakti</a>
                             </li>
                             <li class="navigation">
-                                <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="18px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
+                                <a href="http://www.facebook.com/zibenitis"><i class="fab fa-facebook-square fa-lg fa-fw"></i><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
                             </li>
                             <li class="navigation">
-                                <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><img src="/media/youtube.png" height="18px"
-                                                                                                        alt=""/><span class="youtube-nav hidden-sm hidden-md hidden-lg"> Youtube</span></a>
+                                <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><i class="fab fa-youtube fa-lg fa-fw"></i><span class="youtube-nav hidden-sm hidden-md hidden-lg"> Youtube</span></a>
                             </li>
 
                         </ul>
@@ -102,7 +102,7 @@
             <div class="container">
                 <ul class="nav navbar-nav navbar-right">
                     <li><p class="navbar-text footer-copyright">© Zibenitis {% now "Y" %}</p></li>
-                    <li><p class="navbar-text"><a href="/admin/"><span class="glyphicon glyphicon-cog"></span>Admin</a></p></li>
+                    <li><p class="navbar-text"><a href="/admin/"><i class="fas fa-cog fa-fw fa-sm"></i>Admin</a></p></li>
                 </ul>
             </div>
         </div>
