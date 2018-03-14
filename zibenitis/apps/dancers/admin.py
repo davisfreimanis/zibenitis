@@ -1,7 +1,7 @@
 from django.contrib import admin
-from dancers.models import History
-from dancers.models import Person
-from dancers.models import Contact_person
+from .models import History
+from .models import Person
+from .models import Contact_person
 from markdownx.admin import MarkdownxModelAdmin
 
 

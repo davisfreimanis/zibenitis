@@ -64,7 +64,7 @@ INSTALLED_APPS = (
     'photologue',
     'sortedm2m',  # with photologue
 
-    'dancers',
+    'zibenitis.apps.dancers',
     'zibenitis.apps.blog',
     'zibenitis.apps.events',
     'utils',
