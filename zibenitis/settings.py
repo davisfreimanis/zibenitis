@@ -66,7 +66,7 @@ INSTALLED_APPS = (
 
     'dancers',
     'zibenitis.apps.blog',
-    'events',
+    'zibenitis.apps.events',
     'utils',
 )
 

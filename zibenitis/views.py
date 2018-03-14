@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from dancers.models import Person, Contact_person
-from events.models import Event
+from zibenitis.apps.events.models import Event
 from zibenitis.apps.blog.models import Post
 from zibenitis.apps.blog.models import Carousel
 from dancers.models import History

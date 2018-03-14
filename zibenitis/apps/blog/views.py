@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from zibenitis.apps.blog.models import Post
-from events.models import Event
+from zibenitis.apps.events.models import Event
 from zibenitis.apps.blog.models import Carousel
 from datetime import datetime, timedelta
 
