@@ -2,14 +2,18 @@
   "name": "Zibenitis",
   "version": "0.0.1",
   "description": "Zibenitis webpage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davisfreimanis/zibenitis.git"
+  },
   "scripts": {
     "gulp": "gulp"
   },
-  "dependencies": {
-    "node-sass": "^4.7.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-util": "^3.0.8"
   }
 }
