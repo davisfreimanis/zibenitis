@@ -31,8 +31,9 @@ http://zibenitis.se/
 * Install python3
 * Install pip3 `sudo apt-get install python3-pip`
 * Install pip modules `sudo pip3 install -r requirements.txt"`
-* Install ruby `sudo apt-get install ruby-full`
-* Install SCSS `sudo su -c "gem install sass"`
+* Install node with nvm
+* Install yarn
+* Install yarn dependencies
 
 * Run migrations `python3 manage.py makemigrations` and `python3 manage.py migrate`
 * Generate stylesheets `scss static-loc/scss/style.scss static-loc/style.css`
