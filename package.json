@@ -1,0 +1,15 @@
+{
+  "name": "Zibenitis",
+  "version": "0.0.1",
+  "description": "Zibenitis webpage",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "dependencies": {
+    "node-sass": "^4.7.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.8"
+  }
+}
