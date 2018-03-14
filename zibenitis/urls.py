@@ -9,9 +9,9 @@ from zibenitis import views
 
 urlpatterns = [
     path('', views.front_page, name='home'),
-    path('blog/', include('blog.urls')),
-    path('dancers/', include('dancers.urls')),
-    path('events/', include('events.urls')),
+    path('blog/', include('zibenitis.apps.blog.urls')),
+    path('dancers/', include('zibenitis.apps.dancers.urls')),
+    path('events/', include('zibenitis.apps.events.urls')),
     path('admin/', admin.site.urls),
     path('contact/', views.contact_persons, name='contact'),
     path('markdownx/', include('markdownx.urls')),

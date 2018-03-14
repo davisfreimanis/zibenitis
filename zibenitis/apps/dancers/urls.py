@@ -1,5 +1,5 @@
 from django.urls import path
-from dancers import views
+from zibenitis.apps.dancers import views
 
 urlpatterns = [
     path('', views.index, name='dancers'),

@@ -3,9 +3,9 @@ import locale
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from dancers.models import History
-from dancers.models import Person
-from dancers.models import Contact_person
+from .models import History
+from .models import Person
+from .models import Contact_person
 
 active = True
 locale.setlocale(locale.LC_ALL, "lv_LV.utf8")

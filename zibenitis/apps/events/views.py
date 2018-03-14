@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from events.models import Event
+from zibenitis.apps.events.models import Event
 from datetime import datetime, timedelta
 
 active = True

@@ -59,13 +59,15 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+
     'markdownx',
-    'dancers',
-    'blog',
-    'events',
-    'utils',
     'photologue',
     'sortedm2m',  # with photologue
+
+    'zibenitis.apps.dancers',
+    'zibenitis.apps.blog',
+    'zibenitis.apps.events',
+    'utils',
 )
 
 MIDDLEWARE = (
