@@ -85,6 +85,7 @@ INSTALLED_APPS = (
     'zibenitis.apps.blog',
     'zibenitis.apps.events',
     'zibenitis.apps.utils',
+    'zibenitis.apps.stats',
 )
 
 MIDDLEWARE = (

@@ -12,6 +12,7 @@ urlpatterns = [
     path('blog/', include('zibenitis.apps.blog.urls')),
     path('dancers/', include('zibenitis.apps.dancers.urls')),
     path('events/', include('zibenitis.apps.events.urls')),
+    path('stats/', include('zibenitis.apps.stats.urls')),
     path('admin/', admin.site.urls),
     path('contact/', views.contact_persons, name='contact'),
     path('markdownx/', include('markdownx.urls')),
