@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load django_markdown %}
+{% load markdownx %}
 
 {% block title %}{{ post.title }}{% endblock %}
 {% block pagetitle %} Zibenitis blog {% endblock %}
@@ -29,7 +29,7 @@
                         <p class="description">
                             {{ post.description }}
                         </p>
-                        {{ post.content|markdown }}
+                        {{ post.content|markdown|safe }}
                     </article>
 
                     <a href="{% url 'blog' %}">

@@ -8,13 +8,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {% load staticfiles %}
+
         <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'events/css/events.css' %}" />
-        <link rel="stylesheet" type="text/css" href="{% static 'dancers/dancers.css' %}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
         <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
-        <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="{{MEDIA_URL}}logo_icon.ico" />
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -38,8 +36,9 @@
     <body>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
         <div class="wrapper">
 
             <nav class="navbar navbar-default">
@@ -60,10 +59,10 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="navigation {% if blog_active %}blog-active{% endif %}">
-                                <a href="{% url 'blog.views.blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
+                                <a href="{% url 'blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="navigation {% if about_active %}about-active{% endif %}">
-                                <a href="{% url 'dancers.views.index' %}">Par mums</a>
+                                <a href="{% url 'dancers' %}">Par mums</a>
                             </li>
                             <li class="navigation {% if event_active %}event-active{% endif %}">
                                 <a href="{% url 'events' %}">Pasākumi</a>
@@ -72,14 +71,13 @@
                                 <a href="/photos">Bildes</a>
                             </li>
                             <li class="navigation {% if contact_active %}contact-active{% endif %}">
-                                <a href="{% url 'zibenitis.views.contact_persons' %}">Kontakti</a>
+                                <a href="{% url 'contact' %}">Kontakti</a>
                             </li>
                             <li class="navigation">
-                                <a href="http://www.facebook.com/zibenitis"><img src="/media/facebook.png" height="18px" alt=""/><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
+                                <a href="http://www.facebook.com/zibenitis"><i class="fab fa-facebook-square fa-lg fa-fw"></i><span class="facebook-nav hidden-sm hidden-md hidden-lg"> Facebook</span></a>
                             </li>
                             <li class="navigation">
-                                <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><img src="/media/youtube.png" height="18px"
-                                                                                                        alt=""/><span class="youtube-nav hidden-sm hidden-md hidden-lg"> Youtube</span></a>
+                                <a href="https://www.youtube.com/channel/UC2RRxVxwTE0mvxx8aFeTvEA"><i class="fab fa-youtube fa-lg fa-fw"></i><span class="youtube-nav hidden-sm hidden-md hidden-lg"> Youtube</span></a>
                             </li>
 
                         </ul>
@@ -102,7 +100,7 @@
             <div class="container">
                 <ul class="nav navbar-nav navbar-right">
                     <li><p class="navbar-text footer-copyright">© Zibenitis {% now "Y" %}</p></li>
-                    <li><p class="navbar-text"><a href="/admin/"><span class="glyphicon glyphicon-cog"></span>Admin</a></p></li>
+                    <li><p class="navbar-text"><a href="/admin/"><i class="fas fa-cog fa-fw fa-sm"></i>Admin</a></p></li>
                 </ul>
             </div>
         </div>

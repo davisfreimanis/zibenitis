@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load django_markdown %}
+{% load markdownx %}
 
 {% block title %} TDK Zibenitis {% endblock %}
 
@@ -16,18 +16,15 @@
                             -moz-background-size: cover;
                             -o-background-size: cover;"
                          class="item active">
+                    </div>
                 {% else %}
                     <div style="background: url(/media/{{ slide.image }}) no-repeat center center; background-size: cover;-webkit-background-size: cover;
                             -moz-background-size: cover;
                             -o-background-size: cover;" class="item">
-                {% endif %}
-            <!-- <div class="carousel-caption">
-                <h4>{{ slide.title }}</h4>
-
-                <p>{{ slide.description }}</p>
-            </div>
-            -->
                     </div>
+                {% endif %}
+
+
             {% endfor %}
 
             <!-- Controls -->
@@ -57,7 +54,7 @@
                     <div class="row">
                         <div class="col-md-4">
                             {% if n.check_if_picture %}
-                                <img class="img-responsive" src="../media/{{n.image}}" alt=""/>
+                                <img class="img-responsive" src="../media/{{ n.image }}" alt=""/>
                             {% endif %}
                         </div>
                         <div class="col-md-8">
@@ -65,7 +62,7 @@
                                 <h2 news-post-title>{{ n.title }}</h2>
                             </a>
 
-                            <p news-post-content>{{ n.content|markdown|truncatechars:100 }}</p>
+                            <p news-post-content>{{ n.content|truncatechars:100|markdown|safe }}</p>
                         </div>
                     </div>
                 </div>
@@ -122,7 +119,7 @@
                 {% for d in dancers %}
                     <div class="col-md-3 col-sm-6 col-xs-12">
                         <div class="cont">
-                            <img class="img-thumbnail img-responsive img-circle" src="../media/{{d.picture}}" alt=""/>
+                            <img class="img-thumbnail img-responsive img-circle" src="../media/{{ d.picture }}" alt=""/>
                             <h3 class="dancer-name">{{ d.first_name }} {{ d.last_name }}</h3>
                         </div>
                     </div>
@@ -145,7 +142,7 @@
                 <div class="col-md-12">
                     {% for h in history %}
                         <div class="well cont">
-                            <p>{{h.content|markdown}}</p>
+                            <p>{{ h.content|markdown|safe }}</p>
                         </div>
                     {% endfor %}
                 </div>

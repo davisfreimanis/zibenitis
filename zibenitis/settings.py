@@ -18,16 +18,48 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-with open(os.path.join(BASE_DIR, 'zibenitis/secret_key')) as f:
-    SECRET_KEY = f.read().strip()
+# SECRET_KEY is stored in Environmental variable. Otherwise default value (fake key, not used in production)
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-TEMPLATE_DEBUG = True
+DEVELOPMENT = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = []
+# Settings for production
+if not DEVELOPMENT:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_SSL_REDIRECT = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    ALLOWED_HOSTS = ['zibenitis.se', 'www.zibenitis.se', 'dev.zibenitis.se']
+else:
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    X_FRAME_OPTIONS = 'SAMEORIGIN'
+    SECURE_SSL_REDIRECT = False
+    SECURE_BROWSER_XSS_FILTER = False
+    SECURE_CONTENT_TYPE_NOSNIFF = False
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+                "django.template.context_processors.request",
+            ],
+            'debug': DEBUG,
+        }
+    }
+]
 
 # Enable tables and other non-core features
 MARKDOWN_EXTENSIONS = ['extra']
@@ -36,6 +68,7 @@ SITE_ID = 1
 
 # Application definition
 INSTALLED_APPS = (
+    'bootstrap_admin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,21 +76,23 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'django_markdown',
-    'dancers',
-    'blog',
-    'events',
-    'stats',
+
+    'markdownx',
     'photologue',
-    'sortedm2m', # with photologue
+    'sortedm2m',  # with photologue
+
+    'zibenitis.apps.dancers',
+    'zibenitis.apps.blog',
+    'zibenitis.apps.events',
+    'zibenitis.apps.utils',
 )
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
+    'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -80,7 +115,6 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'lv'
 
 TIME_ZONE = 'CET'
@@ -91,9 +125,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-# Template files like .html
-# https://docs.djangoproject.com/en/1.7/intro/tutorial02/
-TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates'), ]  # possible to add multiple paths to directories
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static-loc'), ]  # possible to add multiple paths to directories
 # Static files (CSS, JavaScript, Images)
