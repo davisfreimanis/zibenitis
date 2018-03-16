@@ -18,12 +18,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-with open(os.path.join(BASE_DIR, 'zibenitis/secret_key')) as f:
-    SECRET_KEY = f.read().strip()
+# SECRET_KEY is stored in Environmental variable. Otherwise default value (fake key, not used in production)
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+print("###########")
+print(DEBUG)
+print("###########")
 
 TEMPLATES = [
     {
@@ -42,7 +44,7 @@ TEMPLATES = [
     }
 ]
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 # Enable tables and other non-core features
 MARKDOWN_EXTENSIONS = ['extra']

@@ -1,6 +1,6 @@
 language: python
 python:
-  - '3.6'
+  - '3.5'
 install:
   - sudo locale-gen "lv_LV.utf8"
   - touch zibenitis/secret_key
