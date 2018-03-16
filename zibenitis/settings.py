@@ -19,17 +19,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECRET_KEY is stored in Environmental variable. Otherwise default value (fake key, not used in production)
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
-ALLOWED_HOSTS = ['127.0.0.1']
-
-development = bool(os.environ.get('DJANGO_DEBUG', True))
+DEVELOPMENT = bool(os.environ.get('DJANGO_DEBUG', True))
 
 # Settings for production
-if not development:
+if not DEVELOPMENT:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     X_FRAME_OPTIONS = 'DENY'
@@ -37,6 +35,14 @@ if not development:
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
     ALLOWED_HOSTS = ['zibenitis.se', 'www.zibenitis.se', 'dev.zibenitis.se']
+else:
+    CSRF_COOKIE_SECURE = False
+    SESSION_COOKIE_SECURE = False
+    X_FRAME_OPTIONS = 'SAMEORIGIN'
+    SECURE_SSL_REDIRECT = False
+    SECURE_BROWSER_XSS_FILTER = False
+    SECURE_CONTENT_TYPE_NOSNIFF = False
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 TEMPLATES = [
     {
