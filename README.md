@@ -36,14 +36,11 @@ http://zibenitis.se/
 * Install yarn dependencies
 
 * Run migrations `python3 manage.py makemigrations` and `python3 manage.py migrate`
-* Generate stylesheets `scss static-loc/scss/style.scss static-loc/style.css`
+* Generate stylesheets `yarn gulp sass`
 
 * Add latvian locale to be able to sort names `sudo locale-gen "lv_LV.utf8"`
 
 * Create a local superuser to use adminpanel `python3 manage.py creatsuperuser`
-
-##### Add SECRET_KEY file
-Create a new file called `secret_key` in the same folder as settings.py and add the secret key. Ask Davis
 
 ## Dev (development)
 

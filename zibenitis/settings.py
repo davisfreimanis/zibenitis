@@ -23,9 +23,20 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
-print("###########")
-print(DEBUG)
-print("###########")
+
+ALLOWED_HOSTS = ['127.0.0.1']
+
+development = bool(os.environ.get('DJANGO_DEBUG', True))
+
+# Settings for production
+if not development:
+    CSRF_COOKIE_SECURE = True
+    SESSION_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
+    SECURE_SSL_REDIRECT = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    ALLOWED_HOSTS = ['zibenitis.se', 'www.zibenitis.se', 'dev.zibenitis.se']
 
 TEMPLATES = [
     {
@@ -43,8 +54,6 @@ TEMPLATES = [
         }
     }
 ]
-
-ALLOWED_HOSTS = ['127.0.0.1']
 
 # Enable tables and other non-core features
 MARKDOWN_EXTENSIONS = ['extra']
@@ -100,7 +109,6 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-#LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'lv'
 
 TIME_ZONE = 'CET'
