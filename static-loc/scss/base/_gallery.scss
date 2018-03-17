@@ -1,27 +1,39 @@
-.scalerino {
-  transition: transform 0.3s ease-in-out;
-}
-
-.scalerino:hover {
-  transform: scale(1.02);
-}
-
 .cover {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
   margin-top: 10px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-bottom: 10px;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: #444444;
+  background-origin: padding-box;
+  transition: transform 0.3s ease-in-out;
 
   &:after {
+    position: relative;
     content: '';
-    display: inline-block;
-    height: 0;
     padding-bottom: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.1;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+
+    &:after {
+      opacity: 0;
+    }
   }
 
   &__title {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     z-index: 1;
     padding: 15px;
     color: #444;
@@ -38,6 +50,5 @@
       color: #444;
     }
   }
-
 }
 

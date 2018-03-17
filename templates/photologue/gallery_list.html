@@ -13,21 +13,21 @@
             {% for gallery in object_list %}
                 <!-- Only show galleries with pictures -->
                 {% if gallery.public %}
-                    <div class="row col-sm-4">
-                        <!--
-                        <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-                        <p class="muted"><small>{% trans "Publicēts" %} {{ gallery.date_added }}</small></p>
-                        {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
-                        -->
-                        <div class="cover" style="background: url('{{ gallery.public.0.get_display_url }}')">
-                            <div class="cover__title">
-                                {{ gallery.title }}
+
+                    <!--
+                    <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
+                    <p class="muted"><small>{% trans "Publicēts" %} {{ gallery.date_added }}</small></p>
+                    {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
+                    -->
+
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <a href="{{ gallery.get_absolute_url }}">
+                            <div class="cover" style="background-image: url({{ gallery.public.0.get_display_url }})">
+                                <div class="cover__title">
+                                    {{ gallery.title }}
+                                </div>
                             </div>
-                            <!-- Title picture for gallery
-                            <a href="{{ gallery.public.0.get_display_url }}">
-                                 <img src="{{ gallery.public.0.get_display_url }}" class="scalerino" alt="{{ photo.title }}">
-                            </a> -->
-                        </div>
+                        </a>
                     </div>
                 {% endif %}
             {% endfor %}
@@ -36,8 +36,5 @@
         {% endif %}
     </div>
 
-
-
     {% include "photologue/includes/paginator.html" %}
-    
 {% endblock %}
