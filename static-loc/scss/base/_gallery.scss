@@ -10,6 +10,7 @@
   background-color: #444444;
   background-origin: padding-box;
   transition: transform 0.3s ease-in-out;
+  box-shadow: -3px 3px 10px 0px rgba(#444, 0.4);
 
   &:after {
     position: relative;
@@ -19,7 +20,7 @@
     height: 100%;
     background-color: black;
     opacity: 0.1;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
   }
 
   &:hover {
@@ -36,12 +37,9 @@
     width: 100%;
     z-index: 1;
     padding: 15px;
-    color: #444;
-    background: #fff;
+    background: $body-bg-color;
     letter-spacing: 1px;
-    color: #828282;
-    white-space:nowrap;
-    overflow:hidden;
+    color: $logo-color;
 
     &:before {
       font-weight: bold;
