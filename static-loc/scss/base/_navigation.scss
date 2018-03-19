@@ -103,13 +103,9 @@ nav.navbar {
   }
 }
 
-
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
   background-color: $navigation-bg-color;
 }
-
-
 
 div.footer {
   background-color: $navigation-bg-color;
