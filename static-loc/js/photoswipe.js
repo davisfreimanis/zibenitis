@@ -8,6 +8,6 @@ var openPhotoSwipe = function(startIndex) {
         index: startIndex
     };
 
-    var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, window.djangoImages, options);
+    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, window.djangoImages, options);
     gallery.init();
 };

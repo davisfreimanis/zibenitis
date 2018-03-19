@@ -12,13 +12,6 @@
             {% for gallery in object_list %}
                 <!-- Only show galleries with pictures -->
                 {% if gallery.public %}
-
-                    <!--
-                    <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-                    <p class="muted"><small>{% trans "Publicēts" %} {{ gallery.date_added }}</small></p>
-                    {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
-                    -->
-
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <a href="{{ gallery.get_absolute_url }}">
                             <div class="cover" style="background-image: url({{ gallery.public.0.get_display_url }})">
