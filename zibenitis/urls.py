@@ -15,7 +15,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact/', views.contact_persons, name='contact'),
     path('markdownx/', include('markdownx.urls')),
-    path('photos', include('photologue.urls', namespace='photologue')),
+    path('photos/', include('photologue.urls', namespace='photologue')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # Title for /admin
