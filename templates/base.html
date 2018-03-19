@@ -64,19 +64,19 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="navigation {% if blog_active %}blog-active{% endif %}">
+                            <li class="navigation {% if "/blog/" in request.path %}active-page{% endif %}">
                                 <a href="{% url 'blog' %}">Aktualitātes <span class="sr-only">(current)</span></a>
                             </li>
-                            <li class="navigation {% if about_active %}about-active{% endif %}">
+                            <li class="navigation {% if "/dancers/" in request.path %}active-page{% endif %}">
                                 <a href="{% url 'dancers' %}">Par mums</a>
                             </li>
-                            <li class="navigation {% if event_active %}event-active{% endif %}">
+                            <li class="navigation {% if "/events/" in request.path %}active-page{% endif %}">
                                 <a href="{% url 'events' %}">Pasākumi</a>
                             </li>
-                            <li class="navigation">
+                            <li class="navigation {% if "/photos/" in request.path %}active-page{% endif %}">
                                 <a href="{% url 'photologue:gallery-list' %}">Bildes</a>
                             </li>
-                            <li class="navigation {% if contact_active %}contact-active{% endif %}">
+                            <li class="navigation {% if "/contact/" in request.path %}active-page{% endif %}">
                                 <a href="{% url 'contact' %}">Kontakti</a>
                             </li>
                             <li class="navigation">

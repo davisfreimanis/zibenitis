@@ -14,7 +14,7 @@ def blog(request):
     slides = Carousel.objects.order_by('title')
 
     posts_all = Post.objects.order_by('-created')
-    paginator = Paginator(posts_all, 3) # use 3 posts for testing
+    paginator = Paginator(posts_all, 3)  # use 3 posts for testing
 
     page = request.GET.get('page')
 
