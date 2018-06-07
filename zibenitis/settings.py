@@ -42,7 +42,7 @@ else:
     SECURE_SSL_REDIRECT = False
     SECURE_BROWSER_XSS_FILTER = False
     SECURE_CONTENT_TYPE_NOSNIFF = False
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '18.184.62.219']
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 TEMPLATES = [
     {
