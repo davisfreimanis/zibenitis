@@ -31,3 +31,7 @@ def front_page(request):
 def contact_persons(request):
     administration = Contact_person.objects.order_by('order')
     return render(request, 'contact.html', {'administration': administration, 'contact_active': active})
+
+
+def donate(request):
+    return render(request, 'donate.html', {})
