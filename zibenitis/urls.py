@@ -14,6 +14,7 @@ urlpatterns = [
     path('events/', include('zibenitis.apps.events.urls')),
     path('admin/', admin.site.urls),
     path('contact/', views.contact_persons, name='contact'),
+    path('donate/', views.donate, name='donate'),
     path('markdownx/', include('markdownx.urls')),
     path('photos/', include('photologue.urls', namespace='photologue')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
