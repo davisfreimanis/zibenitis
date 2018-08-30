@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load django_markdown %}
+{% load markdownx %}
 
 {% block title %}{{ post.title }}{% endblock %}
 {% block pagetitle %} Zibenitis blog {% endblock %}
@@ -10,7 +10,6 @@
         <div class="container">
             <div class="row">
                 <h1 class="news-title"> {{ post.title }} </h1>
-                <hr class="news-title-underline"/>
                 <div class="col-md-12">
                     <article class="well">
                         <header>
@@ -29,7 +28,7 @@
                         <p class="description">
                             {{ post.description }}
                         </p>
-                        {{ post.content|markdown }}
+                        {{ post.content|markdown|safe }}
                     </article>
 
                     <a href="{% url 'blog' %}">

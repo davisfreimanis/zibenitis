@@ -5,26 +5,28 @@
 
     <div class="row col-lg-12">
         <h1 class="gallery-title">{% trans "Visas galerijas" %}</h1>
-        <hr class="gallery-title-underline"/>
     </div>
 
-    {% if object_list %}
-        {% for gallery in object_list %}
-            <div class="row col-lg-12">
-                <h2><a href="{{ gallery.get_absolute_url }}">{{ gallery.title }}</a></h2>
-                <p class="muted"><small>{% trans "Publicēts" %} {{ gallery.date_added }}</small></p>
-                {% if gallery.description %}<p>{{ gallery.description|safe }}</p>{% endif %}
-                {% for photo in gallery.sample %}
-                    <a href="{{ photo.get_absolute_url }}">
-                         <img src="{{ photo.get_thumbnail_url }}" class="thumbnail" alt="{{ photo.title }}">
-                    </a>
-                {% endfor %}
-            </div>
-        {% endfor %}
-    {% else %}
-        <div class="row col-lg-12">{% trans "Nav galerijas" %}.</div>
-    {% endif %}
+    <div class="row">
+        {% if object_list %}
+            {% for gallery in object_list %}
+                <!-- Only show galleries with pictures -->
+                {% if gallery.public %}
+                    <div class="col-xs-12 col-sm-6 col-md-4">
+                        <a href="{{ gallery.get_absolute_url }}">
+                            <div class="cover" style="background-image: url({{ gallery.public.0.get_display_url }})">
+                                <div class="cover__title">
+                                    {{ gallery.title }}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% else %}
+            <div class="row col-lg-12">{% trans "Nav galerijas" %}.</div>
+        {% endif %}
+    </div>
 
     {% include "photologue/includes/paginator.html" %}
-    
 {% endblock %}

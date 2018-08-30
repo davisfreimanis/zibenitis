@@ -1,7 +1,7 @@
 p, h1, h2, h3, h4, h5, h6 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    overflow: hidden;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 h2.no-events {
@@ -10,28 +10,23 @@ h2.no-events {
 }
 
 #myCarousel {
-    width: 100%;
+  width: 100%;
 }
+
 .carousel-inner .item {
-    width: 100%;
-    height: 400px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 section {
-  padding: $text-padding;
-  padding-top: 50px;
-  padding-bottom: 50px;
   div.container {
     div.row {
       h1 {
         text-align: center;
-      }
-      hr {
-        width: $underline-width;
       }
       div.col-md-4 {
         margin-bottom: 15px;
@@ -60,9 +55,6 @@ section.news {
   h1.news-title {
     color: $news-header-color;
   }
-  hr.news-title-underline {
-    border-top: $underline-height solid $news-header-color;
-  }
   div.row {
     height: auto;
     div.col-md-4 {
@@ -81,9 +73,6 @@ section.events {
   h1.events-title {
     color: $events-header-color;
   }
-  hr.events-title-underline {
-    border-top: $underline-height solid $events-header-color;
-  }
   div {
     div.cont {
       background-color: white;
@@ -101,9 +90,6 @@ section.dancers {
   background-color: $dancers-section-bg-color;
   h1.dancers-title {
     color: $dancers-header-color;
-  }
-  hr.dancers-title-underline {
-    border-top: $underline-height solid $dancers-header-color;
   }
   div {
     height: auto;
@@ -126,9 +112,6 @@ section.history {
   h1.history-title {
     color: $history-header-color;
   }
-  hr.history-title-underline {
-    border-top: $underline-height solid $history-header-color;
-  }
   div.col-md-12 {
     div.cont {
       background-color: $history-text-bg-color;
@@ -140,13 +123,14 @@ section.history {
 }
 
 section.gallery {
-  background-color: $gallery-section-bg-color;
-  h1.gallery-title {
-    color: $gallery-header-color;
-    border: none;
-  }
-  hr.gallery-title-underline {
-    width: $underline-width;
-    border-top: $underline-height solid $gallery-header-color;
+  background: #f5f4f4;
+  padding-bottom: 20px;
+  .container {
+    h1.gallery-title {
+      color: $body-bg-color;
+      border: none;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
   }
 }

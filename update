@@ -1,0 +1,25 @@
+#!/bin/bash
+
+REPO=/home/deploy/zibenitis
+
+# force lock for single script executing
+LOCK="/tmp/update"
+
+lockfile-create $LOCK
+
+cd $REPO && git pull
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+yarn gulp sass
+
+python3 manage.py collectstatic --noinput
+
+# chown -R www-data:www-data $REPO
+
+systemctl restart nginx
+systemctl restart uwsgi
+
+lockfile-remove $LOCK
+

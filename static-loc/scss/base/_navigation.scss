@@ -41,75 +41,31 @@ nav.navbar {
         color: $logo-color;
         padding-left: 10px;
         padding-right: 10px;
-        background-color: $navigation-bg-color;
         span.youtube-nav.facebook-nav {
           margin-left: 15px;
         }
+
+        &:hover {
+          color: $logo-color;
+        }
       }
-      a:hover {
-        background-color: darken($navigation-bg-color, $link-hover-darken);
-        color: $logo-color;
+      &:hover {
+        background-color: lighten($navigation-bg-color, 5%);
       }
     }
 
-    li.blog-active {
-      a {
-        background-color: $news-section-bg-color;
-      }
-      a:hover {
-        background-color: darken($news-section-bg-color, $link-hover-darken);
-      }
-    }
-    li.about-active {
-      a {
-        background-color: $history-section-bg-color;
-      }
-      a:hover {
-        background-color: darken($history-section-bg-color, $link-hover-darken);
+    li.navigation.active-page {
+      font-weight: bold;
+      background-color: lighten($navigation-bg-color, 10%);
+
+      &:hover {
+        background-color: lighten($navigation-bg-color, 10%);
       }
     }
-    li.event-active {
-      a {
-        background-color: $events-section-bg-color;
-      }
-      a:hover {
-        background-color: darken($events-section-bg-color, $link-hover-darken);
-      }
-    }
-    li.media-active {
-      a {
-        color: $gallery-header-color;
-        background-color: $gallery-section-bg-color;
-      }
-      a:hover {
-        background-color: darken($gallery-section-bg-color, $link-hover-darken);
-      }
-    }
-    li.contact-active {
-      a {
-        color: $contacts-header-color;
-        background-color: $contacts-section-bg-color;
-      }
-      a:hover {
-        background-color: darken($contacts-section-bg-color, $link-hover-darken);
-      }
-    }
-    li {
-      ul.dropdown-menu {
-        background-color: $navigation-bg-color;
-        border: none;
-      }
-    }
+
+
   }
 }
-
-
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover, .navbar-default .navbar-nav>.open>a:focus {
-  background-color: $navigation-bg-color;
-}
-
-
 
 div.footer {
   background-color: $navigation-bg-color;
